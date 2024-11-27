@@ -83,7 +83,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
-    <meta name="docbuild:last-update" content="16 November 2024"/>
+    <meta name="docbuild:last-update" content="27 November 2024"/>
   </head>
   
   
@@ -370,6 +370,22 @@
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Introduction</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="notebook-template.html">Project Pythia Notebook Template</a></li>
+<li class="toctree-l1"><a class="reference internal" href="00_geosat_explaining_steps.html">Advanced Baseline Imager (ABI) data with Satpy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01_geosat_ABI_GOES_east.html">Advanced Baseline Imager (ABI) data with Satpy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01_geosat_GOESR.html">Advanced Baseline Imager (ABI) data with Satpy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_geosat_ABI_GOES_west.html">Advanced Baseline Imager (ABI) data with Satpy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03_geosat_AHI_HIMAWARI.html">Advanced Himawari Imager (AHI) data with Satpy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04_geosat_AMI_GK2A.html">Advance Meteorological Imager (AMI) data with Satpy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="99_auxiliar_dowloading.html">This notebook contains example cells to download data.</a></li>
+
+
+
+
+
+
+
+
+
 </ul>
 
     </div>
@@ -402,8 +418,8 @@
   <section class="tex2jax_ignore mathjax_ignore" id="how-to-cite-this-cookbook">
 <h1>How to Cite This Cookbook<a class="headerlink" href="#how-to-cite-this-cookbook" title="Link to this heading"><i class="fas fa-link"></i></a></h1>
 <p>The material in this Project Pythia Cookbook is licensed for free and open consumption and reuse. All code is served under <a class="reference external" href="https://www.apache.org/licenses/LICENSE-2.0">Apache 2.0</a>, while all non-code content is licensed under <a class="reference external" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons BY 4.0 (CC BY 4.0)</a>. Effectively, this means you are free to share and adapt this material so long as you give appropriate credit to the Cookbook authors and the Project Pythia community.</p>
-<p>The source code for the book is <a class="reference external" href="https://github.com/ProjectPythia/cookbook-template">released on GitHub</a> and archived on Zenodo. This DOI will always resolve to the latest release of the book source:</p>
-<p><a class="reference external" href="https://zenodo.org/badge/latestdoi/475509405"><img alt="DOI" src="https://zenodo.org/badge/475509405.svg" /></a></p>
+<p>The source code for the book is <a class="reference external" href="https://github.com/ProjectPythia/geostationary-cookbook">released on GitHub</a> and archived on Zenodo. This DOI will always resolve to the latest release of the book source:</p>
+<p><a class="reference external" href="https://zenodo.org/badge/latestdoi/889581632"><img alt="DOI" src="https://zenodo.org/badge/889581632.svg" /></a></p>
 </section>
 
     <script type="text/x-thebe-config">
@@ -496,7 +512,7 @@
       
       
       
-      <li><a href="https://github.com/ProjectPythia/cookbook-template" target="_blank"
+      <li><a href="https://github.com/ProjectPythia/geostationary-cookbook" target="_blank"
    class="btn btn-sm btn-source-repository-button dropdown-item"
    title="Source repository"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -513,7 +529,7 @@
       
       
       
-      <li><a href="https://github.com/ProjectPythia/cookbook-template/edit/main/notebooks/how-to-cite.md" target="_blank"
+      <li><a href="https://github.com/ProjectPythia/geostationary-cookbook/edit/main/notebooks/how-to-cite.md" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -530,7 +546,7 @@
       
       
       
-      <li><a href="https://github.com/ProjectPythia/cookbook-template/issues/new?title=Issue%20on%20page%20%2Fnotebooks/how-to-cite.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/ProjectPythia/geostationary-cookbook/issues/new?title=Issue%20on%20page%20%2Fnotebooks/how-to-cite.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -658,7 +674,7 @@ By the <a href="https://projectpythia.org/">Project Pythia</a> Community
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on 16 November 2024.
+  Last updated on 27 November 2024.
   <br/>
 </p>
   </div>
@@ -692,13 +708,13 @@ By the <a href="https://projectpythia.org/">Project Pythia</a> Community
     <div class="container-xl">
       <div class="row d-flex flex-wrap align-items-center">
         <div class="d-flex col-lg-3 col-md-4 col-sm-6 p-2 mx-auto">
-          <img alt="NCAR" src="../_images\NSF-NCAR_Lockup-UCAR-Dark_102523.svg" style="width: 100%">
+          <img alt="NCAR" src="../_images/NSF-NCAR_Lockup-UCAR-Dark_102523.svg" style="width: 100%">
         </div>
         <div class="d-flex col-lg-3 col-md-4 col-sm-6 p-2 mx-auto">
-          <img alt="Unidata" src="../_images\Unidata_logo_horizontal_1200x300.svg" style="width: 100%">
+          <img alt="Unidata" src="../_images/Unidata_logo_horizontal_1200x300.svg" style="width: 100%">
         </div>
         <div class="d-flex col-lg-3 col-md-4 col-sm-6 p-2 mx-auto">
-          <img alt="UAlbany" src="../_images\UAlbany-A2-logo-purple-gold.svg" style="width: 100%">
+          <img alt="UAlbany" src="../_images/UAlbany-A2-logo-purple-gold.svg" style="width: 100%">
         </div>
       </div>
     </div>
@@ -712,7 +728,7 @@ By the <a href="https://projectpythia.org/">Project Pythia</a> Community
         
           By the <a href="https://projectpythia.org/">Project Pythia</a> Community.
         
-          Last updated on 16 November 2024.
+          Last updated on 27 November 2024.
         </p>
       </div>
     </div>

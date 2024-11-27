@@ -2,8 +2,8 @@
 
 # Geostationary satellite Cookbook
 
-[![nightly-build](https://github.com/ProjectPythia/cookbook-geosat/actions/workflows/nightly-build.yaml/badge.svg)](https://github.com/ProjectPythia/cookbook-geosat/actions/workflows/nightly-build.yaml)
-[![Binder](https://binder.projectpythia.org/badge_logo.svg)](https://binder.projectpythia.org/v2/gh/ProjectPythia/cookbook-geosat/main?labpath=notebooks)
+[![nightly-build](https://github.com/ProjectPythia/geostationary-cookbook/actions/workflows/nightly-build.yaml/badge.svg)](https://github.com/ProjectPythia/geostationary-cookbook/actions/workflows/nightly-build.yaml)
+[![Binder](https://binder.projectpythia.org/badge_logo.svg)](https://binder.projectpythia.org/v2/gh/ProjectPythia/geostationary-cookbook/main?labpath=notebooks)
 [![DOI](https://zenodo.org/badge/810398043.svg)](https://zenodo.org/badge/latestdoi/810398043)
 
 
@@ -37,8 +37,8 @@ of the three geostationary satellites that can be accessed freely from AWS bucke
 
 ### Contributors
 
-<a href="https://github.com/ProjectPythia/cookbook-geosat/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=ProjectPythia/cookbook-geosat" />
+<a href="https://github.com/ProjectPythia/geostationary-cookbook/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=ProjectPythia/geostationary-cookbook" />
 </a>
 
 
@@ -93,22 +93,22 @@ Jupyter](https://foundations.projectpythia.org/foundations/getting-started-jupyt
 
 If you are interested in running this material locally on your computer, you will need to follow this workflow:
 
-(Replace "cookbook-geosat" with the title of your cookbooks)
+(Replace "geostationary-cookbook" with the title of your cookbooks)
 
-1. Clone the `https://github.com/ProjectPythia/cookbook-geosat` repository:
+1. Clone the `https://github.com/ProjectPythia/geostationary-cookbook` repository:
 
    ```bash
-    git clone https://github.com/ProjectPythia/cookbook-geosat.git
+    git clone https://github.com/ProjectPythia/geostationary-cookbook.git
    ```
 
-1. Move into the `cookbook-geosat` directory
+1. Move into the `geostationary-cookbook` directory
    ```bash
-   cd cookbook-geosat
+   cd geostationary-cookbook
    ```
 1. Create and activate your conda environment from the `environment.yml` file
    ```bash
    conda env create -f environment.yml
-   conda activate cookbook-geosat
+   conda activate geostationary-cookbook
    ```
 1. Move into the `notebooks` directory and start up Jupyterlab
    ```bash

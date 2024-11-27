@@ -80,10 +80,12 @@
     <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Advanced Baseline Imager (ABI) data with Satpy" href="02_geosat_ABI_GOES_west.html" />
+    <link rel="prev" title="Advanced Baseline Imager (ABI) data with Satpy" href="01_geosat_ABI_GOES_east.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
-    <meta name="docbuild:last-update" content="16 November 2024"/>
+    <meta name="docbuild:last-update" content="27 November 2024"/>
   </head>
   
   
@@ -238,8 +240,6 @@
         
         
         
-          
-        
         <div class="bd-sidebar-primary bd-sidebar">
           
 
@@ -374,8 +374,24 @@
 <li class="toctree-l1"><a class="reference internal" href="how-to-cite.html">How to Cite This Cookbook</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Introduction</span></p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="notebook-template.html">Project Pythia Notebook Template</a></li>
+<li class="toctree-l1"><a class="reference internal" href="00_geosat_explaining_steps.html">Advanced Baseline Imager (ABI) data with Satpy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01_geosat_ABI_GOES_east.html">Advanced Baseline Imager (ABI) data with Satpy</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Advanced Baseline Imager (ABI) data with Satpy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_geosat_ABI_GOES_west.html">Advanced Baseline Imager (ABI) data with Satpy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03_geosat_AHI_HIMAWARI.html">Advanced Himawari Imager (AHI) data with Satpy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04_geosat_AMI_GK2A.html">Advance Meteorological Imager (AMI) data with Satpy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="99_auxiliar_dowloading.html">This notebook contains example cells to download data.</a></li>
+
+
+
+
+
+
+
+
+
 </ul>
 
     </div>
@@ -602,22 +618,22 @@ Therefore, don’t alter them when you save the data locally. SatPy won’t be a
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Output_data/ABI-L1b-RadF/s20210992350171\\OR_ABI-L1b-RadF-M6C01_G16_s20210992350171_e20210992359479_c20210992359525.nc&#39;,
- &#39;Output_data/ABI-L1b-RadF/s20210992350171\\OR_ABI-L1b-RadF-M6C02_G16_s20210992350171_e20210992359479_c20210992359522.nc&#39;,
- &#39;Output_data/ABI-L1b-RadF/s20210992350171\\OR_ABI-L1b-RadF-M6C03_G16_s20210992350171_e20210992359479_c20210992359530.nc&#39;,
- &#39;Output_data/ABI-L1b-RadF/s20210992350171\\OR_ABI-L1b-RadF-M6C04_G16_s20210992350171_e20210992359479_c20210992359514.nc&#39;,
- &#39;Output_data/ABI-L1b-RadF/s20210992350171\\OR_ABI-L1b-RadF-M6C05_G16_s20210992350171_e20210992359479_c20210992359533.nc&#39;,
- &#39;Output_data/ABI-L1b-RadF/s20210992350171\\OR_ABI-L1b-RadF-M6C06_G16_s20210992350171_e20210992359484_c20210992359528.nc&#39;,
- &#39;Output_data/ABI-L1b-RadF/s20210992350171\\OR_ABI-L1b-RadF-M6C07_G16_s20210992350171_e20210992359490_c20210992359539.nc&#39;,
- &#39;Output_data/ABI-L1b-RadF/s20210992350171\\OR_ABI-L1b-RadF-M6C08_G16_s20210992350171_e20210992359479_c20210992359535.nc&#39;,
- &#39;Output_data/ABI-L1b-RadF/s20210992350171\\OR_ABI-L1b-RadF-M6C09_G16_s20210992350171_e20210992359484_c20210992359551.nc&#39;,
- &#39;Output_data/ABI-L1b-RadF/s20210992350171\\OR_ABI-L1b-RadF-M6C10_G16_s20210992350171_e20210992359490_c20210992359536.nc&#39;,
- &#39;Output_data/ABI-L1b-RadF/s20210992350171\\OR_ABI-L1b-RadF-M6C11_G16_s20210992350171_e20210992359479_c20210992359545.nc&#39;,
- &#39;Output_data/ABI-L1b-RadF/s20210992350171\\OR_ABI-L1b-RadF-M6C12_G16_s20210992350171_e20210992359484_c20210992359539.nc&#39;,
- &#39;Output_data/ABI-L1b-RadF/s20210992350171\\OR_ABI-L1b-RadF-M6C13_G16_s20210992350171_e20210992359490_c20210992359555.nc&#39;,
- &#39;Output_data/ABI-L1b-RadF/s20210992350171\\OR_ABI-L1b-RadF-M6C14_G16_s20210992350171_e20210992359479_c20210992359547.nc&#39;,
- &#39;Output_data/ABI-L1b-RadF/s20210992350171\\OR_ABI-L1b-RadF-M6C15_G16_s20210992350171_e20210992359484_c20210992359557.nc&#39;,
- &#39;Output_data/ABI-L1b-RadF/s20210992350171\\OR_ABI-L1b-RadF-M6C16_G16_s20210992350171_e20210992359490_c20210992359542.nc&#39;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Output_data/ABI-L1b-RadF/s20210992350171/OR_ABI-L1b-RadF-M6C14_G16_s20210992350171_e20210992359479_c20210992359547.nc&#39;,
+ &#39;Output_data/ABI-L1b-RadF/s20210992350171/OR_ABI-L1b-RadF-M6C09_G16_s20210992350171_e20210992359484_c20210992359551.nc&#39;,
+ &#39;Output_data/ABI-L1b-RadF/s20210992350171/OR_ABI-L1b-RadF-M6C06_G16_s20210992350171_e20210992359484_c20210992359528.nc&#39;,
+ &#39;Output_data/ABI-L1b-RadF/s20210992350171/OR_ABI-L1b-RadF-M6C05_G16_s20210992350171_e20210992359479_c20210992359533.nc&#39;,
+ &#39;Output_data/ABI-L1b-RadF/s20210992350171/OR_ABI-L1b-RadF-M6C13_G16_s20210992350171_e20210992359490_c20210992359555.nc&#39;,
+ &#39;Output_data/ABI-L1b-RadF/s20210992350171/OR_ABI-L1b-RadF-M6C16_G16_s20210992350171_e20210992359490_c20210992359542.nc&#39;,
+ &#39;Output_data/ABI-L1b-RadF/s20210992350171/OR_ABI-L1b-RadF-M6C10_G16_s20210992350171_e20210992359490_c20210992359536.nc&#39;,
+ &#39;Output_data/ABI-L1b-RadF/s20210992350171/OR_ABI-L1b-RadF-M6C11_G16_s20210992350171_e20210992359479_c20210992359545.nc&#39;,
+ &#39;Output_data/ABI-L1b-RadF/s20210992350171/OR_ABI-L1b-RadF-M6C03_G16_s20210992350171_e20210992359479_c20210992359530.nc&#39;,
+ &#39;Output_data/ABI-L1b-RadF/s20210992350171/OR_ABI-L1b-RadF-M6C12_G16_s20210992350171_e20210992359484_c20210992359539.nc&#39;,
+ &#39;Output_data/ABI-L1b-RadF/s20210992350171/OR_ABI-L1b-RadF-M6C01_G16_s20210992350171_e20210992359479_c20210992359525.nc&#39;,
+ &#39;Output_data/ABI-L1b-RadF/s20210992350171/OR_ABI-L1b-RadF-M6C08_G16_s20210992350171_e20210992359479_c20210992359535.nc&#39;,
+ &#39;Output_data/ABI-L1b-RadF/s20210992350171/OR_ABI-L1b-RadF-M6C07_G16_s20210992350171_e20210992359490_c20210992359539.nc&#39;,
+ &#39;Output_data/ABI-L1b-RadF/s20210992350171/OR_ABI-L1b-RadF-M6C02_G16_s20210992350171_e20210992359479_c20210992359522.nc&#39;,
+ &#39;Output_data/ABI-L1b-RadF/s20210992350171/OR_ABI-L1b-RadF-M6C04_G16_s20210992350171_e20210992359479_c20210992359514.nc&#39;,
+ &#39;Output_data/ABI-L1b-RadF/s20210992350171/OR_ABI-L1b-RadF-M6C15_G16_s20210992350171_e20210992359484_c20210992359557.nc&#39;]
 </pre></div>
 </div>
 </div>
@@ -646,27 +662,204 @@ Therefore, don’t alter them when you save the data locally. SatPy won’t be a
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>No filenames found for reader: mviri_l1b_fiduceo_nc
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Problem with [&#39;/home/runner/miniconda3/envs/geostationary-cookbook/lib/python3.10/site-packages/satpy/etc/readers/modis_l3.yaml&#39;]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>while constructing a Python object
+cannot find module &#39;satpy.readers.modis_l3&#39; (No module named &#39;pyhdf&#39;)
+  in &quot;/home/runner/miniconda3/envs/geostationary-cookbook/lib/python3.10/site-packages/satpy/etc/readers/modis_l3.yaml&quot;, line 16, column 18
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>No filenames found for reader: mersi2_l1b
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Problem with [&#39;/home/runner/miniconda3/envs/geostationary-cookbook/lib/python3.10/site-packages/satpy/etc/readers/sar-c_safe.yaml&#39;]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>while constructing a Python object
+cannot find module &#39;satpy.readers.sar_c_safe&#39; (No module named &#39;rioxarray&#39;)
+  in &quot;/home/runner/miniconda3/envs/geostationary-cookbook/lib/python3.10/site-packages/satpy/etc/readers/sar-c_safe.yaml&quot;, line 10, column 11
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>No filenames found for reader: oli_tirs_l1_tif
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>No filenames found for reader: omps_edr
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>No filenames found for reader: tropomi_l2
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>No filenames found for reader: virr_l1b
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>No filenames found for reader: amsr2_l2
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>No filenames found for reader: amsub_l1c_aapp
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>No filenames found for reader: ahi_l1b_gridded_bin
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>No filenames found for reader: ahi_hsd
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>No filenames found for reader: mersi3_l1b
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>No filenames found for reader: gld360_ualf2
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>No filenames found for reader: geocat
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>No filenames found for reader: agri_fy4a_l1
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>No filenames found for reader: iasi_l2_cdr_nc
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>No filenames found for reader: nucaps
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Problem with [&#39;/home/runner/miniconda3/envs/geostationary-cookbook/lib/python3.10/site-packages/satpy/etc/readers/iasi_l2_so2_bufr.yaml&#39;]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>while constructing a Python object
+cannot find module &#39;satpy.readers.iasi_l2_so2_bufr&#39; ((&#39;Missing eccodes-python and/or eccodes C-library installation. Use conda to install eccodes.\n           Error: &#39;, ModuleNotFoundError(&quot;No module named &#39;eccodes&#39;&quot;)))
+  in &quot;/home/runner/miniconda3/envs/geostationary-cookbook/lib/python3.10/site-packages/satpy/etc/readers/iasi_l2_so2_bufr.yaml&quot;, line 15, column 18
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>No filenames found for reader: viirs_l1b
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>No filenames found for reader: goes-imager_hrit
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>No filenames found for reader: iasi_l2
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>No filenames found for reader: msu_gsa_l1b
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Problem with [&#39;C:\\Users\\Ismart\\miniconda3\\envs\\cookbook-geosat\\Lib\\site-packages\\satpy\\etc\\readers\\fci_l2_grib.yaml&#39;]
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>No filenames found for reader: agri_fy4b_l1
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Problem with [&#39;/home/runner/miniconda3/envs/geostationary-cookbook/lib/python3.10/site-packages/satpy/etc/readers/mcd12q1.yaml&#39;]
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>while constructing a Python object
-cannot find module &#39;satpy.readers.eum_l2_grib&#39; (Missing eccodes-python and/or eccodes C-library installation. Use conda to install eccodes)
-  in &quot;C:\Users\Ismart\miniconda3\envs\cookbook-geosat\Lib\site-packages\satpy\etc\readers\fci_l2_grib.yaml&quot;, line 13, column 18
+cannot find module &#39;satpy.readers.mcd12q1&#39; (No module named &#39;pyhdf&#39;)
+  in &quot;/home/runner/miniconda3/envs/geostationary-cookbook/lib/python3.10/site-packages/satpy/etc/readers/mcd12q1.yaml&quot;, line 14, column 18
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>No filenames found for reader: fci_l2_nc
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>No filenames found for reader: avhrr_l1b_eps
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>No filenames found for reader: seviri_l1b_hrit
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>No filenames found for reader: nwcsaf-pps_nc
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>No filenames found for reader: mhs_l1c_aapp
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>No filenames found for reader: mimicTPW2_comp
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>No filenames found for reader: viirs_compact
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>No filenames found for reader: osisaf_nc
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>No filenames found for reader: mersi3_l1b
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>No filenames found for reader: smos_l2_wind
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>No filenames found for reader: nwcsaf-msg2013-hdf5
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>No filenames found for reader: meris_nc_sen3
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>No filenames found for reader: ahi_hrit
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>No filenames found for reader: electrol_hrit
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Problem with [&#39;/home/runner/miniconda3/envs/geostationary-cookbook/lib/python3.10/site-packages/satpy/etc/readers/avhrr_l1b_gaclac.yaml&#39;]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>while constructing a Python object
+cannot find module &#39;satpy.readers.avhrr_l1b_gaclac&#39; (No module named &#39;pygac&#39;)
+  in &quot;/home/runner/miniconda3/envs/geostationary-cookbook/lib/python3.10/site-packages/satpy/etc/readers/avhrr_l1b_gaclac.yaml&quot;, line 183, column 22
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>No filenames found for reader: viirs_edr_active_fires
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Problem with [&#39;/home/runner/miniconda3/envs/geostationary-cookbook/lib/python3.10/site-packages/satpy/etc/readers/fci_l2_grib.yaml&#39;]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>while constructing a Python object
+cannot find module &#39;satpy.readers.eum_l2_grib&#39; (Missing eccodes-python and/or eccodes C-library installation. Use conda to install eccodes)
+  in &quot;/home/runner/miniconda3/envs/geostationary-cookbook/lib/python3.10/site-packages/satpy/etc/readers/fci_l2_grib.yaml&quot;, line 13, column 18
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>No filenames found for reader: fci_l1c_nc
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Problem with [&#39;/home/runner/miniconda3/envs/geostationary-cookbook/lib/python3.10/site-packages/satpy/etc/readers/oci_l2_bgc.yaml&#39;]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>while constructing a Python object
+cannot find module &#39;satpy.readers.seadas_l2&#39; (No module named &#39;pyhdf&#39;)
+  in &quot;/home/runner/miniconda3/envs/geostationary-cookbook/lib/python3.10/site-packages/satpy/etc/readers/oci_l2_bgc.yaml&quot;, line 16, column 18
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>No filenames found for reader: gpm_imerg
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>No filenames found for reader: vii_l2_nc
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Problem with [&#39;/home/runner/miniconda3/envs/geostationary-cookbook/lib/python3.10/site-packages/satpy/etc/readers/viirs_edr_flood.yaml&#39;]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>while constructing a Python object
+cannot find module &#39;satpy.readers.viirs_edr_flood&#39; (No module named &#39;pyhdf&#39;)
+  in &quot;/home/runner/miniconda3/envs/geostationary-cookbook/lib/python3.10/site-packages/satpy/etc/readers/viirs_edr_flood.yaml&quot;, line 13, column 22
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Problem with [&#39;/home/runner/miniconda3/envs/geostationary-cookbook/lib/python3.10/site-packages/satpy/etc/readers/seviri_l1b_icare.yaml&#39;]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>while constructing a Python object
+cannot find module &#39;satpy.readers.seviri_l1b_icare&#39; (No module named &#39;pyhdf&#39;)
+  in &quot;/home/runner/miniconda3/envs/geostationary-cookbook/lib/python3.10/site-packages/satpy/etc/readers/seviri_l1b_icare.yaml&quot;, line 20, column 22
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>No filenames found for reader: olci_l2
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>No filenames found for reader: glm_l2
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Problem with [&#39;/home/runner/miniconda3/envs/geostationary-cookbook/lib/python3.10/site-packages/satpy/etc/readers/hsaf_grib.yaml&#39;]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>while constructing a Python object
+cannot find module &#39;satpy.readers.hsaf_grib&#39; (No module named &#39;pygrib&#39;)
+  in &quot;/home/runner/miniconda3/envs/geostationary-cookbook/lib/python3.10/site-packages/satpy/etc/readers/hsaf_grib.yaml&quot;, line 13, column 18
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>No filenames found for reader: ghrsst_l2
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>No filenames found for reader: li_l2_nc
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;C01&#39;, &#39;C02&#39;, &#39;C03&#39;, &#39;C04&#39;, &#39;C05&#39;, &#39;C06&#39;, &#39;C07&#39;, &#39;C08&#39;, &#39;C09&#39;, &#39;C10&#39;, &#39;C11&#39;, &#39;C12&#39;, &#39;C13&#39;, &#39;C14&#39;, &#39;C15&#39;, &#39;C16&#39;]
@@ -790,14 +983,14 @@ cannot find module &#39;satpy.readers.eum_l2_grib&#39; (Missing eccodes-python a
   --xr-background-color-row-odd: var(--jp-layout-color2, #eeeeee);
 }
 
-html[theme=dark],
-html[data-theme=dark],
-body[data-theme=dark],
+html[theme="dark"],
+html[data-theme="dark"],
+body[data-theme="dark"],
 body.vscode-dark {
   --xr-font-color0: rgba(255, 255, 255, 1);
   --xr-font-color2: rgba(255, 255, 255, 0.54);
   --xr-font-color3: rgba(255, 255, 255, 0.38);
-  --xr-border-color: #1F1F1F;
+  --xr-border-color: #1f1f1f;
   --xr-disabled-color: #515151;
   --xr-background-color: #111111;
   --xr-background-color-row-even: #111111;
@@ -852,6 +1045,7 @@ body.vscode-dark {
 .xr-section-item input {
   display: inline-block;
   opacity: 0;
+  height: 0;
 }
 
 .xr-section-item input + label {
@@ -888,7 +1082,7 @@ body.vscode-dark {
 
 .xr-section-summary-in + label:before {
   display: inline-block;
-  content: '►';
+  content: "►";
   font-size: 11px;
   width: 15px;
   text-align: center;
@@ -899,7 +1093,7 @@ body.vscode-dark {
 }
 
 .xr-section-summary-in:checked + label:before {
-  content: '▼';
+  content: "▼";
 }
 
 .xr-section-summary-in:checked + label > span {
@@ -971,15 +1165,15 @@ body.vscode-dark {
 }
 
 .xr-dim-list:before {
-  content: '(';
+  content: "(";
 }
 
 .xr-dim-list:after {
-  content: ')';
+  content: ")";
 }
 
 .xr-dim-list li:not(:last-child):after {
-  content: ',';
+  content: ",";
   padding-right: 5px;
 }
 
@@ -1129,7 +1323,7 @@ dl.xr-attrs {
   stroke: currentColor;
   fill: currentColor;
 }
-</style><pre class='xr-text-repr-fallback'>&lt;xarray.DataArray &#x27;where-1e4a7312c9e7e3d7c1fddf9b61b6cbed&#x27; (bands: 3, y: 5424,
+</style><pre class='xr-text-repr-fallback'>&lt;xarray.DataArray &#x27;where-46be9cae45d61a183036f257512d1fd9&#x27; (bands: 3, y: 5424,
                                                             x: 5424)&gt; Size: 353MB
 dask.array&lt;where, shape=(3, 5424, 5424), dtype=float32, chunksize=(1, 1356, 1356), chunktype=numpy.ndarray&gt;
 Coordinates:
@@ -1138,19 +1332,19 @@ Coordinates:
   * x        (x) float64 43kB -5.434e+06 -5.432e+06 ... 5.432e+06 5.434e+06
   * bands    (bands) &lt;U1 12B &#x27;R&#x27; &#x27;G&#x27; &#x27;B&#x27;
 Attributes: (12/27)
-    grid_mapping:            goes_imager_projection
-    scene_id:                Full Disk
-    orbital_parameters:      {&#x27;projection_longitude&#x27;: -75.0, &#x27;projection_lati...
-    standard_name:           airmass
+    cell_methods:            t: point area: point
+    orbital_slot:            GOES-East
+    observation_type:        Rad
+    resolution:              2000
     sensor:                  abi
-    end_time:                2021-04-09 23:59:49
+    platform_shortname:      G16
     ...                      ...
     wavelength:              None
     name:                    airmass
     _satpy_id:               DataID(name=&#x27;airmass&#x27;, resolution=2000)
     prerequisites:           [DataQuery(name=&#x27;_airmass_dep_0&#x27;), DataQuery(nam...
     optional_prerequisites:  []
-    mode:                    RGB</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>xarray.DataArray</div><div class='xr-array-name'>'where-1e4a7312c9e7e3d7c1fddf9b61b6cbed'</div><ul class='xr-dim-list'><li><span class='xr-has-index'>bands</span>: 3</li><li><span class='xr-has-index'>y</span>: 5424</li><li><span class='xr-has-index'>x</span>: 5424</li></ul></div><ul class='xr-sections'><li class='xr-section-item'><div class='xr-array-wrap'><input id='section-a7db7e82-0be8-413e-ac4a-905bccc53c28' class='xr-array-in' type='checkbox' checked><label for='section-a7db7e82-0be8-413e-ac4a-905bccc53c28' title='Show/hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-array-preview xr-preview'><span>dask.array&lt;chunksize=(1, 1356, 1356), meta=np.ndarray&gt;</span></div><div class='xr-array-data'><table>
+    mode:                    RGB</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>xarray.DataArray</div><div class='xr-array-name'>'where-46be9cae45d61a183036f257512d1fd9'</div><ul class='xr-dim-list'><li><span class='xr-has-index'>bands</span>: 3</li><li><span class='xr-has-index'>y</span>: 5424</li><li><span class='xr-has-index'>x</span>: 5424</li></ul></div><ul class='xr-sections'><li class='xr-section-item'><div class='xr-array-wrap'><input id='section-ea2976df-1d80-4121-88b6-46d043693bb8' class='xr-array-in' type='checkbox' checked><label for='section-ea2976df-1d80-4121-88b6-46d043693bb8' title='Show/hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-array-preview xr-preview'><span>dask.array&lt;chunksize=(1, 1356, 1356), meta=np.ndarray&gt;</span></div><div class='xr-array-data'><table>
     <tr>
         <td>
             <table style="border-collapse: collapse;">
@@ -1244,7 +1438,7 @@ Attributes: (12/27)
 </svg>
         </td>
     </tr>
-</table></div></div></li><li class='xr-section-item'><input id='section-dbd96391-88cd-4fa3-807e-2d3de9417baa' class='xr-section-summary-in' type='checkbox'  checked><label for='section-dbd96391-88cd-4fa3-807e-2d3de9417baa' class='xr-section-summary' >Coordinates: <span>(4)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span>crs</span></div><div class='xr-var-dims'>()</div><div class='xr-var-dtype'>object</div><div class='xr-var-preview xr-preview'>PROJCRS[&quot;unknown&quot;,BASEGEOGCRS[&quot;u...</div><input id='attrs-a361fe69-7163-4c42-bedf-a69699ba221a' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-a361fe69-7163-4c42-bedf-a69699ba221a' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-79ff202b-cf21-44c8-93d9-26dd2b4ca8a6' class='xr-var-data-in' type='checkbox'><label for='data-79ff202b-cf21-44c8-93d9-26dd2b4ca8a6' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array(&lt;Projected CRS: PROJCRS[&quot;unknown&quot;,BASEGEOGCRS[&quot;unknown&quot;,DATUM[&quot;Unk ...&gt;
+</table></div></div></li><li class='xr-section-item'><input id='section-f5f2b8fd-b0f7-40ac-87d9-237f895f7809' class='xr-section-summary-in' type='checkbox'  checked><label for='section-f5f2b8fd-b0f7-40ac-87d9-237f895f7809' class='xr-section-summary' >Coordinates: <span>(4)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span>crs</span></div><div class='xr-var-dims'>()</div><div class='xr-var-dtype'>object</div><div class='xr-var-preview xr-preview'>PROJCRS[&quot;unknown&quot;,BASEGEOGCRS[&quot;u...</div><input id='attrs-acfaa8ef-2715-498e-b2da-6980d05e625f' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-acfaa8ef-2715-498e-b2da-6980d05e625f' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-047dd356-dec5-46fd-b8cc-9f86d679760c' class='xr-var-data-in' type='checkbox'><label for='data-047dd356-dec5-46fd-b8cc-9f86d679760c' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array(&lt;Projected CRS: PROJCRS[&quot;unknown&quot;,BASEGEOGCRS[&quot;unknown&quot;,DATUM[&quot;Unk ...&gt;
 Name: unknown
 Axis Info [cartesian]:
 - E[east]: Easting (metre)
@@ -1257,9 +1451,9 @@ Coordinate Operation:
 Datum: Unknown based on GRS 1980 ellipsoid
 - Ellipsoid: GRS 1980
 - Prime Meridian: Greenwich
-, dtype=object)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>y</span></div><div class='xr-var-dims'>(y)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>5.434e+06 5.432e+06 ... -5.434e+06</div><input id='attrs-de9ca187-0a8c-474d-8f31-ff0dc776ef9d' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-de9ca187-0a8c-474d-8f31-ff0dc776ef9d' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-dae5b1fa-2cd5-4f97-9b9f-4ac7aa3e2d40' class='xr-var-data-in' type='checkbox'><label for='data-dae5b1fa-2cd5-4f97-9b9f-4ac7aa3e2d40' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>meter</dd></dl></div><div class='xr-var-data'><pre>array([ 5433892.876412,  5431888.859124,  5429884.841836, ..., -5429884.841836,
-       -5431888.859124, -5433892.876412])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>x</span></div><div class='xr-var-dims'>(x)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>-5.434e+06 -5.432e+06 ... 5.434e+06</div><input id='attrs-357ed00c-870a-4da9-8a87-7487422645a2' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-357ed00c-870a-4da9-8a87-7487422645a2' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-211a8c0c-d05f-46a1-b785-de4420d560ff' class='xr-var-data-in' type='checkbox'><label for='data-211a8c0c-d05f-46a1-b785-de4420d560ff' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>meter</dd></dl></div><div class='xr-var-data'><pre>array([-5433892.876412, -5431888.859124, -5429884.841836, ...,  5429884.841836,
-        5431888.859124,  5433892.876412])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>bands</span></div><div class='xr-var-dims'>(bands)</div><div class='xr-var-dtype'>&lt;U1</div><div class='xr-var-preview xr-preview'>&#x27;R&#x27; &#x27;G&#x27; &#x27;B&#x27;</div><input id='attrs-b3d42a26-95cd-469d-bdc1-e6cc7aa96617' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-b3d42a26-95cd-469d-bdc1-e6cc7aa96617' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-f96778d4-e144-4d50-b0bf-3670984ca485' class='xr-var-data-in' type='checkbox'><label for='data-f96778d4-e144-4d50-b0bf-3670984ca485' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([&#x27;R&#x27;, &#x27;G&#x27;, &#x27;B&#x27;], dtype=&#x27;&lt;U1&#x27;)</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-690443be-7d55-48b6-ad82-d3bb6cf4c97a' class='xr-section-summary-in' type='checkbox'  ><label for='section-690443be-7d55-48b6-ad82-d3bb6cf4c97a' class='xr-section-summary' >Indexes: <span>(3)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-index-name'><div>y</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-69e29af0-2e1a-4857-b3f2-c38ebfce2b21' class='xr-index-data-in' type='checkbox'/><label for='index-69e29af0-2e1a-4857-b3f2-c38ebfce2b21' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([5433892.8764120005,     5431888.859124,  5429884.841836001,
+, dtype=object)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>y</span></div><div class='xr-var-dims'>(y)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>5.434e+06 5.432e+06 ... -5.434e+06</div><input id='attrs-c0262cad-c40b-40c7-baa1-e93db48182f0' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-c0262cad-c40b-40c7-baa1-e93db48182f0' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-873ae696-4d94-447d-b25d-4499cc6da136' class='xr-var-data-in' type='checkbox'><label for='data-873ae696-4d94-447d-b25d-4499cc6da136' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>meter</dd></dl></div><div class='xr-var-data'><pre>array([ 5433892.876412,  5431888.859124,  5429884.841836, ..., -5429884.841836,
+       -5431888.859124, -5433892.876412])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>x</span></div><div class='xr-var-dims'>(x)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>-5.434e+06 -5.432e+06 ... 5.434e+06</div><input id='attrs-2cb533d2-2dfa-4574-b4e1-fe72077577af' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-2cb533d2-2dfa-4574-b4e1-fe72077577af' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-ce869130-7034-461a-8b98-d2a11d8a52a1' class='xr-var-data-in' type='checkbox'><label for='data-ce869130-7034-461a-8b98-d2a11d8a52a1' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>meter</dd></dl></div><div class='xr-var-data'><pre>array([-5433892.876412, -5431888.859124, -5429884.841836, ...,  5429884.841836,
+        5431888.859124,  5433892.876412])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>bands</span></div><div class='xr-var-dims'>(bands)</div><div class='xr-var-dtype'>&lt;U1</div><div class='xr-var-preview xr-preview'>&#x27;R&#x27; &#x27;G&#x27; &#x27;B&#x27;</div><input id='attrs-ba3c2295-aa67-4197-8708-4cade6b6f470' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-ba3c2295-aa67-4197-8708-4cade6b6f470' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-95724b26-569b-417c-be23-3cfd6c4f959b' class='xr-var-data-in' type='checkbox'><label for='data-95724b26-569b-417c-be23-3cfd6c4f959b' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([&#x27;R&#x27;, &#x27;G&#x27;, &#x27;B&#x27;], dtype=&#x27;&lt;U1&#x27;)</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-f1cad6a4-3b49-4a14-8751-3609905a037e' class='xr-section-summary-in' type='checkbox'  ><label for='section-f1cad6a4-3b49-4a14-8751-3609905a037e' class='xr-section-summary' >Indexes: <span>(3)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-index-name'><div>y</div></div><div class='xr-index-preview'>PandasIndex</div><input type='checkbox' disabled/><label></label><input id='index-c7a23983-4860-4f91-801c-570b480d58c7' class='xr-index-data-in' type='checkbox'/><label for='index-c7a23983-4860-4f91-801c-570b480d58c7' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([5433892.8764120005,     5431888.859124,  5429884.841836001,
        5427880.8245480005,      5425876.80726,  5423872.789972001,
            5421868.772684,     5419864.755396,  5417860.738108001,
             5415856.72082,
@@ -1268,7 +1462,7 @@ Datum: Unknown based on GRS 1980 ellipsoid
           -5421868.772684,    -5423872.789972, -5425876.807259999,
        -5427880.824547999,    -5429884.841836, -5431888.859123999,
        -5433892.876411999],
-      dtype=&#x27;float64&#x27;, name=&#x27;y&#x27;, length=5424))</pre></div></li><li class='xr-var-item'><div class='xr-index-name'><div>x</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-3ea77d46-1c20-49ce-835c-e92f43e61937' class='xr-index-data-in' type='checkbox'/><label for='index-3ea77d46-1c20-49ce-835c-e92f43e61937' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([-5433892.8764120005,     -5431888.859124,  -5429884.841836001,
+      dtype=&#x27;float64&#x27;, name=&#x27;y&#x27;, length=5424))</pre></div></li><li class='xr-var-item'><div class='xr-index-name'><div>x</div></div><div class='xr-index-preview'>PandasIndex</div><input type='checkbox' disabled/><label></label><input id='index-a9fad5a6-96f7-4203-a44a-b435530b8866' class='xr-index-data-in' type='checkbox'/><label for='index-a9fad5a6-96f7-4203-a44a-b435530b8866' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([-5433892.8764120005,     -5431888.859124,  -5429884.841836001,
        -5427880.8245480005,      -5425876.80726,  -5423872.789972001,
            -5421868.772684,     -5419864.755396,  -5417860.738108001,
             -5415856.72082,
@@ -1277,13 +1471,13 @@ Datum: Unknown based on GRS 1980 ellipsoid
             5421868.772684,      5423872.789972,   5425876.807259999,
          5427880.824547999,      5429884.841836,   5431888.859123999,
          5433892.876411999],
-      dtype=&#x27;float64&#x27;, name=&#x27;x&#x27;, length=5424))</pre></div></li><li class='xr-var-item'><div class='xr-index-name'><div>bands</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-7d22070c-20df-4cc7-9e91-145d25e54b03' class='xr-index-data-in' type='checkbox'/><label for='index-7d22070c-20df-4cc7-9e91-145d25e54b03' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([&#x27;R&#x27;, &#x27;G&#x27;, &#x27;B&#x27;], dtype=&#x27;object&#x27;, name=&#x27;bands&#x27;))</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-f632caf6-17c7-4c78-b5af-cf83e1192c15' class='xr-section-summary-in' type='checkbox'  ><label for='section-f632caf6-17c7-4c78-b5af-cf83e1192c15' class='xr-section-summary' >Attributes: <span>(27)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>grid_mapping :</span></dt><dd>goes_imager_projection</dd><dt><span>scene_id :</span></dt><dd>Full Disk</dd><dt><span>orbital_parameters :</span></dt><dd>{&#x27;projection_longitude&#x27;: -75.0, &#x27;projection_latitude&#x27;: 0.0, &#x27;projection_altitude&#x27;: 35786023.0, &#x27;satellite_nominal_latitude&#x27;: 0.0, &#x27;satellite_nominal_longitude&#x27;: -75.19999694824219, &#x27;satellite_nominal_altitude&#x27;: 35786023.4375, &#x27;yaw_flip&#x27;: False}</dd><dt><span>standard_name :</span></dt><dd>airmass</dd><dt><span>sensor :</span></dt><dd>abi</dd><dt><span>end_time :</span></dt><dd>2021-04-09 23:59:49</dd><dt><span>resolution :</span></dt><dd>2000</dd><dt><span>reader :</span></dt><dd>abi_l1b</dd><dt><span>platform_name :</span></dt><dd>GOES-16</dd><dt><span>platform_shortname :</span></dt><dd>G16</dd><dt><span>instrument_ID :</span></dt><dd>FM1</dd><dt><span>observation_type :</span></dt><dd>Rad</dd><dt><span>area :</span></dt><dd>Area ID: GOES-East
+      dtype=&#x27;float64&#x27;, name=&#x27;x&#x27;, length=5424))</pre></div></li><li class='xr-var-item'><div class='xr-index-name'><div>bands</div></div><div class='xr-index-preview'>PandasIndex</div><input type='checkbox' disabled/><label></label><input id='index-d4bfa023-6ff6-47b0-9034-39b77152f1cd' class='xr-index-data-in' type='checkbox'/><label for='index-d4bfa023-6ff6-47b0-9034-39b77152f1cd' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([&#x27;R&#x27;, &#x27;G&#x27;, &#x27;B&#x27;], dtype=&#x27;object&#x27;, name=&#x27;bands&#x27;))</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-fb3b75fa-295e-40f8-a26e-1cd94642915f' class='xr-section-summary-in' type='checkbox'  ><label for='section-fb3b75fa-295e-40f8-a26e-1cd94642915f' class='xr-section-summary' >Attributes: <span>(27)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>cell_methods :</span></dt><dd>t: point area: point</dd><dt><span>orbital_slot :</span></dt><dd>GOES-East</dd><dt><span>observation_type :</span></dt><dd>Rad</dd><dt><span>resolution :</span></dt><dd>2000</dd><dt><span>sensor :</span></dt><dd>abi</dd><dt><span>platform_shortname :</span></dt><dd>G16</dd><dt><span>area :</span></dt><dd>Area ID: GOES-East
 Description: 2km at nadir
 Projection ID: abi_fixed_grid
 Projection: {&#x27;ellps&#x27;: &#x27;GRS80&#x27;, &#x27;h&#x27;: &#x27;35786023&#x27;, &#x27;lon_0&#x27;: &#x27;-75&#x27;, &#x27;no_defs&#x27;: &#x27;None&#x27;, &#x27;proj&#x27;: &#x27;geos&#x27;, &#x27;sweep&#x27;: &#x27;x&#x27;, &#x27;type&#x27;: &#x27;crs&#x27;, &#x27;units&#x27;: &#x27;m&#x27;, &#x27;x_0&#x27;: &#x27;0&#x27;, &#x27;y_0&#x27;: &#x27;0&#x27;}
 Number of columns: 5424
 Number of rows: 5424
-Area extent: (np.float64(-5434894.8851), np.float64(-5434894.8851), np.float64(5434894.8851), np.float64(5434894.8851))</dd><dt><span>cell_methods :</span></dt><dd>t: point area: point</dd><dt><span>start_time :</span></dt><dd>2021-04-09 23:50:17.100000</dd><dt><span>scan_mode :</span></dt><dd>M6</dd><dt><span>production_site :</span></dt><dd>WCDAS</dd><dt><span>orbital_slot :</span></dt><dd>GOES-East</dd><dt><span>long_name :</span></dt><dd>Brightness Temperature</dd><dt><span>ancillary_variables :</span></dt><dd>[]</dd><dt><span>scene_abbr :</span></dt><dd>F</dd><dt><span>wavelength :</span></dt><dd>None</dd><dt><span>name :</span></dt><dd>airmass</dd><dt><span>_satpy_id :</span></dt><dd>DataID(name=&#x27;airmass&#x27;, resolution=2000)</dd><dt><span>prerequisites :</span></dt><dd>[DataQuery(name=&#x27;_airmass_dep_0&#x27;), DataQuery(name=&#x27;_airmass_dep_1&#x27;), DataQuery(name=&#x27;C08&#x27;)]</dd><dt><span>optional_prerequisites :</span></dt><dd>[]</dd><dt><span>mode :</span></dt><dd>RGB</dd></dl></div></li></ul></div></div></div></div>
+Area extent: (np.float64(-5434894.8851), np.float64(-5434894.8851), np.float64(5434894.8851), np.float64(5434894.8851))</dd><dt><span>instrument_ID :</span></dt><dd>FM1</dd><dt><span>scene_id :</span></dt><dd>Full Disk</dd><dt><span>scan_mode :</span></dt><dd>M6</dd><dt><span>start_time :</span></dt><dd>2021-04-09 23:50:17.100000</dd><dt><span>ancillary_variables :</span></dt><dd>[]</dd><dt><span>scene_abbr :</span></dt><dd>F</dd><dt><span>platform_name :</span></dt><dd>GOES-16</dd><dt><span>reader :</span></dt><dd>abi_l1b</dd><dt><span>grid_mapping :</span></dt><dd>goes_imager_projection</dd><dt><span>end_time :</span></dt><dd>2021-04-09 23:59:49</dd><dt><span>standard_name :</span></dt><dd>airmass</dd><dt><span>long_name :</span></dt><dd>Brightness Temperature</dd><dt><span>production_site :</span></dt><dd>WCDAS</dd><dt><span>orbital_parameters :</span></dt><dd>{&#x27;projection_longitude&#x27;: -75.0, &#x27;projection_latitude&#x27;: 0.0, &#x27;projection_altitude&#x27;: 35786023.0, &#x27;satellite_nominal_latitude&#x27;: 0.0, &#x27;satellite_nominal_longitude&#x27;: -75.19999694824219, &#x27;satellite_nominal_altitude&#x27;: 35786023.4375, &#x27;yaw_flip&#x27;: False}</dd><dt><span>wavelength :</span></dt><dd>None</dd><dt><span>name :</span></dt><dd>airmass</dd><dt><span>_satpy_id :</span></dt><dd>DataID(name=&#x27;airmass&#x27;, resolution=2000)</dd><dt><span>prerequisites :</span></dt><dd>[DataQuery(name=&#x27;_airmass_dep_0&#x27;), DataQuery(name=&#x27;_airmass_dep_1&#x27;), DataQuery(name=&#x27;C08&#x27;)]</dd><dt><span>optional_prerequisites :</span></dt><dd>[]</dd><dt><span>mode :</span></dt><dd>RGB</dd></dl></div></li></ul></div></div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1305,22 +1499,22 @@ Area extent: (np.float64(-5434894.8851), np.float64(-5434894.8851), np.float64(5
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[DataID(name=&#39;C01&#39;, wavelength=WavelengthRange(min=0.45, central=0.47, max=0.49, unit=&#39;µm&#39;), resolution=1000, calibration=&lt;1&gt;, modifiers=()),
- DataID(name=&#39;C02&#39;, wavelength=WavelengthRange(min=0.59, central=0.64, max=0.69, unit=&#39;µm&#39;), resolution=500, calibration=&lt;1&gt;, modifiers=()),
- DataID(name=&#39;C03&#39;, wavelength=WavelengthRange(min=0.8455, central=0.865, max=0.8845, unit=&#39;µm&#39;), resolution=1000, calibration=&lt;1&gt;, modifiers=()),
- DataID(name=&#39;C04&#39;, wavelength=WavelengthRange(min=1.3705, central=1.378, max=1.3855, unit=&#39;µm&#39;), resolution=2000, calibration=&lt;1&gt;, modifiers=()),
- DataID(name=&#39;C05&#39;, wavelength=WavelengthRange(min=1.58, central=1.61, max=1.64, unit=&#39;µm&#39;), resolution=1000, calibration=&lt;1&gt;, modifiers=()),
- DataID(name=&#39;C06&#39;, wavelength=WavelengthRange(min=2.225, central=2.25, max=2.275, unit=&#39;µm&#39;), resolution=2000, calibration=&lt;1&gt;, modifiers=()),
- DataID(name=&#39;C07&#39;, wavelength=WavelengthRange(min=3.8, central=3.9, max=4.0, unit=&#39;µm&#39;), resolution=2000, calibration=&lt;2&gt;, modifiers=()),
- DataID(name=&#39;C08&#39;, wavelength=WavelengthRange(min=5.77, central=6.185, max=6.6, unit=&#39;µm&#39;), resolution=2000, calibration=&lt;2&gt;, modifiers=()),
- DataID(name=&#39;C09&#39;, wavelength=WavelengthRange(min=6.75, central=6.95, max=7.15, unit=&#39;µm&#39;), resolution=2000, calibration=&lt;2&gt;, modifiers=()),
- DataID(name=&#39;C10&#39;, wavelength=WavelengthRange(min=7.24, central=7.34, max=7.44, unit=&#39;µm&#39;), resolution=2000, calibration=&lt;2&gt;, modifiers=()),
- DataID(name=&#39;C11&#39;, wavelength=WavelengthRange(min=8.3, central=8.5, max=8.7, unit=&#39;µm&#39;), resolution=2000, calibration=&lt;2&gt;, modifiers=()),
- DataID(name=&#39;C12&#39;, wavelength=WavelengthRange(min=9.42, central=9.61, max=9.8, unit=&#39;µm&#39;), resolution=2000, calibration=&lt;2&gt;, modifiers=()),
- DataID(name=&#39;C13&#39;, wavelength=WavelengthRange(min=10.1, central=10.35, max=10.6, unit=&#39;µm&#39;), resolution=2000, calibration=&lt;2&gt;, modifiers=()),
- DataID(name=&#39;C14&#39;, wavelength=WavelengthRange(min=10.8, central=11.2, max=11.6, unit=&#39;µm&#39;), resolution=2000, calibration=&lt;2&gt;, modifiers=()),
- DataID(name=&#39;C15&#39;, wavelength=WavelengthRange(min=11.8, central=12.3, max=12.8, unit=&#39;µm&#39;), resolution=2000, calibration=&lt;2&gt;, modifiers=()),
- DataID(name=&#39;C16&#39;, wavelength=WavelengthRange(min=13.0, central=13.3, max=13.6, unit=&#39;µm&#39;), resolution=2000, calibration=&lt;2&gt;, modifiers=()),
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[DataID(name=&#39;C01&#39;, wavelength=WavelengthRange(min=0.45, central=0.47, max=0.49, unit=&#39;µm&#39;), resolution=1000, calibration=&lt;calibration.reflectance&gt;, modifiers=()),
+ DataID(name=&#39;C02&#39;, wavelength=WavelengthRange(min=0.59, central=0.64, max=0.69, unit=&#39;µm&#39;), resolution=500, calibration=&lt;calibration.reflectance&gt;, modifiers=()),
+ DataID(name=&#39;C03&#39;, wavelength=WavelengthRange(min=0.8455, central=0.865, max=0.8845, unit=&#39;µm&#39;), resolution=1000, calibration=&lt;calibration.reflectance&gt;, modifiers=()),
+ DataID(name=&#39;C04&#39;, wavelength=WavelengthRange(min=1.3705, central=1.378, max=1.3855, unit=&#39;µm&#39;), resolution=2000, calibration=&lt;calibration.reflectance&gt;, modifiers=()),
+ DataID(name=&#39;C05&#39;, wavelength=WavelengthRange(min=1.58, central=1.61, max=1.64, unit=&#39;µm&#39;), resolution=1000, calibration=&lt;calibration.reflectance&gt;, modifiers=()),
+ DataID(name=&#39;C06&#39;, wavelength=WavelengthRange(min=2.225, central=2.25, max=2.275, unit=&#39;µm&#39;), resolution=2000, calibration=&lt;calibration.reflectance&gt;, modifiers=()),
+ DataID(name=&#39;C07&#39;, wavelength=WavelengthRange(min=3.8, central=3.9, max=4.0, unit=&#39;µm&#39;), resolution=2000, calibration=&lt;calibration.brightness_temperature&gt;, modifiers=()),
+ DataID(name=&#39;C08&#39;, wavelength=WavelengthRange(min=5.77, central=6.185, max=6.6, unit=&#39;µm&#39;), resolution=2000, calibration=&lt;calibration.brightness_temperature&gt;, modifiers=()),
+ DataID(name=&#39;C09&#39;, wavelength=WavelengthRange(min=6.75, central=6.95, max=7.15, unit=&#39;µm&#39;), resolution=2000, calibration=&lt;calibration.brightness_temperature&gt;, modifiers=()),
+ DataID(name=&#39;C10&#39;, wavelength=WavelengthRange(min=7.24, central=7.34, max=7.44, unit=&#39;µm&#39;), resolution=2000, calibration=&lt;calibration.brightness_temperature&gt;, modifiers=()),
+ DataID(name=&#39;C11&#39;, wavelength=WavelengthRange(min=8.3, central=8.5, max=8.7, unit=&#39;µm&#39;), resolution=2000, calibration=&lt;calibration.brightness_temperature&gt;, modifiers=()),
+ DataID(name=&#39;C12&#39;, wavelength=WavelengthRange(min=9.42, central=9.61, max=9.8, unit=&#39;µm&#39;), resolution=2000, calibration=&lt;calibration.brightness_temperature&gt;, modifiers=()),
+ DataID(name=&#39;C13&#39;, wavelength=WavelengthRange(min=10.1, central=10.35, max=10.6, unit=&#39;µm&#39;), resolution=2000, calibration=&lt;calibration.brightness_temperature&gt;, modifiers=()),
+ DataID(name=&#39;C14&#39;, wavelength=WavelengthRange(min=10.8, central=11.2, max=11.6, unit=&#39;µm&#39;), resolution=2000, calibration=&lt;calibration.brightness_temperature&gt;, modifiers=()),
+ DataID(name=&#39;C15&#39;, wavelength=WavelengthRange(min=11.8, central=12.3, max=12.8, unit=&#39;µm&#39;), resolution=2000, calibration=&lt;calibration.brightness_temperature&gt;, modifiers=()),
+ DataID(name=&#39;C16&#39;, wavelength=WavelengthRange(min=13.0, central=13.3, max=13.6, unit=&#39;µm&#39;), resolution=2000, calibration=&lt;calibration.brightness_temperature&gt;, modifiers=()),
  DataID(name=&#39;airmass&#39;, resolution=2000)]
 </pre></div>
 </div>
@@ -1496,7 +1690,7 @@ Projection ID: abi_fixed_grid
 Projection: {&#x27;ellps&#x27;: &#x27;GRS80&#x27;, &#x27;h&#x27;: &#x27;35786023&#x27;, &#x27;lon_0&#x27;: &#x27;-75&#x27;, &#x27;no_defs&#x27;: &#x27;None&#x27;, &#x27;proj&#x27;: &#x27;geos&#x27;, &#x27;sweep&#x27;: &#x27;x&#x27;, &#x27;type&#x27;: &#x27;crs&#x27;, &#x27;units&#x27;: &#x27;m&#x27;, &#x27;x_0&#x27;: &#x27;0&#x27;, &#x27;y_0&#x27;: &#x27;0&#x27;}
 Number of columns: 5424
 Number of rows: 5424
-Area extent: (np.float64(-5434894.8851), np.float64(-5434894.8851), np.float64(5434894.8851), np.float64(5434894.8851))</pre><div class='pyresample-wrap' style='display:none'><div class='pyresample-header'><div class='pyresample-obj-type'>pyresample.AreaDefinition</div></div><div class='pyresample-area-sections'><div class='pyresample-area-section-item'><input id='section-3882806d-f797-40ca-abe9-83319abec6d6' class='pyresample-area-section-in' type='checkbox'  checked><label for='section-3882806d-f797-40ca-abe9-83319abec6d6'  title='Expand/collapse section'><svg class='icon pyresample-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg> Properties</label><div class='pyresample-area-section-preview'></div><div class='pyresample-area-section-details'><dl><dt>Area name</dt><dd>GOES-East</dd><dt>Description</dt><dd>2km at nadir</dd><dt>Projection</dt><dd>{'ellps': 'GRS80', 'h': '35786023', 'lon_0': '-75', 'no_defs': 'None', 'proj': 'geos', 'sweep': 'x', 'type': 'crs', 'units': 'm', 'x_0': '0', 'y_0': '0'}</dd><dt>Width/Height</dt><dd>5424/5424 Pixel</dd><dt>Resolution x/y (SSP)</dt><dd>2004.0/2004.0 m</dd><dt>Extent (ll_x, ll_y, ur_x, ur_y)</dt><dd>(-5434894.8851, -5434894.8851, 5434894.8851, 5434894.8851)</dd></dl></div></div><div class='pyresample-area-section-item'><input id='section-bc6d876f-1813-4721-abe1-2dbe04369393' class='pyresample-area-section-in' type='checkbox'  ><label for='section-bc6d876f-1813-4721-abe1-2dbe04369393'  title='Expand/collapse section'><svg class='icon pyresample-icon-globe'><use xlink:href='#icon-globe'></use></svg> Map</label><div class='pyresample-area-section-preview'></div><div class='pyresample-area-section-details'>Note: If cartopy is installed a display of the area can be seen here</div></div></div></div></div>
+Area extent: (np.float64(-5434894.8851), np.float64(-5434894.8851), np.float64(5434894.8851), np.float64(5434894.8851))</pre><div class='pyresample-wrap' style='display:none'><div class='pyresample-header'><div class='pyresample-obj-type'>pyresample.AreaDefinition</div></div><div class='pyresample-area-sections'><div class='pyresample-area-section-item'><input id='section-4e4ecec6-f2ed-4893-a699-96390b3295d2' class='pyresample-area-section-in' type='checkbox'  checked><label for='section-4e4ecec6-f2ed-4893-a699-96390b3295d2'  title='Expand/collapse section'><svg class='icon pyresample-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg> Properties</label><div class='pyresample-area-section-preview'></div><div class='pyresample-area-section-details'><dl><dt>Area name</dt><dd>GOES-East</dd><dt>Description</dt><dd>2km at nadir</dd><dt>Projection</dt><dd>{'ellps': 'GRS80', 'h': '35786023', 'lon_0': '-75', 'no_defs': 'None', 'proj': 'geos', 'sweep': 'x', 'type': 'crs', 'units': 'm', 'x_0': '0', 'y_0': '0'}</dd><dt>Width/Height</dt><dd>5424/5424 Pixel</dd><dt>Resolution x/y (SSP)</dt><dd>2004.0/2004.0 m</dd><dt>Extent (ll_x, ll_y, ur_x, ur_y)</dt><dd>(-5434894.8851, -5434894.8851, 5434894.8851, 5434894.8851)</dd></dl></div></div><div class='pyresample-area-section-item'><input id='section-148db3b2-ec2d-4ad7-949f-78162e630dd5' class='pyresample-area-section-in' type='checkbox'  ><label for='section-148db3b2-ec2d-4ad7-949f-78162e630dd5'  title='Expand/collapse section'><svg class='icon pyresample-icon-globe'><use xlink:href='#icon-globe'></use></svg> Map</label><div class='pyresample-area-section-preview'></div><div class='pyresample-area-section-details'>Note: If cartopy is installed a display of the area can be seen here</div></div></div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1668,7 +1862,7 @@ Projection ID: abi_fixed_grid
 Projection: {&#x27;ellps&#x27;: &#x27;GRS80&#x27;, &#x27;h&#x27;: &#x27;35786023&#x27;, &#x27;lon_0&#x27;: &#x27;-75&#x27;, &#x27;no_defs&#x27;: &#x27;None&#x27;, &#x27;proj&#x27;: &#x27;geos&#x27;, &#x27;sweep&#x27;: &#x27;x&#x27;, &#x27;type&#x27;: &#x27;crs&#x27;, &#x27;units&#x27;: &#x27;m&#x27;, &#x27;x_0&#x27;: &#x27;0&#x27;, &#x27;y_0&#x27;: &#x27;0&#x27;}
 Number of columns: 10848
 Number of rows: 10848
-Area extent: (np.float64(-5434894.8851), np.float64(-5434894.8851), np.float64(5434894.8851), np.float64(5434894.8851))</pre><div class='pyresample-wrap' style='display:none'><div class='pyresample-header'><div class='pyresample-obj-type'>pyresample.AreaDefinition</div></div><div class='pyresample-area-sections'><div class='pyresample-area-section-item'><input id='section-9eb2bd11-cf17-4b24-b7b3-b604ace66e5a' class='pyresample-area-section-in' type='checkbox'  checked><label for='section-9eb2bd11-cf17-4b24-b7b3-b604ace66e5a'  title='Expand/collapse section'><svg class='icon pyresample-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg> Properties</label><div class='pyresample-area-section-preview'></div><div class='pyresample-area-section-details'><dl><dt>Area name</dt><dd>GOES-East</dd><dt>Description</dt><dd>1km at nadir</dd><dt>Projection</dt><dd>{'ellps': 'GRS80', 'h': '35786023', 'lon_0': '-75', 'no_defs': 'None', 'proj': 'geos', 'sweep': 'x', 'type': 'crs', 'units': 'm', 'x_0': '0', 'y_0': '0'}</dd><dt>Width/Height</dt><dd>10848/10848 Pixel</dd><dt>Resolution x/y (SSP)</dt><dd>1002.0/1002.0 m</dd><dt>Extent (ll_x, ll_y, ur_x, ur_y)</dt><dd>(-5434894.8851, -5434894.8851, 5434894.8851, 5434894.8851)</dd></dl></div></div><div class='pyresample-area-section-item'><input id='section-ab058b70-6206-4d38-81ec-e66b75cdecc3' class='pyresample-area-section-in' type='checkbox'  ><label for='section-ab058b70-6206-4d38-81ec-e66b75cdecc3'  title='Expand/collapse section'><svg class='icon pyresample-icon-globe'><use xlink:href='#icon-globe'></use></svg> Map</label><div class='pyresample-area-section-preview'></div><div class='pyresample-area-section-details'>Note: If cartopy is installed a display of the area can be seen here</div></div></div></div></div>
+Area extent: (np.float64(-5434894.8851), np.float64(-5434894.8851), np.float64(5434894.8851), np.float64(5434894.8851))</pre><div class='pyresample-wrap' style='display:none'><div class='pyresample-header'><div class='pyresample-obj-type'>pyresample.AreaDefinition</div></div><div class='pyresample-area-sections'><div class='pyresample-area-section-item'><input id='section-817b76f1-a457-4e12-8c0b-3a701e9a4216' class='pyresample-area-section-in' type='checkbox'  checked><label for='section-817b76f1-a457-4e12-8c0b-3a701e9a4216'  title='Expand/collapse section'><svg class='icon pyresample-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg> Properties</label><div class='pyresample-area-section-preview'></div><div class='pyresample-area-section-details'><dl><dt>Area name</dt><dd>GOES-East</dd><dt>Description</dt><dd>1km at nadir</dd><dt>Projection</dt><dd>{'ellps': 'GRS80', 'h': '35786023', 'lon_0': '-75', 'no_defs': 'None', 'proj': 'geos', 'sweep': 'x', 'type': 'crs', 'units': 'm', 'x_0': '0', 'y_0': '0'}</dd><dt>Width/Height</dt><dd>10848/10848 Pixel</dd><dt>Resolution x/y (SSP)</dt><dd>1002.0/1002.0 m</dd><dt>Extent (ll_x, ll_y, ur_x, ur_y)</dt><dd>(-5434894.8851, -5434894.8851, 5434894.8851, 5434894.8851)</dd></dl></div></div><div class='pyresample-area-section-item'><input id='section-d29bcf0a-f087-431c-9b4a-b8887571a364' class='pyresample-area-section-in' type='checkbox'  ><label for='section-d29bcf0a-f087-431c-9b4a-b8887571a364'  title='Expand/collapse section'><svg class='icon pyresample-icon-globe'><use xlink:href='#icon-globe'></use></svg> Map</label><div class='pyresample-area-section-preview'></div><div class='pyresample-area-section-details'>Note: If cartopy is installed a display of the area can be seen here</div></div></div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1840,7 +2034,7 @@ Projection ID: abi_fixed_grid
 Projection: {&#x27;ellps&#x27;: &#x27;GRS80&#x27;, &#x27;h&#x27;: &#x27;35786023&#x27;, &#x27;lon_0&#x27;: &#x27;-75&#x27;, &#x27;no_defs&#x27;: &#x27;None&#x27;, &#x27;proj&#x27;: &#x27;geos&#x27;, &#x27;sweep&#x27;: &#x27;x&#x27;, &#x27;type&#x27;: &#x27;crs&#x27;, &#x27;units&#x27;: &#x27;m&#x27;, &#x27;x_0&#x27;: &#x27;0&#x27;, &#x27;y_0&#x27;: &#x27;0&#x27;}
 Number of columns: 21696
 Number of rows: 21696
-Area extent: (np.float64(-5434894.8851), np.float64(-5434894.8851), np.float64(5434894.8851), np.float64(5434894.8851))</pre><div class='pyresample-wrap' style='display:none'><div class='pyresample-header'><div class='pyresample-obj-type'>pyresample.AreaDefinition</div></div><div class='pyresample-area-sections'><div class='pyresample-area-section-item'><input id='section-99d106d5-3283-466b-ab7b-eacb3e7d2287' class='pyresample-area-section-in' type='checkbox'  checked><label for='section-99d106d5-3283-466b-ab7b-eacb3e7d2287'  title='Expand/collapse section'><svg class='icon pyresample-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg> Properties</label><div class='pyresample-area-section-preview'></div><div class='pyresample-area-section-details'><dl><dt>Area name</dt><dd>GOES-East</dd><dt>Description</dt><dd>0.5km at nadir</dd><dt>Projection</dt><dd>{'ellps': 'GRS80', 'h': '35786023', 'lon_0': '-75', 'no_defs': 'None', 'proj': 'geos', 'sweep': 'x', 'type': 'crs', 'units': 'm', 'x_0': '0', 'y_0': '0'}</dd><dt>Width/Height</dt><dd>21696/21696 Pixel</dd><dt>Resolution x/y (SSP)</dt><dd>501.0/501.0 m</dd><dt>Extent (ll_x, ll_y, ur_x, ur_y)</dt><dd>(-5434894.8851, -5434894.8851, 5434894.8851, 5434894.8851)</dd></dl></div></div><div class='pyresample-area-section-item'><input id='section-39d8a44c-c43f-43ac-a975-4f5917632adf' class='pyresample-area-section-in' type='checkbox'  ><label for='section-39d8a44c-c43f-43ac-a975-4f5917632adf'  title='Expand/collapse section'><svg class='icon pyresample-icon-globe'><use xlink:href='#icon-globe'></use></svg> Map</label><div class='pyresample-area-section-preview'></div><div class='pyresample-area-section-details'>Note: If cartopy is installed a display of the area can be seen here</div></div></div></div></div>
+Area extent: (np.float64(-5434894.8851), np.float64(-5434894.8851), np.float64(5434894.8851), np.float64(5434894.8851))</pre><div class='pyresample-wrap' style='display:none'><div class='pyresample-header'><div class='pyresample-obj-type'>pyresample.AreaDefinition</div></div><div class='pyresample-area-sections'><div class='pyresample-area-section-item'><input id='section-8a64135b-08d7-41ed-bb8e-445b431b3aa9' class='pyresample-area-section-in' type='checkbox'  checked><label for='section-8a64135b-08d7-41ed-bb8e-445b431b3aa9'  title='Expand/collapse section'><svg class='icon pyresample-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg> Properties</label><div class='pyresample-area-section-preview'></div><div class='pyresample-area-section-details'><dl><dt>Area name</dt><dd>GOES-East</dd><dt>Description</dt><dd>0.5km at nadir</dd><dt>Projection</dt><dd>{'ellps': 'GRS80', 'h': '35786023', 'lon_0': '-75', 'no_defs': 'None', 'proj': 'geos', 'sweep': 'x', 'type': 'crs', 'units': 'm', 'x_0': '0', 'y_0': '0'}</dd><dt>Width/Height</dt><dd>21696/21696 Pixel</dd><dt>Resolution x/y (SSP)</dt><dd>501.0/501.0 m</dd><dt>Extent (ll_x, ll_y, ur_x, ur_y)</dt><dd>(-5434894.8851, -5434894.8851, 5434894.8851, 5434894.8851)</dd></dl></div></div><div class='pyresample-area-section-item'><input id='section-0cb878ed-5fce-4e1e-b303-ed90317c04fe' class='pyresample-area-section-in' type='checkbox'  ><label for='section-0cb878ed-5fce-4e1e-b303-ed90317c04fe'  title='Expand/collapse section'><svg class='icon pyresample-icon-globe'><use xlink:href='#icon-globe'></use></svg> Map</label><div class='pyresample-area-section-preview'></div><div class='pyresample-area-section-details'>Note: If cartopy is installed a display of the area can be seen here</div></div></div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1892,21 +2086,20 @@ Area extent: (np.float64(-5434894.8851), np.float64(-5434894.8851), np.float64(5
 <span class="c1"># The &#39;natural_color&#39; composite is designed to mimic the colors visible to the human eye by combining specific spectral bands.</span>
 <span class="c1"># Loading this dataset into the resampled scene (&#39;lscn&#39;) ensures that the data is properly aligned and standardized across the same geographic area.</span>
 
-<span class="n">lscn</span><span class="o">.</span><span class="n">load</span><span class="p">([</span><span class="s2">&quot;natural_color&quot;</span><span class="p">])</span>
+<span class="c1">### Uncomment to show it</span>
+<span class="c1">#lscn.load([&quot;natural_color&quot;])</span>
 
 <span class="c1"># Display the &quot;natural_color&quot; dataset.</span>
 <span class="c1"># This step involves visualizing the loaded dataset using the &#39;show&#39; method, which renders the satellite image according to the data&#39;s true or natural color representation.</span>
 <span class="c1"># Visualizing data in this way is particularly useful for presentations and educational purposes, providing a realistic view of earth&#39;s features such as vegetation, water bodies, and urban areas.</span>
 
-<span class="n">lscn</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;natural_color&quot;</span><span class="p">)</span>
+<span class="c1">### Uncomment to show it</span>
+<span class="c1">#lscn.show(&quot;natural_color&quot;)</span>
 
 <span class="c1"># This visualization step is crucial for analyzing environmental and atmospheric conditions,</span>
 <span class="c1"># as it allows observers to easily identify and assess visible features without the need for specialized image interpretation skills.</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../_images/0f12d16aba074a7142bb0c6282904e809420c47d8f4825d29176a5a37a4b5df2.png" src="../_images/0f12d16aba074a7142bb0c6282904e809420c47d8f4825d29176a5a37a4b5df2.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1920,16 +2113,15 @@ Area extent: (np.float64(-5434894.8851), np.float64(-5434894.8851), np.float64(5
 <span class="c1"># The &quot;C13&quot; channel typically represents an infrared wavelength used for observing cloud structure and surface temperature,</span>
 <span class="c1"># crucial for meteorological studies and weather forecasting.</span>
 <span class="c1"># Displaying this dataset allows for detailed observation of atmospheric conditions within the specified geographic area.</span>
-<span class="n">scn_c1</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;C13&quot;</span><span class="p">)</span>
+
+<span class="c1">### Uncomment to show it</span>
+<span class="c1">#scn_c1.show(&quot;C13&quot;)</span>
 
 <span class="c1"># Visualizing specific channels like &quot;C13&quot; in defined geographic regions helps in targeted analysis,</span>
 <span class="c1"># such as monitoring storm development or evaluating climate patterns in detail.</span>
 <span class="c1"># This capability is particularly valuable in educational settings for demonstrating real-world applications of satellite data analysis.</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../_images/f7fb6c07a868358bdabb0a5d0d1cf1eb6b192bda6839bfe0606706f0c62b8b19.png" src="../_images/f7fb6c07a868358bdabb0a5d0d1cf1eb6b192bda6839bfe0606706f0c62b8b19.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1943,15 +2135,14 @@ Area extent: (np.float64(-5434894.8851), np.float64(-5434894.8851), np.float64(5
 <span class="c1"># Display the &quot;ash&quot; dataset from the cropped scene (scn_c1).</span>
 <span class="c1"># Displaying this dataset allows for visual assessment of ash presence within the specified geographic area.</span>
 <span class="c1"># The visualization is particularly useful in educational and operational settings for demonstrating how satellite data can be applied to real-world environmental challenges.</span>
-<span class="n">scn_c1</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s1">&#39;ash&#39;</span><span class="p">)</span>
+
+<span class="c1">### Uncomment to show it</span>
+<span class="c1">#scn_c1.show(&#39;ash&#39;)</span>
 
 <span class="c1"># This step not only aids in the educational demonstration of satellite capabilities but also provides practical insights into the management of natural disasters.</span>
 <span class="c1"># Such visualizations are essential tools in emergency response planning and environmental monitoring.</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../_images/80e6992dfb9aa27164a8aad7830cfa9a423f39e540b940a66a2997c56b5ef7ef.png" src="../_images/80e6992dfb9aa27164a8aad7830cfa9a423f39e540b940a66a2997c56b5ef7ef.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1964,15 +2155,14 @@ Area extent: (np.float64(-5434894.8851), np.float64(-5434894.8851), np.float64(5
 <span class="c1"># Display the &quot;so2&quot; dataset from the cropped scene (scn_c1).</span>
 <span class="c1"># Displaying this dataset allows for a visual assessment of SO2 distribution within the specified geographic area.</span>
 <span class="c1"># The visualization helps in understanding the spatial extent and concentration of sulfur dioxide, which is essential for both environmental and public health assessments.</span>
-<span class="n">scn_c1</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s1">&#39;so2&#39;</span><span class="p">)</span>
+
+<span class="c1">### Uncomment to show it</span>
+<span class="c1">#scn_c1.show(&#39;so2&#39;)</span>
 
 <span class="c1"># This step not only aids in the educational demonstration of how satellite imagery can be utilized to monitor environmental pollutants but also provides practical insights into the management of air quality.</span>
 <span class="c1"># Such visualizations are valuable tools for researchers, policymakers, and educators in understanding and addressing atmospheric pollution.</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../_images/21f12ad04e2db8ebf876ec97f38fbec7518dcfe6b21f1ed97aebd7a071b58d31.png" src="../_images/21f12ad04e2db8ebf876ec97f38fbec7518dcfe6b21f1ed97aebd7a071b58d31.png" />
 </div>
 </div>
 <section id="a-content-subsection">
@@ -2004,8 +2194,8 @@ Area extent: (np.float64(-5434894.8851), np.float64(-5434894.8851), np.float64(5
 <section id="header-levels">
 <h6>header levels<a class="headerlink" href="#header-levels" title="Link to this heading"><i class="fas fa-link"></i></a></h6>
 <p>as well <span class="math notranslate nohighlight">\(m = a * t / h\)</span> text! Similarly, you have access to other <span class="math notranslate nohighlight">\(\LaTeX\)</span> equation <a class="reference external" href="https://jupyter-notebook.readthedocs.io/en/stable/examples/Notebook/Typesetting%20Equations.html"><strong>functionality</strong></a> via MathJax (demo below from link),</p>
-<div class="amsmath math notranslate nohighlight" id="equation-bc857029-78f6-4aba-b7e7-b426c2881790">
-<span class="eqno">()<a class="headerlink" href="#equation-bc857029-78f6-4aba-b7e7-b426c2881790" title="Permalink to this equation"><i class="fas fa-link"></i></a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-96621dce-0359-4ec2-9854-6b42df2dfbea">
+<span class="eqno">(2)<a class="headerlink" href="#equation-96621dce-0359-4ec2-9854-6b42df2dfbea" title="Permalink to this equation"><i class="fas fa-link"></i></a></span>\[\begin{align}
 \dot{x} &amp; = \sigma(y-x) \\
 \dot{y} &amp; = \rho x - y - xz \\
 \dot{z} &amp; = -\beta z + xy
@@ -2115,6 +2305,24 @@ Negative potential consequences of an action.</p>
                   <footer class="prev-next-footer">
                     
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="01_geosat_ABI_GOES_east.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Advanced Baseline Imager (ABI) data with Satpy</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="02_geosat_ABI_GOES_west.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Advanced Baseline Imager (ABI) data with Satpy</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                   </footer>
                 
@@ -2198,7 +2406,7 @@ Negative potential consequences of an action.</p>
       
       
       
-      <li><a href="https://binder.projectpythia.org/v2/gh/ProjectPythia/cookbook-template/main?urlpath=lab/tree/notebooks/01_geosat_GOESR.ipynb" target="_blank"
+      <li><a href="https://binder.projectpythia.org/v2/gh/ProjectPythia/geostationary-cookbook/main?urlpath=lab/tree/notebooks/01_geosat_GOESR.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch on Binder"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -2229,7 +2437,7 @@ Negative potential consequences of an action.</p>
       
       
       
-      <li><a href="https://github.com/ProjectPythia/cookbook-template" target="_blank"
+      <li><a href="https://github.com/ProjectPythia/geostationary-cookbook" target="_blank"
    class="btn btn-sm btn-source-repository-button dropdown-item"
    title="Source repository"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -2246,7 +2454,7 @@ Negative potential consequences of an action.</p>
       
       
       
-      <li><a href="https://github.com/ProjectPythia/cookbook-template/edit/main/notebooks/01_geosat_GOESR.ipynb" target="_blank"
+      <li><a href="https://github.com/ProjectPythia/geostationary-cookbook/edit/main/notebooks/01_geosat_GOESR.ipynb" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -2263,7 +2471,7 @@ Negative potential consequences of an action.</p>
       
       
       
-      <li><a href="https://github.com/ProjectPythia/cookbook-template/issues/new?title=Issue%20on%20page%20%2Fnotebooks/01_geosat_GOESR.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/ProjectPythia/geostationary-cookbook/issues/new?title=Issue%20on%20page%20%2Fnotebooks/01_geosat_GOESR.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -2393,7 +2601,7 @@ By the <a href="https://projectpythia.org/">Project Pythia</a> Community
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on 16 November 2024.
+  Last updated on 27 November 2024.
   <br/>
 </p>
   </div>
@@ -2427,13 +2635,13 @@ By the <a href="https://projectpythia.org/">Project Pythia</a> Community
     <div class="container-xl">
       <div class="row d-flex flex-wrap align-items-center">
         <div class="d-flex col-lg-3 col-md-4 col-sm-6 p-2 mx-auto">
-          <img alt="NCAR" src="../_images\NSF-NCAR_Lockup-UCAR-Dark_102523.svg" style="width: 100%">
+          <img alt="NCAR" src="../_images/NSF-NCAR_Lockup-UCAR-Dark_102523.svg" style="width: 100%">
         </div>
         <div class="d-flex col-lg-3 col-md-4 col-sm-6 p-2 mx-auto">
-          <img alt="Unidata" src="../_images\Unidata_logo_horizontal_1200x300.svg" style="width: 100%">
+          <img alt="Unidata" src="../_images/Unidata_logo_horizontal_1200x300.svg" style="width: 100%">
         </div>
         <div class="d-flex col-lg-3 col-md-4 col-sm-6 p-2 mx-auto">
-          <img alt="UAlbany" src="../_images\UAlbany-A2-logo-purple-gold.svg" style="width: 100%">
+          <img alt="UAlbany" src="../_images/UAlbany-A2-logo-purple-gold.svg" style="width: 100%">
         </div>
       </div>
     </div>
@@ -2447,7 +2655,7 @@ By the <a href="https://projectpythia.org/">Project Pythia</a> Community
         
           By the <a href="https://projectpythia.org/">Project Pythia</a> Community.
         
-          Last updated on 16 November 2024.
+          Last updated on 27 November 2024.
         </p>
       </div>
     </div>

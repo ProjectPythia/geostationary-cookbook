@@ -80,11 +80,12 @@
     <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Advanced Baseline Imager (ABI) data with Satpy" href="00_geosat_explaining_steps.html" />
     <link rel="prev" title="How to Cite This Cookbook" href="how-to-cite.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
-    <meta name="docbuild:last-update" content="16 November 2024"/>
+    <meta name="docbuild:last-update" content="27 November 2024"/>
   </head>
   
   
@@ -375,6 +376,22 @@
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Introduction</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Project Pythia Notebook Template</a></li>
+<li class="toctree-l1"><a class="reference internal" href="00_geosat_explaining_steps.html">Advanced Baseline Imager (ABI) data with Satpy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01_geosat_ABI_GOES_east.html">Advanced Baseline Imager (ABI) data with Satpy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01_geosat_GOESR.html">Advanced Baseline Imager (ABI) data with Satpy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_geosat_ABI_GOES_west.html">Advanced Baseline Imager (ABI) data with Satpy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03_geosat_AHI_HIMAWARI.html">Advanced Himawari Imager (AHI) data with Satpy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04_geosat_AMI_GK2A.html">Advance Meteorological Imager (AMI) data with Satpy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="99_auxiliar_dowloading.html">This notebook contains example cells to download data.</a></li>
+
+
+
+
+
+
+
+
+
 </ul>
 
     </div>
@@ -521,8 +538,8 @@
 <section id="header-levels">
 <h6>header levels<a class="headerlink" href="#header-levels" title="Link to this heading"><i class="fas fa-link"></i></a></h6>
 <p>as well <span class="math notranslate nohighlight">\(m = a * t / h\)</span> text! Similarly, you have access to other <span class="math notranslate nohighlight">\(\LaTeX\)</span> equation <a class="reference external" href="https://jupyter-notebook.readthedocs.io/en/stable/examples/Notebook/Typesetting%20Equations.html"><strong>functionality</strong></a> via MathJax (demo below from link),</p>
-<div class="amsmath math notranslate nohighlight" id="equation-fe707517-8b40-4d1e-b661-9127f1487206">
-<span class="eqno">(1)<a class="headerlink" href="#equation-fe707517-8b40-4d1e-b661-9127f1487206" title="Permalink to this equation"><i class="fas fa-link"></i></a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-989c61ed-7350-43dd-a6f8-5a7119c72c91">
+<span class="eqno">(1)<a class="headerlink" href="#equation-989c61ed-7350-43dd-a6f8-5a7119c72c91" title="Permalink to this equation"><i class="fas fa-link"></i></a></span>\[\begin{align}
 \dot{x} &amp; = \sigma(y-x) \\
 \dot{y} &amp; = \rho x - y - xz \\
 \dot{z} &amp; = -\beta z + xy
@@ -617,6 +634,15 @@
         <p class="prev-next-title">How to Cite This Cookbook</p>
       </div>
     </a>
+    <a class="right-next"
+       href="00_geosat_explaining_steps.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Advanced Baseline Imager (ABI) data with Satpy</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                   </footer>
                 
@@ -700,7 +726,7 @@
       
       
       
-      <li><a href="https://binder.projectpythia.org/v2/gh/ProjectPythia/cookbook-template/main?urlpath=lab/tree/notebooks/notebook-template.ipynb" target="_blank"
+      <li><a href="https://binder.projectpythia.org/v2/gh/ProjectPythia/geostationary-cookbook/main?urlpath=lab/tree/notebooks/notebook-template.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch on Binder"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -731,7 +757,7 @@
       
       
       
-      <li><a href="https://github.com/ProjectPythia/cookbook-template" target="_blank"
+      <li><a href="https://github.com/ProjectPythia/geostationary-cookbook" target="_blank"
    class="btn btn-sm btn-source-repository-button dropdown-item"
    title="Source repository"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -748,7 +774,7 @@
       
       
       
-      <li><a href="https://github.com/ProjectPythia/cookbook-template/edit/main/notebooks/notebook-template.ipynb" target="_blank"
+      <li><a href="https://github.com/ProjectPythia/geostationary-cookbook/edit/main/notebooks/notebook-template.ipynb" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -765,7 +791,7 @@
       
       
       
-      <li><a href="https://github.com/ProjectPythia/cookbook-template/issues/new?title=Issue%20on%20page%20%2Fnotebooks/notebook-template.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/ProjectPythia/geostationary-cookbook/issues/new?title=Issue%20on%20page%20%2Fnotebooks/notebook-template.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -895,7 +921,7 @@ By the <a href="https://projectpythia.org/">Project Pythia</a> Community
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on 16 November 2024.
+  Last updated on 27 November 2024.
   <br/>
 </p>
   </div>
@@ -929,13 +955,13 @@ By the <a href="https://projectpythia.org/">Project Pythia</a> Community
     <div class="container-xl">
       <div class="row d-flex flex-wrap align-items-center">
         <div class="d-flex col-lg-3 col-md-4 col-sm-6 p-2 mx-auto">
-          <img alt="NCAR" src="../_images\NSF-NCAR_Lockup-UCAR-Dark_102523.svg" style="width: 100%">
+          <img alt="NCAR" src="../_images/NSF-NCAR_Lockup-UCAR-Dark_102523.svg" style="width: 100%">
         </div>
         <div class="d-flex col-lg-3 col-md-4 col-sm-6 p-2 mx-auto">
-          <img alt="Unidata" src="../_images\Unidata_logo_horizontal_1200x300.svg" style="width: 100%">
+          <img alt="Unidata" src="../_images/Unidata_logo_horizontal_1200x300.svg" style="width: 100%">
         </div>
         <div class="d-flex col-lg-3 col-md-4 col-sm-6 p-2 mx-auto">
-          <img alt="UAlbany" src="../_images\UAlbany-A2-logo-purple-gold.svg" style="width: 100%">
+          <img alt="UAlbany" src="../_images/UAlbany-A2-logo-purple-gold.svg" style="width: 100%">
         </div>
       </div>
     </div>
@@ -949,7 +975,7 @@ By the <a href="https://projectpythia.org/">Project Pythia</a> Community
         
           By the <a href="https://projectpythia.org/">Project Pythia</a> Community.
         
-          Last updated on 16 November 2024.
+          Last updated on 27 November 2024.
         </p>
       </div>
     </div>

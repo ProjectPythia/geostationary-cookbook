@@ -78,10 +78,12 @@
     <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Advance Meteorological Imager (AMI) data with Satpy" href="04_geosat_AMI_GK2A.html" />
+    <link rel="prev" title="Advanced Baseline Imager (ABI) data with Satpy" href="02_geosat_ABI_GOES_west.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
-    <meta name="docbuild:last-update" content="16 November 2024"/>
+    <meta name="docbuild:last-update" content="27 November 2024"/>
   </head>
   
   
@@ -236,8 +238,6 @@
         
         
         
-          
-        
         <div class="bd-sidebar-primary bd-sidebar">
           
 
@@ -372,8 +372,24 @@
 <li class="toctree-l1"><a class="reference internal" href="how-to-cite.html">How to Cite This Cookbook</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Introduction</span></p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="notebook-template.html">Project Pythia Notebook Template</a></li>
+<li class="toctree-l1"><a class="reference internal" href="00_geosat_explaining_steps.html">Advanced Baseline Imager (ABI) data with Satpy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01_geosat_ABI_GOES_east.html">Advanced Baseline Imager (ABI) data with Satpy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01_geosat_GOESR.html">Advanced Baseline Imager (ABI) data with Satpy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_geosat_ABI_GOES_west.html">Advanced Baseline Imager (ABI) data with Satpy</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Advanced Himawari Imager (AHI) data with Satpy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04_geosat_AMI_GK2A.html">Advance Meteorological Imager (AMI) data with Satpy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="99_auxiliar_dowloading.html">This notebook contains example cells to download data.</a></li>
+
+
+
+
+
+
+
+
+
 </ul>
 
     </div>
@@ -440,22 +456,22 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;input/HI9_AHI_L1b_JP\\HS_H09_20230815_0430_B01_JP02_R10_S0101.DAT.bz2&#39;,
- &#39;input/HI9_AHI_L1b_JP\\HS_H09_20230815_0430_B02_JP02_R10_S0101.DAT.bz2&#39;,
- &#39;input/HI9_AHI_L1b_JP\\HS_H09_20230815_0430_B03_JP02_R05_S0101.DAT.bz2&#39;,
- &#39;input/HI9_AHI_L1b_JP\\HS_H09_20230815_0430_B04_JP02_R10_S0101.DAT.bz2&#39;,
- &#39;input/HI9_AHI_L1b_JP\\HS_H09_20230815_0430_B05_JP02_R20_S0101.DAT.bz2&#39;,
- &#39;input/HI9_AHI_L1b_JP\\HS_H09_20230815_0430_B06_JP02_R20_S0101.DAT.bz2&#39;,
- &#39;input/HI9_AHI_L1b_JP\\HS_H09_20230815_0430_B07_JP02_R20_S0101.DAT.bz2&#39;,
- &#39;input/HI9_AHI_L1b_JP\\HS_H09_20230815_0430_B08_JP02_R20_S0101.DAT.bz2&#39;,
- &#39;input/HI9_AHI_L1b_JP\\HS_H09_20230815_0430_B09_JP02_R20_S0101.DAT.bz2&#39;,
- &#39;input/HI9_AHI_L1b_JP\\HS_H09_20230815_0430_B10_JP02_R20_S0101.DAT.bz2&#39;,
- &#39;input/HI9_AHI_L1b_JP\\HS_H09_20230815_0430_B11_JP02_R20_S0101.DAT.bz2&#39;,
- &#39;input/HI9_AHI_L1b_JP\\HS_H09_20230815_0430_B12_JP02_R20_S0101.DAT.bz2&#39;,
- &#39;input/HI9_AHI_L1b_JP\\HS_H09_20230815_0430_B13_JP02_R20_S0101.DAT.bz2&#39;,
- &#39;input/HI9_AHI_L1b_JP\\HS_H09_20230815_0430_B14_JP02_R20_S0101.DAT.bz2&#39;,
- &#39;input/HI9_AHI_L1b_JP\\HS_H09_20230815_0430_B15_JP02_R20_S0101.DAT.bz2&#39;,
- &#39;input/HI9_AHI_L1b_JP\\HS_H09_20230815_0430_B16_JP02_R20_S0101.DAT.bz2&#39;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;input/HI9_AHI_L1b_JP/HS_H09_20230815_0430_B11_JP02_R20_S0101.DAT.bz2&#39;,
+ &#39;input/HI9_AHI_L1b_JP/HS_H09_20230815_0430_B01_JP02_R10_S0101.DAT.bz2&#39;,
+ &#39;input/HI9_AHI_L1b_JP/HS_H09_20230815_0430_B07_JP02_R20_S0101.DAT.bz2&#39;,
+ &#39;input/HI9_AHI_L1b_JP/HS_H09_20230815_0430_B04_JP02_R10_S0101.DAT.bz2&#39;,
+ &#39;input/HI9_AHI_L1b_JP/HS_H09_20230815_0430_B12_JP02_R20_S0101.DAT.bz2&#39;,
+ &#39;input/HI9_AHI_L1b_JP/HS_H09_20230815_0430_B09_JP02_R20_S0101.DAT.bz2&#39;,
+ &#39;input/HI9_AHI_L1b_JP/HS_H09_20230815_0430_B16_JP02_R20_S0101.DAT.bz2&#39;,
+ &#39;input/HI9_AHI_L1b_JP/HS_H09_20230815_0430_B10_JP02_R20_S0101.DAT.bz2&#39;,
+ &#39;input/HI9_AHI_L1b_JP/HS_H09_20230815_0430_B14_JP02_R20_S0101.DAT.bz2&#39;,
+ &#39;input/HI9_AHI_L1b_JP/HS_H09_20230815_0430_B13_JP02_R20_S0101.DAT.bz2&#39;,
+ &#39;input/HI9_AHI_L1b_JP/HS_H09_20230815_0430_B15_JP02_R20_S0101.DAT.bz2&#39;,
+ &#39;input/HI9_AHI_L1b_JP/HS_H09_20230815_0430_B06_JP02_R20_S0101.DAT.bz2&#39;,
+ &#39;input/HI9_AHI_L1b_JP/HS_H09_20230815_0430_B05_JP02_R20_S0101.DAT.bz2&#39;,
+ &#39;input/HI9_AHI_L1b_JP/HS_H09_20230815_0430_B08_JP02_R20_S0101.DAT.bz2&#39;,
+ &#39;input/HI9_AHI_L1b_JP/HS_H09_20230815_0430_B02_JP02_R10_S0101.DAT.bz2&#39;,
+ &#39;input/HI9_AHI_L1b_JP/HS_H09_20230815_0430_B03_JP02_R05_S0101.DAT.bz2&#39;]
 </pre></div>
 </div>
 </div>
@@ -506,12 +522,10 @@
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">scn</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">rgb_im</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">### Uncomment to show it</span>
+<span class="c1">#scn.show(rgb_im)</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../_images/77b9dad6480b115fd5d3e64be5c4b24d39b7406517c0683ee1ec02cf053daed8.png" src="../_images/77b9dad6480b115fd5d3e64be5c4b24d39b7406517c0683ee1ec02cf053daed8.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -553,14 +567,14 @@
   --xr-background-color-row-odd: var(--jp-layout-color2, #eeeeee);
 }
 
-html[theme=dark],
-html[data-theme=dark],
-body[data-theme=dark],
+html[theme="dark"],
+html[data-theme="dark"],
+body[data-theme="dark"],
 body.vscode-dark {
   --xr-font-color0: rgba(255, 255, 255, 1);
   --xr-font-color2: rgba(255, 255, 255, 0.54);
   --xr-font-color3: rgba(255, 255, 255, 0.38);
-  --xr-border-color: #1F1F1F;
+  --xr-border-color: #1f1f1f;
   --xr-disabled-color: #515151;
   --xr-background-color: #111111;
   --xr-background-color-row-even: #111111;
@@ -615,6 +629,7 @@ body.vscode-dark {
 .xr-section-item input {
   display: inline-block;
   opacity: 0;
+  height: 0;
 }
 
 .xr-section-item input + label {
@@ -651,7 +666,7 @@ body.vscode-dark {
 
 .xr-section-summary-in + label:before {
   display: inline-block;
-  content: '►';
+  content: "►";
   font-size: 11px;
   width: 15px;
   text-align: center;
@@ -662,7 +677,7 @@ body.vscode-dark {
 }
 
 .xr-section-summary-in:checked + label:before {
-  content: '▼';
+  content: "▼";
 }
 
 .xr-section-summary-in:checked + label > span {
@@ -734,15 +749,15 @@ body.vscode-dark {
 }
 
 .xr-dim-list:before {
-  content: '(';
+  content: "(";
 }
 
 .xr-dim-list:after {
-  content: ')';
+  content: ")";
 }
 
 .xr-dim-list li:not(:last-child):after {
-  content: ',';
+  content: ",";
   padding-right: 5px;
 }
 
@@ -892,7 +907,7 @@ dl.xr-attrs {
   stroke: currentColor;
   fill: currentColor;
 }
-</style><pre class='xr-text-repr-fallback'>&lt;xarray.DataArray &#x27;where-6fd6469b451f9ab08dbe37162251b76c&#x27; (bands: 3, y: 1200,
+</style><pre class='xr-text-repr-fallback'>&lt;xarray.DataArray &#x27;where-9be5842710e517295950728be294cf67&#x27; (bands: 3, y: 1200,
                                                             x: 1500)&gt; Size: 43MB
 dask.array&lt;where, shape=(3, 1200, 1500), dtype=float64, chunksize=(1, 1200, 1375), chunktype=numpy.ndarray&gt;
 Coordinates:
@@ -902,18 +917,18 @@ Coordinates:
   * bands    (bands) &lt;U1 12B &#x27;R&#x27; &#x27;G&#x27; &#x27;B&#x27;
 Attributes: (12/16)
     end_time:                2023-08-15 04:35:00
-    area:                    Area ID: JP02\nDescription: AHI JP02 area\nProje...
-    time_parameters:         {&#x27;nominal_start_time&#x27;: datetime.datetime(2023, 8...
     standard_name:           airmass
-    resolution:              2000
-    sensor:                  ahi
+    area:                    Area ID: JP02\nDescription: AHI JP02 area\nProje...
+    platform_name:           Himawari-9
+    ancillary_variables:     []
+    start_time:              2023-08-15 04:32:30
     ...                      ...
     wavelength:              None
     name:                    airmass
     _satpy_id:               DataID(name=&#x27;airmass&#x27;, resolution=2000)
     prerequisites:           [DataQuery(name=&#x27;_airmass_dep_0&#x27;), DataQuery(nam...
     optional_prerequisites:  []
-    mode:                    RGB</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>xarray.DataArray</div><div class='xr-array-name'>'where-6fd6469b451f9ab08dbe37162251b76c'</div><ul class='xr-dim-list'><li><span class='xr-has-index'>bands</span>: 3</li><li><span class='xr-has-index'>y</span>: 1200</li><li><span class='xr-has-index'>x</span>: 1500</li></ul></div><ul class='xr-sections'><li class='xr-section-item'><div class='xr-array-wrap'><input id='section-b08dbe38-fb32-4d9f-be9c-6b509167eb0e' class='xr-array-in' type='checkbox' checked><label for='section-b08dbe38-fb32-4d9f-be9c-6b509167eb0e' title='Show/hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-array-preview xr-preview'><span>dask.array&lt;chunksize=(1, 1200, 1375), meta=np.ndarray&gt;</span></div><div class='xr-array-data'><table>
+    mode:                    RGB</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>xarray.DataArray</div><div class='xr-array-name'>'where-9be5842710e517295950728be294cf67'</div><ul class='xr-dim-list'><li><span class='xr-has-index'>bands</span>: 3</li><li><span class='xr-has-index'>y</span>: 1200</li><li><span class='xr-has-index'>x</span>: 1500</li></ul></div><ul class='xr-sections'><li class='xr-section-item'><div class='xr-array-wrap'><input id='section-60c92e74-cc97-42fe-9220-160450fb8f42' class='xr-array-in' type='checkbox' checked><label for='section-60c92e74-cc97-42fe-9220-160450fb8f42' title='Show/hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-array-preview xr-preview'><span>dask.array&lt;chunksize=(1, 1200, 1375), meta=np.ndarray&gt;</span></div><div class='xr-array-data'><table>
     <tr>
         <td>
             <table style="border-collapse: collapse;">
@@ -997,7 +1012,7 @@ Attributes: (12/16)
 </svg>
         </td>
     </tr>
-</table></div></div></li><li class='xr-section-item'><input id='section-285e1197-acd0-4e5a-ba16-6b00a74391e2' class='xr-section-summary-in' type='checkbox'  checked><label for='section-285e1197-acd0-4e5a-ba16-6b00a74391e2' class='xr-section-summary' >Coordinates: <span>(4)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span>crs</span></div><div class='xr-var-dims'>()</div><div class='xr-var-dtype'>object</div><div class='xr-var-preview xr-preview'>PROJCRS[&quot;unknown&quot;,BASEGEOGCRS[&quot;u...</div><input id='attrs-2c8c0780-e028-4b45-8ee6-13b14268f044' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-2c8c0780-e028-4b45-8ee6-13b14268f044' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-0f513c87-ab3e-42ae-bff3-3700cbf6140b' class='xr-var-data-in' type='checkbox'><label for='data-0f513c87-ab3e-42ae-bff3-3700cbf6140b' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array(&lt;Projected CRS: PROJCRS[&quot;unknown&quot;,BASEGEOGCRS[&quot;unknown&quot;,DATUM[&quot;unk ...&gt;
+</table></div></div></li><li class='xr-section-item'><input id='section-625f67f9-5d74-4168-87ab-c7a3693df33e' class='xr-section-summary-in' type='checkbox'  checked><label for='section-625f67f9-5d74-4168-87ab-c7a3693df33e' class='xr-section-summary' >Coordinates: <span>(4)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span>crs</span></div><div class='xr-var-dims'>()</div><div class='xr-var-dtype'>object</div><div class='xr-var-preview xr-preview'>PROJCRS[&quot;unknown&quot;,BASEGEOGCRS[&quot;u...</div><input id='attrs-1e17ac5f-a820-40c4-bb5d-d2514a3980ab' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-1e17ac5f-a820-40c4-bb5d-d2514a3980ab' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-22025018-5afa-439c-82d1-02ed1b576150' class='xr-var-data-in' type='checkbox'><label for='data-22025018-5afa-439c-82d1-02ed1b576150' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array(&lt;Projected CRS: PROJCRS[&quot;unknown&quot;,BASEGEOGCRS[&quot;unknown&quot;,DATUM[&quot;unk ...&gt;
 Name: unknown
 Axis Info [cartesian]:
 - E[east]: Easting (metre)
@@ -1010,9 +1025,9 @@ Coordinate Operation:
 Datum: unknown
 - Ellipsoid: unknown
 - Prime Meridian: Greenwich
-, dtype=object)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>y</span></div><div class='xr-var-dims'>(y)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>4.599e+06 4.597e+06 ... 2.201e+06</div><input id='attrs-871078b9-7d69-44a7-b50f-13b74cc596fe' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-871078b9-7d69-44a7-b50f-13b74cc596fe' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-6edcde89-765f-4099-a8fc-2350d818a09c' class='xr-var-data-in' type='checkbox'><label for='data-6edcde89-765f-4099-a8fc-2350d818a09c' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>meter</dd></dl></div><div class='xr-var-data'><pre>array([4598999.917364, 4596999.9174  , 4594999.917436, ..., 2204999.96038 ,
-       2202999.960416, 2200999.960452])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>x</span></div><div class='xr-var-dims'>(x)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>-2.149e+06 -2.147e+06 ... 8.49e+05</div><input id='attrs-966d2ae9-4ceb-4c8d-a6ed-5adcf33bc154' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-966d2ae9-4ceb-4c8d-a6ed-5adcf33bc154' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-9978c292-c8ed-4e59-9d9b-7ce336ed5599' class='xr-var-data-in' type='checkbox'><label for='data-9978c292-c8ed-4e59-9d9b-7ce336ed5599' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>meter</dd></dl></div><div class='xr-var-data'><pre>array([-2148999.961386, -2146999.961422, -2144999.961458, ...,   844999.984817,
-         846999.984781,   848999.984745])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>bands</span></div><div class='xr-var-dims'>(bands)</div><div class='xr-var-dtype'>&lt;U1</div><div class='xr-var-preview xr-preview'>&#x27;R&#x27; &#x27;G&#x27; &#x27;B&#x27;</div><input id='attrs-ff33da9d-9c67-44ca-badd-3d5ec96777fb' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-ff33da9d-9c67-44ca-badd-3d5ec96777fb' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-38505b8c-ce7b-49c2-9abc-08a3a4e7a9da' class='xr-var-data-in' type='checkbox'><label for='data-38505b8c-ce7b-49c2-9abc-08a3a4e7a9da' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([&#x27;R&#x27;, &#x27;G&#x27;, &#x27;B&#x27;], dtype=&#x27;&lt;U1&#x27;)</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-74ceb2c5-0497-49d0-9c10-d64f23180314' class='xr-section-summary-in' type='checkbox'  ><label for='section-74ceb2c5-0497-49d0-9c10-d64f23180314' class='xr-section-summary' >Indexes: <span>(3)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-index-name'><div>y</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-1fcacece-5ec5-43f3-bc5b-877d1d3a27ae' class='xr-index-data-in' type='checkbox'/><label for='index-1fcacece-5ec5-43f3-bc5b-877d1d3a27ae' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([ 4598999.917364102,  4596999.917400038,  4594999.917435975,
+, dtype=object)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>y</span></div><div class='xr-var-dims'>(y)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>4.599e+06 4.597e+06 ... 2.201e+06</div><input id='attrs-c93a19e6-1f96-4abd-8164-c924643a5639' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-c93a19e6-1f96-4abd-8164-c924643a5639' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-9a7c43d2-183b-49cf-9dbb-6abe175d532e' class='xr-var-data-in' type='checkbox'><label for='data-9a7c43d2-183b-49cf-9dbb-6abe175d532e' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>meter</dd></dl></div><div class='xr-var-data'><pre>array([4598999.917364, 4596999.9174  , 4594999.917436, ..., 2204999.96038 ,
+       2202999.960416, 2200999.960452])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>x</span></div><div class='xr-var-dims'>(x)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>-2.149e+06 -2.147e+06 ... 8.49e+05</div><input id='attrs-f9f5526b-7e90-495a-a9f5-10aaa1ee7be2' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-f9f5526b-7e90-495a-a9f5-10aaa1ee7be2' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-050145d0-c373-4fcd-af41-ac4b666d9f0a' class='xr-var-data-in' type='checkbox'><label for='data-050145d0-c373-4fcd-af41-ac4b666d9f0a' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>meter</dd></dl></div><div class='xr-var-data'><pre>array([-2148999.961386, -2146999.961422, -2144999.961458, ...,   844999.984817,
+         846999.984781,   848999.984745])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>bands</span></div><div class='xr-var-dims'>(bands)</div><div class='xr-var-dtype'>&lt;U1</div><div class='xr-var-preview xr-preview'>&#x27;R&#x27; &#x27;G&#x27; &#x27;B&#x27;</div><input id='attrs-de7d63fc-3a05-4857-96e9-5d0947d795ba' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-de7d63fc-3a05-4857-96e9-5d0947d795ba' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-682667e8-e7ba-47d9-a1b7-6ab1c524fdae' class='xr-var-data-in' type='checkbox'><label for='data-682667e8-e7ba-47d9-a1b7-6ab1c524fdae' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([&#x27;R&#x27;, &#x27;G&#x27;, &#x27;B&#x27;], dtype=&#x27;&lt;U1&#x27;)</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-f8359eef-7868-4731-a34a-028c42aeb065' class='xr-section-summary-in' type='checkbox'  ><label for='section-f8359eef-7868-4731-a34a-028c42aeb065' class='xr-section-summary' >Indexes: <span>(3)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-index-name'><div>y</div></div><div class='xr-index-preview'>PandasIndex</div><input type='checkbox' disabled/><label></label><input id='index-ef0e09fe-44cc-491d-974f-2845e78951d1' class='xr-index-data-in' type='checkbox'/><label for='index-ef0e09fe-44cc-491d-974f-2845e78951d1' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([ 4598999.917364102,  4596999.917400038,  4594999.917435975,
         4592999.917471911,  4590999.917507848,  4588999.917543784,
         4586999.917579721,  4584999.917615657,  4582999.917651594,
          4580999.91768753,
@@ -1021,7 +1036,7 @@ Datum: unknown
        2212999.9602363026,  2210999.960272239, 2208999.9603081755,
         2206999.960344112, 2204999.9603800485,  2202999.960415985,
        2200999.9604519214],
-      dtype=&#x27;float64&#x27;, name=&#x27;y&#x27;, length=1200))</pre></div></li><li class='xr-var-item'><div class='xr-index-name'><div>x</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-86f46d28-c74d-4218-b7bf-ac8251c3fb0c' class='xr-index-data-in' type='checkbox'/><label for='index-86f46d28-c74d-4218-b7bf-ac8251c3fb0c' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([  -2148999.96138627, -2146999.9614222064,  -2144999.961458143,
+      dtype=&#x27;float64&#x27;, name=&#x27;y&#x27;, length=1200))</pre></div></li><li class='xr-var-item'><div class='xr-index-name'><div>x</div></div><div class='xr-index-preview'>PandasIndex</div><input type='checkbox' disabled/><label></label><input id='index-286125e1-213b-4c11-bcb6-5ac704a68f14' class='xr-index-data-in' type='checkbox'/><label for='index-286125e1-213b-4c11-bcb6-5ac704a68f14' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([  -2148999.96138627, -2146999.9614222064,  -2144999.961458143,
        -2142999.9614940793,  -2140999.961530016, -2138999.9615659523,
        -2136999.9616018888, -2134999.9616378252, -2132999.9616737617,
         -2130999.961709698,
@@ -1030,13 +1045,13 @@ Datum: unknown
          836999.9849605905,    838999.984924654,   840999.9848887175,
           842999.984852781,   844999.9848168446,   846999.9847809081,
          848999.9847449716],
-      dtype=&#x27;float64&#x27;, name=&#x27;x&#x27;, length=1500))</pre></div></li><li class='xr-var-item'><div class='xr-index-name'><div>bands</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-1cfa9a27-774f-40f9-8ed9-a59433af01e4' class='xr-index-data-in' type='checkbox'/><label for='index-1cfa9a27-774f-40f9-8ed9-a59433af01e4' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([&#x27;R&#x27;, &#x27;G&#x27;, &#x27;B&#x27;], dtype=&#x27;object&#x27;, name=&#x27;bands&#x27;))</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-5bbab216-dac0-40c9-9f1d-fde3b89137e7' class='xr-section-summary-in' type='checkbox'  ><label for='section-5bbab216-dac0-40c9-9f1d-fde3b89137e7' class='xr-section-summary' >Attributes: <span>(16)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>end_time :</span></dt><dd>2023-08-15 04:35:00</dd><dt><span>area :</span></dt><dd>Area ID: JP02
+      dtype=&#x27;float64&#x27;, name=&#x27;x&#x27;, length=1500))</pre></div></li><li class='xr-var-item'><div class='xr-index-name'><div>bands</div></div><div class='xr-index-preview'>PandasIndex</div><input type='checkbox' disabled/><label></label><input id='index-7d2fe2f3-c1a6-451b-af0e-2a8bc9757781' class='xr-index-data-in' type='checkbox'/><label for='index-7d2fe2f3-c1a6-451b-af0e-2a8bc9757781' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([&#x27;R&#x27;, &#x27;G&#x27;, &#x27;B&#x27;], dtype=&#x27;object&#x27;, name=&#x27;bands&#x27;))</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-756e6fba-1817-4c99-855e-2a2bc6fbbce2' class='xr-section-summary-in' type='checkbox'  ><label for='section-756e6fba-1817-4c99-855e-2a2bc6fbbce2' class='xr-section-summary' >Attributes: <span>(16)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>end_time :</span></dt><dd>2023-08-15 04:35:00</dd><dt><span>standard_name :</span></dt><dd>airmass</dd><dt><span>area :</span></dt><dd>Area ID: JP02
 Description: AHI JP02 area
 Projection ID: geosh9
 Projection: {&#x27;a&#x27;: &#x27;6378137&#x27;, &#x27;h&#x27;: &#x27;35785863&#x27;, &#x27;lon_0&#x27;: &#x27;140.7&#x27;, &#x27;no_defs&#x27;: &#x27;None&#x27;, &#x27;proj&#x27;: &#x27;geos&#x27;, &#x27;rf&#x27;: &#x27;298.257024882273&#x27;, &#x27;type&#x27;: &#x27;crs&#x27;, &#x27;units&#x27;: &#x27;m&#x27;, &#x27;x_0&#x27;: &#x27;0&#x27;, &#x27;y_0&#x27;: &#x27;0&#x27;}
 Number of columns: 1500
 Number of rows: 1200
-Area extent: (np.float64(-2149999.9614), np.float64(2199999.9605), np.float64(849999.9847), np.float64(4599999.9173))</dd><dt><span>time_parameters :</span></dt><dd>{&#x27;nominal_start_time&#x27;: datetime.datetime(2023, 8, 15, 4, 32, 30), &#x27;nominal_end_time&#x27;: datetime.datetime(2023, 8, 15, 4, 35), &#x27;observation_start_time&#x27;: datetime.datetime(2023, 8, 15, 4, 32, 48, 325943), &#x27;observation_end_time&#x27;: datetime.datetime(2023, 8, 15, 4, 34, 16, 101975)}</dd><dt><span>standard_name :</span></dt><dd>airmass</dd><dt><span>resolution :</span></dt><dd>2000</dd><dt><span>sensor :</span></dt><dd>ahi</dd><dt><span>start_time :</span></dt><dd>2023-08-15 04:32:30</dd><dt><span>reader :</span></dt><dd>ahi_hsd</dd><dt><span>platform_name :</span></dt><dd>Himawari-9</dd><dt><span>ancillary_variables :</span></dt><dd>[]</dd><dt><span>wavelength :</span></dt><dd>None</dd><dt><span>name :</span></dt><dd>airmass</dd><dt><span>_satpy_id :</span></dt><dd>DataID(name=&#x27;airmass&#x27;, resolution=2000)</dd><dt><span>prerequisites :</span></dt><dd>[DataQuery(name=&#x27;_airmass_dep_0&#x27;), DataQuery(name=&#x27;_airmass_dep_1&#x27;), DataQuery(name=&#x27;B08&#x27;)]</dd><dt><span>optional_prerequisites :</span></dt><dd>[]</dd><dt><span>mode :</span></dt><dd>RGB</dd></dl></div></li></ul></div></div></div></div>
+Area extent: (np.float64(-2149999.9614), np.float64(2199999.9605), np.float64(849999.9847), np.float64(4599999.9173))</dd><dt><span>platform_name :</span></dt><dd>Himawari-9</dd><dt><span>ancillary_variables :</span></dt><dd>[]</dd><dt><span>start_time :</span></dt><dd>2023-08-15 04:32:30</dd><dt><span>time_parameters :</span></dt><dd>{&#x27;nominal_start_time&#x27;: datetime.datetime(2023, 8, 15, 4, 32, 30), &#x27;nominal_end_time&#x27;: datetime.datetime(2023, 8, 15, 4, 35), &#x27;observation_start_time&#x27;: datetime.datetime(2023, 8, 15, 4, 32, 48, 325943), &#x27;observation_end_time&#x27;: datetime.datetime(2023, 8, 15, 4, 34, 16, 101975)}</dd><dt><span>resolution :</span></dt><dd>2000</dd><dt><span>reader :</span></dt><dd>ahi_hsd</dd><dt><span>sensor :</span></dt><dd>ahi</dd><dt><span>wavelength :</span></dt><dd>None</dd><dt><span>name :</span></dt><dd>airmass</dd><dt><span>_satpy_id :</span></dt><dd>DataID(name=&#x27;airmass&#x27;, resolution=2000)</dd><dt><span>prerequisites :</span></dt><dd>[DataQuery(name=&#x27;_airmass_dep_0&#x27;), DataQuery(name=&#x27;_airmass_dep_1&#x27;), DataQuery(name=&#x27;B08&#x27;)]</dd><dt><span>optional_prerequisites :</span></dt><dd>[]</dd><dt><span>mode :</span></dt><dd>RGB</dd></dl></div></li></ul></div></div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1047,22 +1062,22 @@ Area extent: (np.float64(-2149999.9614), np.float64(2199999.9605), np.float64(84
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[DataID(name=&#39;B01&#39;, wavelength=WavelengthRange(min=0.45, central=0.47, max=0.49, unit=&#39;µm&#39;), resolution=1000, calibration=&lt;1&gt;, modifiers=()),
- DataID(name=&#39;B02&#39;, wavelength=WavelengthRange(min=0.49, central=0.51, max=0.53, unit=&#39;µm&#39;), resolution=1000, calibration=&lt;1&gt;, modifiers=()),
- DataID(name=&#39;B03&#39;, wavelength=WavelengthRange(min=0.62, central=0.64, max=0.66, unit=&#39;µm&#39;), resolution=500, calibration=&lt;1&gt;, modifiers=()),
- DataID(name=&#39;B04&#39;, wavelength=WavelengthRange(min=0.83, central=0.85, max=0.87, unit=&#39;µm&#39;), resolution=1000, calibration=&lt;1&gt;, modifiers=()),
- DataID(name=&#39;B05&#39;, wavelength=WavelengthRange(min=1.5, central=1.6, max=1.7, unit=&#39;µm&#39;), resolution=2000, calibration=&lt;1&gt;, modifiers=()),
- DataID(name=&#39;B06&#39;, wavelength=WavelengthRange(min=2.2, central=2.3, max=2.4, unit=&#39;µm&#39;), resolution=2000, calibration=&lt;1&gt;, modifiers=()),
- DataID(name=&#39;B07&#39;, wavelength=WavelengthRange(min=3.7, central=3.9, max=4.1, unit=&#39;µm&#39;), resolution=2000, calibration=&lt;2&gt;, modifiers=()),
- DataID(name=&#39;B08&#39;, wavelength=WavelengthRange(min=6.0, central=6.2, max=6.4, unit=&#39;µm&#39;), resolution=2000, calibration=&lt;2&gt;, modifiers=()),
- DataID(name=&#39;B09&#39;, wavelength=WavelengthRange(min=6.7, central=6.9, max=7.1, unit=&#39;µm&#39;), resolution=2000, calibration=&lt;2&gt;, modifiers=()),
- DataID(name=&#39;B10&#39;, wavelength=WavelengthRange(min=7.1, central=7.3, max=7.5, unit=&#39;µm&#39;), resolution=2000, calibration=&lt;2&gt;, modifiers=()),
- DataID(name=&#39;B11&#39;, wavelength=WavelengthRange(min=8.4, central=8.6, max=8.8, unit=&#39;µm&#39;), resolution=2000, calibration=&lt;2&gt;, modifiers=()),
- DataID(name=&#39;B12&#39;, wavelength=WavelengthRange(min=9.4, central=9.6, max=9.8, unit=&#39;µm&#39;), resolution=2000, calibration=&lt;2&gt;, modifiers=()),
- DataID(name=&#39;B13&#39;, wavelength=WavelengthRange(min=10.2, central=10.4, max=10.6, unit=&#39;µm&#39;), resolution=2000, calibration=&lt;2&gt;, modifiers=()),
- DataID(name=&#39;B14&#39;, wavelength=WavelengthRange(min=11.0, central=11.2, max=11.4, unit=&#39;µm&#39;), resolution=2000, calibration=&lt;2&gt;, modifiers=()),
- DataID(name=&#39;B15&#39;, wavelength=WavelengthRange(min=12.2, central=12.4, max=12.6, unit=&#39;µm&#39;), resolution=2000, calibration=&lt;2&gt;, modifiers=()),
- DataID(name=&#39;B16&#39;, wavelength=WavelengthRange(min=13.1, central=13.3, max=13.5, unit=&#39;µm&#39;), resolution=2000, calibration=&lt;2&gt;, modifiers=()),
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[DataID(name=&#39;B01&#39;, wavelength=WavelengthRange(min=0.45, central=0.47, max=0.49, unit=&#39;µm&#39;), resolution=1000, calibration=&lt;calibration.reflectance&gt;, modifiers=()),
+ DataID(name=&#39;B02&#39;, wavelength=WavelengthRange(min=0.49, central=0.51, max=0.53, unit=&#39;µm&#39;), resolution=1000, calibration=&lt;calibration.reflectance&gt;, modifiers=()),
+ DataID(name=&#39;B03&#39;, wavelength=WavelengthRange(min=0.62, central=0.64, max=0.66, unit=&#39;µm&#39;), resolution=500, calibration=&lt;calibration.reflectance&gt;, modifiers=()),
+ DataID(name=&#39;B04&#39;, wavelength=WavelengthRange(min=0.83, central=0.85, max=0.87, unit=&#39;µm&#39;), resolution=1000, calibration=&lt;calibration.reflectance&gt;, modifiers=()),
+ DataID(name=&#39;B05&#39;, wavelength=WavelengthRange(min=1.5, central=1.6, max=1.7, unit=&#39;µm&#39;), resolution=2000, calibration=&lt;calibration.reflectance&gt;, modifiers=()),
+ DataID(name=&#39;B06&#39;, wavelength=WavelengthRange(min=2.2, central=2.3, max=2.4, unit=&#39;µm&#39;), resolution=2000, calibration=&lt;calibration.reflectance&gt;, modifiers=()),
+ DataID(name=&#39;B07&#39;, wavelength=WavelengthRange(min=3.7, central=3.9, max=4.1, unit=&#39;µm&#39;), resolution=2000, calibration=&lt;calibration.brightness_temperature&gt;, modifiers=()),
+ DataID(name=&#39;B08&#39;, wavelength=WavelengthRange(min=6.0, central=6.2, max=6.4, unit=&#39;µm&#39;), resolution=2000, calibration=&lt;calibration.brightness_temperature&gt;, modifiers=()),
+ DataID(name=&#39;B09&#39;, wavelength=WavelengthRange(min=6.7, central=6.9, max=7.1, unit=&#39;µm&#39;), resolution=2000, calibration=&lt;calibration.brightness_temperature&gt;, modifiers=()),
+ DataID(name=&#39;B10&#39;, wavelength=WavelengthRange(min=7.1, central=7.3, max=7.5, unit=&#39;µm&#39;), resolution=2000, calibration=&lt;calibration.brightness_temperature&gt;, modifiers=()),
+ DataID(name=&#39;B11&#39;, wavelength=WavelengthRange(min=8.4, central=8.6, max=8.8, unit=&#39;µm&#39;), resolution=2000, calibration=&lt;calibration.brightness_temperature&gt;, modifiers=()),
+ DataID(name=&#39;B12&#39;, wavelength=WavelengthRange(min=9.4, central=9.6, max=9.8, unit=&#39;µm&#39;), resolution=2000, calibration=&lt;calibration.brightness_temperature&gt;, modifiers=()),
+ DataID(name=&#39;B13&#39;, wavelength=WavelengthRange(min=10.2, central=10.4, max=10.6, unit=&#39;µm&#39;), resolution=2000, calibration=&lt;calibration.brightness_temperature&gt;, modifiers=()),
+ DataID(name=&#39;B14&#39;, wavelength=WavelengthRange(min=11.0, central=11.2, max=11.4, unit=&#39;µm&#39;), resolution=2000, calibration=&lt;calibration.brightness_temperature&gt;, modifiers=()),
+ DataID(name=&#39;B15&#39;, wavelength=WavelengthRange(min=12.2, central=12.4, max=12.6, unit=&#39;µm&#39;), resolution=2000, calibration=&lt;calibration.brightness_temperature&gt;, modifiers=()),
+ DataID(name=&#39;B16&#39;, wavelength=WavelengthRange(min=13.1, central=13.3, max=13.5, unit=&#39;µm&#39;), resolution=2000, calibration=&lt;calibration.brightness_temperature&gt;, modifiers=()),
  DataID(name=&#39;airmass&#39;, resolution=2000)]
 </pre></div>
 </div>
@@ -1230,7 +1245,7 @@ Projection ID: geosh9
 Projection: {&#x27;a&#x27;: &#x27;6378137&#x27;, &#x27;h&#x27;: &#x27;35785863&#x27;, &#x27;lon_0&#x27;: &#x27;140.7&#x27;, &#x27;no_defs&#x27;: &#x27;None&#x27;, &#x27;proj&#x27;: &#x27;geos&#x27;, &#x27;rf&#x27;: &#x27;298.257024882273&#x27;, &#x27;type&#x27;: &#x27;crs&#x27;, &#x27;units&#x27;: &#x27;m&#x27;, &#x27;x_0&#x27;: &#x27;0&#x27;, &#x27;y_0&#x27;: &#x27;0&#x27;}
 Number of columns: 1500
 Number of rows: 1200
-Area extent: (np.float64(-2149999.9614), np.float64(2199999.9605), np.float64(849999.9847), np.float64(4599999.9173))</pre><div class='pyresample-wrap' style='display:none'><div class='pyresample-header'><div class='pyresample-obj-type'>pyresample.AreaDefinition</div></div><div class='pyresample-area-sections'><div class='pyresample-area-section-item'><input id='section-0b90ba62-f448-4ded-bfe4-704e5b5252c7' class='pyresample-area-section-in' type='checkbox'  checked><label for='section-0b90ba62-f448-4ded-bfe4-704e5b5252c7'  title='Expand/collapse section'><svg class='icon pyresample-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg> Properties</label><div class='pyresample-area-section-preview'></div><div class='pyresample-area-section-details'><dl><dt>Area name</dt><dd>JP02</dd><dt>Description</dt><dd>AHI JP02 area</dd><dt>Projection</dt><dd>{'a': '6378137', 'h': '35785863', 'lon_0': '140.7', 'no_defs': 'None', 'proj': 'geos', 'rf': '298.257024882273', 'type': 'crs', 'units': 'm', 'x_0': '0', 'y_0': '0'}</dd><dt>Width/Height</dt><dd>1500/1200 Pixel</dd><dt>Resolution x/y (SSP)</dt><dd>2000.0/2000.0 m</dd><dt>Extent (ll_x, ll_y, ur_x, ur_y)</dt><dd>(-2149999.9614, 2199999.9605, 849999.9847, 4599999.9173)</dd></dl></div></div><div class='pyresample-area-section-item'><input id='section-317d5c92-cc68-45b5-a632-03f5e454a6ea' class='pyresample-area-section-in' type='checkbox'  ><label for='section-317d5c92-cc68-45b5-a632-03f5e454a6ea'  title='Expand/collapse section'><svg class='icon pyresample-icon-globe'><use xlink:href='#icon-globe'></use></svg> Map</label><div class='pyresample-area-section-preview'></div><div class='pyresample-area-section-details'>Note: If cartopy is installed a display of the area can be seen here</div></div></div></div></div>
+Area extent: (np.float64(-2149999.9614), np.float64(2199999.9605), np.float64(849999.9847), np.float64(4599999.9173))</pre><div class='pyresample-wrap' style='display:none'><div class='pyresample-header'><div class='pyresample-obj-type'>pyresample.AreaDefinition</div></div><div class='pyresample-area-sections'><div class='pyresample-area-section-item'><input id='section-4243da04-84da-4554-8c36-72a801e9ac27' class='pyresample-area-section-in' type='checkbox'  checked><label for='section-4243da04-84da-4554-8c36-72a801e9ac27'  title='Expand/collapse section'><svg class='icon pyresample-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg> Properties</label><div class='pyresample-area-section-preview'></div><div class='pyresample-area-section-details'><dl><dt>Area name</dt><dd>JP02</dd><dt>Description</dt><dd>AHI JP02 area</dd><dt>Projection</dt><dd>{'a': '6378137', 'h': '35785863', 'lon_0': '140.7', 'no_defs': 'None', 'proj': 'geos', 'rf': '298.257024882273', 'type': 'crs', 'units': 'm', 'x_0': '0', 'y_0': '0'}</dd><dt>Width/Height</dt><dd>1500/1200 Pixel</dd><dt>Resolution x/y (SSP)</dt><dd>2000.0/2000.0 m</dd><dt>Extent (ll_x, ll_y, ur_x, ur_y)</dt><dd>(-2149999.9614, 2199999.9605, 849999.9847, 4599999.9173)</dd></dl></div></div><div class='pyresample-area-section-item'><input id='section-9e8bea1e-2617-42c2-b3f1-1365a3943552' class='pyresample-area-section-in' type='checkbox'  ><label for='section-9e8bea1e-2617-42c2-b3f1-1365a3943552'  title='Expand/collapse section'><svg class='icon pyresample-icon-globe'><use xlink:href='#icon-globe'></use></svg> Map</label><div class='pyresample-area-section-preview'></div><div class='pyresample-area-section-details'>Note: If cartopy is installed a display of the area can be seen here</div></div></div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1257,24 +1272,20 @@ Area extent: (np.float64(-2149999.9614), np.float64(2199999.9605), np.float64(84
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lscn</span><span class="o">.</span><span class="n">load</span><span class="p">([</span><span class="s2">&quot;natural_color&quot;</span><span class="p">])</span>
 
-<span class="n">lscn</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;natural_color&quot;</span><span class="p">)</span>
+<span class="c1">### Uncomment to show it</span>
+<span class="c1">#lscn.show(&quot;natural_color&quot;)</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../_images/d3b4e468f089ed789121e29941a449665f2211ec723974e7c066eec02b540bd1.png" src="../_images/d3b4e468f089ed789121e29941a449665f2211ec723974e7c066eec02b540bd1.png" />
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lscn</span><span class="o">.</span><span class="n">load</span><span class="p">([</span><span class="s1">&#39;true_color&#39;</span><span class="p">])</span>
 
-<span class="n">lscn</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s1">&#39;true_color&#39;</span><span class="p">)</span>
+<span class="c1">### Uncomment to show it</span>
+<span class="c1">#lscn.show(&#39;true_color&#39;)</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../_images/c17de478b4a9aa1210468da96ca652f9179ec7efb128c30e62603bd4127e8617.png" src="../_images/c17de478b4a9aa1210468da96ca652f9179ec7efb128c30e62603bd4127e8617.png" />
 </div>
 </div>
 </section>
@@ -1310,6 +1321,24 @@ Area extent: (np.float64(-2149999.9614), np.float64(2199999.9605), np.float64(84
                   <footer class="prev-next-footer">
                     
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="02_geosat_ABI_GOES_west.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Advanced Baseline Imager (ABI) data with Satpy</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="04_geosat_AMI_GK2A.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Advance Meteorological Imager (AMI) data with Satpy</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                   </footer>
                 
@@ -1368,7 +1397,7 @@ Area extent: (np.float64(-2149999.9614), np.float64(2199999.9605), np.float64(84
       
       
       
-      <li><a href="https://binder.projectpythia.org/v2/gh/ProjectPythia/cookbook-template/main?urlpath=lab/tree/notebooks/03_geosat_AHI_HIMAWARI.ipynb" target="_blank"
+      <li><a href="https://binder.projectpythia.org/v2/gh/ProjectPythia/geostationary-cookbook/main?urlpath=lab/tree/notebooks/03_geosat_AHI_HIMAWARI.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch on Binder"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -1399,7 +1428,7 @@ Area extent: (np.float64(-2149999.9614), np.float64(2199999.9605), np.float64(84
       
       
       
-      <li><a href="https://github.com/ProjectPythia/cookbook-template" target="_blank"
+      <li><a href="https://github.com/ProjectPythia/geostationary-cookbook" target="_blank"
    class="btn btn-sm btn-source-repository-button dropdown-item"
    title="Source repository"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -1416,7 +1445,7 @@ Area extent: (np.float64(-2149999.9614), np.float64(2199999.9605), np.float64(84
       
       
       
-      <li><a href="https://github.com/ProjectPythia/cookbook-template/edit/main/notebooks/03_geosat_AHI_HIMAWARI.ipynb" target="_blank"
+      <li><a href="https://github.com/ProjectPythia/geostationary-cookbook/edit/main/notebooks/03_geosat_AHI_HIMAWARI.ipynb" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -1433,7 +1462,7 @@ Area extent: (np.float64(-2149999.9614), np.float64(2199999.9605), np.float64(84
       
       
       
-      <li><a href="https://github.com/ProjectPythia/cookbook-template/issues/new?title=Issue%20on%20page%20%2Fnotebooks/03_geosat_AHI_HIMAWARI.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/ProjectPythia/geostationary-cookbook/issues/new?title=Issue%20on%20page%20%2Fnotebooks/03_geosat_AHI_HIMAWARI.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -1563,7 +1592,7 @@ By the <a href="https://projectpythia.org/">Project Pythia</a> Community
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on 16 November 2024.
+  Last updated on 27 November 2024.
   <br/>
 </p>
   </div>
@@ -1597,13 +1626,13 @@ By the <a href="https://projectpythia.org/">Project Pythia</a> Community
     <div class="container-xl">
       <div class="row d-flex flex-wrap align-items-center">
         <div class="d-flex col-lg-3 col-md-4 col-sm-6 p-2 mx-auto">
-          <img alt="NCAR" src="../_images\NSF-NCAR_Lockup-UCAR-Dark_102523.svg" style="width: 100%">
+          <img alt="NCAR" src="../_images/NSF-NCAR_Lockup-UCAR-Dark_102523.svg" style="width: 100%">
         </div>
         <div class="d-flex col-lg-3 col-md-4 col-sm-6 p-2 mx-auto">
-          <img alt="Unidata" src="../_images\Unidata_logo_horizontal_1200x300.svg" style="width: 100%">
+          <img alt="Unidata" src="../_images/Unidata_logo_horizontal_1200x300.svg" style="width: 100%">
         </div>
         <div class="d-flex col-lg-3 col-md-4 col-sm-6 p-2 mx-auto">
-          <img alt="UAlbany" src="../_images\UAlbany-A2-logo-purple-gold.svg" style="width: 100%">
+          <img alt="UAlbany" src="../_images/UAlbany-A2-logo-purple-gold.svg" style="width: 100%">
         </div>
       </div>
     </div>
@@ -1617,7 +1646,7 @@ By the <a href="https://projectpythia.org/">Project Pythia</a> Community
         
           By the <a href="https://projectpythia.org/">Project Pythia</a> Community.
         
-          Last updated on 16 November 2024.
+          Last updated on 27 November 2024.
         </p>
       </div>
     </div>
