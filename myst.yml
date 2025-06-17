@@ -1,0 +1,33 @@
+version: 1
+extends:
+  - https://raw.githubusercontent.com/projectpythia/pythia-config/main/pythia.yml
+project:
+  title: Geostationary Cookbook
+  authors:
+    - name: Project Pythia Community
+      url: https://projectpythia.org/
+  github: https://github.com/projectpythia/geostationary-cookbook
+  copyright: '2024'
+  toc:
+    - file: README.md
+    - title: Preamble
+      children:
+        - file: notebooks/how-to-cite.md
+    - title: Introduction
+      children:
+        - file: notebooks/notebook-template.ipynb
+        - file: notebooks/00_geosat_explaining_steps.ipynb
+        - file: notebooks/01_geosat_ABI_GOES_east.ipynb
+        - file: notebooks/01_geosat_GOESR.ipynb
+        - file: notebooks/02_geosat_ABI_GOES_west.ipynb
+        - file: notebooks/03_geosat_AHI_HIMAWARI.ipynb
+        - file: notebooks/04_geosat_AMI_GK2A.ipynb
+        - file: notebooks/99_auxiliar_dowloading.ipynb
+  jupyter:
+      binder:
+        repo: projectpythia/geostationary-cookbook
+site:
+  options:
+    logo: notebooks/images/logos/pythia_logo-white-rtext.svg
+    folders: true
+  template: book-theme

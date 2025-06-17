@@ -144,3 +144,5 @@ notebooks/Downloaded_data/ABI-L1b-RadF/.DS_Store
 notebooks/.DS_Store
 notebooks/Downloaded_data/ABI-L1b-RadC/.DS_Store
 notebooks/Output_data/*
+# MyST build outputs
+_build
