@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Advanced Baseline Imager (ABI) data with Satpy &#8212; Project Pythia Cookbook Template</title>
+    <title>Advanced Baseline Imager (ABI) data with Satpy &#8212; My Jupyter Book</title>
   
   
   
@@ -16,22 +16,20 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
-  <!-- 
-    this give us a css class that will be invisible only if js is disabled 
-  -->
-  <noscript>
-    <style>
-      .pst-js-only { display: none !important; }
-
-    </style>
-  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-pythia-theme.min.css?v=ba7ce088" />
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
@@ -39,11 +37,10 @@
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=d0efeab3" />
   
-  <!-- So that users can add custom icons -->
-  <script src="../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
     <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="../_static/doctools.js?v=9a2dae69"></script>
@@ -57,33 +54,17 @@
     <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js?v=f930bc37"></script>
-    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-T52X8HNYE8"></script>
-    <script>
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){ dataLayer.push(arguments); }
-                gtag('js', new Date());
-                gtag('config', 'G-T52X8HNYE8');
-            </script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script>
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){ dataLayer.push(arguments); }
-                gtag('js', new Date());
-                gtag('config', 'G-T52X8HNYE8');
-            </script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/00_geosat_explaining_steps';</script>
-    <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Advanced Baseline Imager (ABI) data with Satpy" href="01_geosat_ABI_GOES_east.html" />
     <link rel="prev" title="Project Pythia Notebook Template" href="notebook-template.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="" />
-    <meta name="docbuild:last-update" content="27 November 2024"/>
   </head>
   
   
@@ -92,256 +73,26 @@
   
   
   <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <div class="pst-scroll-pixel-helper"></div>
-    <header class="bd-header navbar navbar-dark navbar-expand-lg bg-dark fixed-top bd-navbar shadow" id="navbar-main">
-<div class="bd-header__inner bd-page-width">
-  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
-    <span class="fa-solid fa-bars"></span>
-  </button>
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
   
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
   
-  <div class=" navbar-header-items__start">
-    
-      <div class="navbar-item">
-
-  
-     
-  
-
-<a class="navbar-brand logo" href="https://projectpythia.org">
-  
-  
-  
-  
-  
-    
-    
-      
-    
-    
-    <img src="../_static/pythia_logo-white-rtext.svg" class="logo__image only-light" alt="Project Pythia Cookbook Template - Home"/>
-    <img src="../_static/pythia_logo-white-rtext.svg" class="logo__image only-dark pst-js-only" alt="Project Pythia Cookbook Template - Home"/>
-  
-  
-</a></div>
-    
-  </div>
-  
-  <div class=" navbar-header-items">
-    
-    <div class="me-auto navbar-header-items__center">
-      
-        <div class="navbar-item"><ul id="navbar-main-elements" class="navbar-nav">
-  
-  <li class="nav-item">
-    
-    
-    
-    <a class="nav-link nav-internal" href="https://projectpythia.org">Home</a>
-  </li>
-  
-  <li class="nav-item">
-    
-    
-    
-    <a class="nav-link nav-internal" href="https://foundations.projectpythia.org">Foundations</a>
-  </li>
-  
-  <li class="nav-item">
-    
-    
-    
-    <a class="nav-link nav-internal" href="https://cookbooks.projectpythia.org">Cookbooks</a>
-  </li>
-  
-  <li class="nav-item">
-    
-    
-    
-    <a class="nav-link nav-internal" href="https://projectpythia.org/resource-gallery.html">Resources</a>
-  </li>
-  
-  <li class="nav-item">
-    
-    
-    
-    <a class="nav-link nav-internal" href="https://projectpythia.org/index.html#join-us">Community</a>
-  </li>
-  
-  
-</ul></div>
-      
-    </div>
-    
-    
-    <div class="navbar-header-items__end">
-      
-      
-        <div class="navbar-item"><ul class="navbar-icon-links"
-    aria-label="Icon Links">
-        <li class="nav-item">
-          
-          
-          
-          
-          
-          
-          
-          
-          <a href="https://github.com/ProjectPythia" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
-            <span class="sr-only">GitHub</span></a>
-        </li>
-        <li class="nav-item">
-          
-          
-          
-          
-          
-          
-          
-          
-          <a href="https://twitter.com/project_pythia" title="Twitter" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-twitter fa-lg" aria-hidden="true"></i>
-            <span class="sr-only">Twitter</span></a>
-        </li>
-        <li class="nav-item">
-          
-          
-          
-          
-          
-          
-          
-          
-          <a href="https://www.youtube.com/channel/UCoZPBqJal5uKpO8ZiwzavCw" title="YouTube" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-youtube-square fa-lg" aria-hidden="true"></i>
-            <span class="sr-only">YouTube</span></a>
-        </li>
-</ul></div>
-      
-    </div>
-    
-  </div>
-  
-  
-
-  
-    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
-      <span class="fa-solid fa-outdent"></span>
-    </button>
-  
-</div>
-
-    </header>
-  <div class="bd-container">
-    <div class="bd-container__inner bd-page-width">
-        
-        
-        
-        <div class="bd-sidebar-primary bd-sidebar">
-          
-
-  
-  <div class="sidebar-header-items sidebar-primary__section">
-    
-    
-      <div class="sidebar-header-items__center">
-        
-          
-          
-            <div class="navbar-item"><ul id="navbar-main-elements" class="navbar-nav">
-  
-  <li class="nav-item">
-    
-    
-    
-    <a class="nav-link nav-internal" href="https://projectpythia.org">Home</a>
-  </li>
-  
-  <li class="nav-item">
-    
-    
-    
-    <a class="nav-link nav-internal" href="https://foundations.projectpythia.org">Foundations</a>
-  </li>
-  
-  <li class="nav-item">
-    
-    
-    
-    <a class="nav-link nav-internal" href="https://cookbooks.projectpythia.org">Cookbooks</a>
-  </li>
-  
-  <li class="nav-item">
-    
-    
-    
-    <a class="nav-link nav-internal" href="https://projectpythia.org/resource-gallery.html">Resources</a>
-  </li>
-  
-  <li class="nav-item">
-    
-    
-    
-    <a class="nav-link nav-internal" href="https://projectpythia.org/index.html#join-us">Community</a>
-  </li>
-  
-  
-</ul></div>
-          
-        
-      </div>
-    
-    
-    
-      <div class="sidebar-header-items__end">
-        
-          <div class="navbar-item"><ul class="navbar-icon-links"
-    aria-label="Icon Links">
-        <li class="nav-item">
-          
-          
-          
-          
-          
-          
-          
-          
-          <a href="https://github.com/ProjectPythia" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
-            <span class="sr-only">GitHub</span></a>
-        </li>
-        <li class="nav-item">
-          
-          
-          
-          
-          
-          
-          
-          
-          <a href="https://twitter.com/project_pythia" title="Twitter" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-twitter fa-lg" aria-hidden="true"></i>
-            <span class="sr-only">Twitter</span></a>
-        </li>
-        <li class="nav-item">
-          
-          
-          
-          
-          
-          
-          
-          
-          <a href="https://www.youtube.com/channel/UCoZPBqJal5uKpO8ZiwzavCw" title="YouTube" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-youtube-square fa-lg" aria-hidden="true"></i>
-            <span class="sr-only">YouTube</span></a>
-        </li>
-</ul></div>
-        
-      </div>
-    
-  </div>
-  
-    <div class="sidebar-primary-items__start sidebar-primary__section">
-        <div class="sidebar-primary-item">
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
 <form class="bd-search d-flex align-items-center"
       action="../search.html"
       method="get">
@@ -349,14 +100,70 @@
   <input type="search"
          class="form-control"
          name="q"
-         placeholder="Search..."
-         aria-label="Search..."
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
          autocomplete="off"
          autocorrect="off"
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../README.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">My Jupyter Book</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
@@ -403,39 +210,173 @@
   <div id="rtd-footer-container"></div>
 
 
-        </div>
-
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
         
-        <main id="main-content" class="bd-main" role="main">
-          
+        
 
-            <div class="bd-content">
+<div class="sbt-scroll-pixel-helper"></div>
 
-              <div class="bd-article-container">
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
 
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/notebooks/00_geosat_explaining_steps.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Advanced Baseline Imager (ABI) data with Satpy</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">Prerequisites</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#imports">Imports</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#starting-to-create-satpy-scenes">Starting to create satpy scenes</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
                 
-                  
-                  
 <div id="searchbox"></div>
-                  <article class="bd-article">
-                    
-  <img alt="pythia ncar" src="../_images/ncar_pythia.png" />
+                <article class="bd-article">
+                  
+  <img src="images/logos/ncar_pythia.png" alt="pythia ncar" />
 <p><strong>This notebook is developed during the pythia cook-off at NCAR Mesa-Lab Boulder Colorado, June 12-14, 2024</strong></p>
 <p>Participants in the workshop event have the chance to practice collaborative problem-solving and hands-on learning in the field of Python programming.</p>
-<p>This notebook is part of the <strong>Breakout Topic: Geostationary on AWS</strong>, lead by <strong>Jorge Humberto Bravo Mendez</strong> jbravo2&#64;stevens.edu, from Stevens Institute of Technology</p>
+<p>This notebook is part of the <strong>Breakout Topic: Geostationary on AWS</strong>, lead by <strong>Jorge Humberto Bravo Mendez</strong> <a class="reference external" href="mailto:jbravo2&#37;&#52;&#48;stevens&#46;edu">jbravo2<span>&#64;</span>stevens<span>&#46;</span>edu</a>, from Stevens Institute of Technology</p>
 <section class="tex2jax_ignore mathjax_ignore" id="advanced-baseline-imager-abi-data-with-satpy">
-<h1>Advanced Baseline Imager (ABI) data with Satpy<a class="headerlink" href="#advanced-baseline-imager-abi-data-with-satpy" title="Link to this heading"><i class="fas fa-link"></i></a></h1>
+<h1>Advanced Baseline Imager (ABI) data with Satpy<a class="headerlink" href="#advanced-baseline-imager-abi-data-with-satpy" title="Link to this heading">#</a></h1>
 <p>Using Satpy to read and  Advanced Baseline Imager (ABI) data from GOES-R satellites. Here’s a step-by-step guide:</p>
 <hr class="docutils" />
 <section id="overview">
-<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"><i class="fas fa-link"></i></a></h2>
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading">#</a></h2>
 <p>It takes a methodical approach to efficiently access, evaluate, and visualize satellite imagery in order to create a Jupyter Notebook to read Advanced Baseline Imager (ABI) data with Satpy. The notebook starts by configuring the environment and importing the modules before gaining access to ABI data from AWS. A Satpy Scene object is initialized by using the Python library Satpy, which is designed for earth-observing satellite instruments. It specifies the ABI data file(s) and the relevant reader. The desired ABI channels or products are then loaded into the Scene object. Then, the loaded data is accessed and visualized using the built-in visualization tools of Matplotlib or Satpy. To ensure that the analysis is clear and repeatable, the notebook places a strong emphasis on comprehensive documentation and explanation. Users can learn more about the analysis of satellite imagery with this methodical approach, opening up a world of possibilities for everything from environmental research to weather monitoring.</p>
 </section>
 <section id="prerequisites">
-<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Link to this heading"><i class="fas fa-link"></i></a></h2>
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Link to this heading">#</a></h2>
 <div class="admonition alert alert-info">
-<p class="admonition-title">Info</p>
-<p>Some prerequisites to understanding Satpy effectively:</p>
+    <p class="admonition-title" style="font-weight:bold">Info</p>
+    Some prerequisites to understanding Satpy effectively:
 </div>
 <ol class="arabic simple">
 <li><p><strong>Basic Python:</strong> Since Satpy is a Python library, knowledge of the Python programming language is required. It is essential to comprehend ideas such as variables, data types, loops, functions, and libraries/modules.</p></li>
@@ -445,10 +386,9 @@
 </ol>
 <hr class="docutils" />
 <div class="admonition alert alert-warning">
-<p class="admonition-title">Warning</p>
-<p>Before starting, we must obtain data</p>
-</div>
-<div class="cell docutils container">
+    <p class="admonition-title" style="font-weight:bold">Warning</p>
+    Before starting, we must obtain data
+</div><div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">### List of files to download for testing</span>
 <span class="n">urls2dwn</span> <span class="o">=</span> <span class="p">[</span> 
@@ -474,8 +414,8 @@
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
-<span class="kn">import</span> <span class="nn">os</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">requests</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
 
 <span class="c1"># Specify the local directory where you want to save the files.</span>
 <span class="c1"># local_directory = input(&quot;Enter the path to the download folder: &quot;)</span>
@@ -558,28 +498,28 @@
 </div>
 </section>
 <section id="imports">
-<h2>Imports<a class="headerlink" href="#imports" title="Link to this heading"><i class="fas fa-link"></i></a></h2>
+<h2>Imports<a class="headerlink" href="#imports" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># To stop extraneous warning messages from clogging the notebook output, </span>
 <span class="c1"># import the warnings module and set it to ignore all warnings.</span>
-<span class="kn">import</span> <span class="nn">warnings</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">warnings</span>
 <span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
 
 <span class="c1"># Scene is a representation of satellite data that enables functions such as data reading, </span>
 <span class="c1"># data resampling, data compositing, and data saving.</span>
-<span class="kn">from</span> <span class="nn">satpy.scene</span> <span class="kn">import</span> <span class="n">Scene</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">satpy.scene</span><span class="w"> </span><span class="kn">import</span> <span class="n">Scene</span>
 <span class="c1"># This line imports the debug_on function from the satpy.utils module, which is used to enable detailed </span>
 <span class="c1"># debug logging in Satpy. This can be helpful for troubleshooting and understanding the internal workings of Satpy processes.</span>
-<span class="kn">from</span> <span class="nn">satpy.utils</span> <span class="kn">import</span> <span class="n">debug_on</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">satpy.utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">debug_on</span>
 
 <span class="c1"># Importing datetime for date and time operations. Processing time-stamped satellite data </span>
 <span class="c1"># is necessary for accurate time-based operations and analysis.</span>
-<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">datetime</span><span class="w"> </span><span class="kn">import</span> <span class="n">datetime</span>
 
 <span class="c1"># Using glob allows for efficient and flexible file handling, especially when dealing with </span>
 <span class="c1"># large datasets typically generated by geostationary satellites.</span>
-<span class="kn">from</span> <span class="nn">glob</span> <span class="kn">import</span> <span class="n">glob</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">glob</span><span class="w"> </span><span class="kn">import</span> <span class="n">glob</span>
 </pre></div>
 </div>
 </div>
@@ -595,13 +535,12 @@
 </div>
 </section>
 <section id="starting-to-create-satpy-scenes">
-<h2>Starting to create satpy scenes<a class="headerlink" href="#starting-to-create-satpy-scenes" title="Link to this heading"><i class="fas fa-link"></i></a></h2>
+<h2>Starting to create satpy scenes<a class="headerlink" href="#starting-to-create-satpy-scenes" title="Link to this heading">#</a></h2>
 <div class="admonition alert alert-danger">
-<p class="admonition-title">Attention</p>
-<p>SatPy requires the original file names at all times!
-Therefore, don’t alter them when you save the data locally. SatPy won’t be able to open the files if this is the case.</p>
-</div>
-<div class="cell docutils container">
+    <p class="admonition-title" style="font-weight:bold">Attention</p>
+    SatPy requires the original file names at all times!<p>
+    Therefore, don't alter them when you save the data locally. SatPy won't be able to open the files if this is the case.
+</div><div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sat_files</span> <span class="o">=</span> <span class="n">glob</span><span class="p">(</span><span class="s2">&quot;./Output_data/ABI-L1b-RadF/s20210992350171/*&quot;</span><span class="p">)</span>
 <span class="n">sat_files</span>
@@ -609,22 +548,22 @@ Therefore, don’t alter them when you save the data locally. SatPy won’t be a
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;./Output_data/ABI-L1b-RadF/s20210992350171/OR_ABI-L1b-RadF-M6C14_G16_s20210992350171_e20210992359479_c20210992359547.nc&#39;,
- &#39;./Output_data/ABI-L1b-RadF/s20210992350171/OR_ABI-L1b-RadF-M6C09_G16_s20210992350171_e20210992359484_c20210992359551.nc&#39;,
- &#39;./Output_data/ABI-L1b-RadF/s20210992350171/OR_ABI-L1b-RadF-M6C06_G16_s20210992350171_e20210992359484_c20210992359528.nc&#39;,
- &#39;./Output_data/ABI-L1b-RadF/s20210992350171/OR_ABI-L1b-RadF-M6C05_G16_s20210992350171_e20210992359479_c20210992359533.nc&#39;,
- &#39;./Output_data/ABI-L1b-RadF/s20210992350171/OR_ABI-L1b-RadF-M6C13_G16_s20210992350171_e20210992359490_c20210992359555.nc&#39;,
- &#39;./Output_data/ABI-L1b-RadF/s20210992350171/OR_ABI-L1b-RadF-M6C16_G16_s20210992350171_e20210992359490_c20210992359542.nc&#39;,
- &#39;./Output_data/ABI-L1b-RadF/s20210992350171/OR_ABI-L1b-RadF-M6C10_G16_s20210992350171_e20210992359490_c20210992359536.nc&#39;,
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;./Output_data/ABI-L1b-RadF/s20210992350171/OR_ABI-L1b-RadF-M6C10_G16_s20210992350171_e20210992359490_c20210992359536.nc&#39;,
  &#39;./Output_data/ABI-L1b-RadF/s20210992350171/OR_ABI-L1b-RadF-M6C11_G16_s20210992350171_e20210992359479_c20210992359545.nc&#39;,
- &#39;./Output_data/ABI-L1b-RadF/s20210992350171/OR_ABI-L1b-RadF-M6C03_G16_s20210992350171_e20210992359479_c20210992359530.nc&#39;,
+ &#39;./Output_data/ABI-L1b-RadF/s20210992350171/OR_ABI-L1b-RadF-M6C07_G16_s20210992350171_e20210992359490_c20210992359539.nc&#39;,
  &#39;./Output_data/ABI-L1b-RadF/s20210992350171/OR_ABI-L1b-RadF-M6C12_G16_s20210992350171_e20210992359484_c20210992359539.nc&#39;,
+ &#39;./Output_data/ABI-L1b-RadF/s20210992350171/OR_ABI-L1b-RadF-M6C16_G16_s20210992350171_e20210992359490_c20210992359542.nc&#39;,
+ &#39;./Output_data/ABI-L1b-RadF/s20210992350171/OR_ABI-L1b-RadF-M6C06_G16_s20210992350171_e20210992359484_c20210992359528.nc&#39;,
  &#39;./Output_data/ABI-L1b-RadF/s20210992350171/OR_ABI-L1b-RadF-M6C01_G16_s20210992350171_e20210992359479_c20210992359525.nc&#39;,
  &#39;./Output_data/ABI-L1b-RadF/s20210992350171/OR_ABI-L1b-RadF-M6C08_G16_s20210992350171_e20210992359479_c20210992359535.nc&#39;,
- &#39;./Output_data/ABI-L1b-RadF/s20210992350171/OR_ABI-L1b-RadF-M6C07_G16_s20210992350171_e20210992359490_c20210992359539.nc&#39;,
+ &#39;./Output_data/ABI-L1b-RadF/s20210992350171/OR_ABI-L1b-RadF-M6C15_G16_s20210992350171_e20210992359484_c20210992359557.nc&#39;,
+ &#39;./Output_data/ABI-L1b-RadF/s20210992350171/OR_ABI-L1b-RadF-M6C09_G16_s20210992350171_e20210992359484_c20210992359551.nc&#39;,
+ &#39;./Output_data/ABI-L1b-RadF/s20210992350171/OR_ABI-L1b-RadF-M6C14_G16_s20210992350171_e20210992359479_c20210992359547.nc&#39;,
+ &#39;./Output_data/ABI-L1b-RadF/s20210992350171/OR_ABI-L1b-RadF-M6C05_G16_s20210992350171_e20210992359479_c20210992359533.nc&#39;,
  &#39;./Output_data/ABI-L1b-RadF/s20210992350171/OR_ABI-L1b-RadF-M6C02_G16_s20210992350171_e20210992359479_c20210992359522.nc&#39;,
+ &#39;./Output_data/ABI-L1b-RadF/s20210992350171/OR_ABI-L1b-RadF-M6C03_G16_s20210992350171_e20210992359479_c20210992359530.nc&#39;,
  &#39;./Output_data/ABI-L1b-RadF/s20210992350171/OR_ABI-L1b-RadF-M6C04_G16_s20210992350171_e20210992359479_c20210992359514.nc&#39;,
- &#39;./Output_data/ABI-L1b-RadF/s20210992350171/OR_ABI-L1b-RadF-M6C15_G16_s20210992350171_e20210992359484_c20210992359557.nc&#39;]
+ &#39;./Output_data/ABI-L1b-RadF/s20210992350171/OR_ABI-L1b-RadF-M6C13_G16_s20210992350171_e20210992359490_c20210992359555.nc&#39;]
 </pre></div>
 </div>
 </div>
@@ -683,7 +622,7 @@ Therefore, don’t alter them when you save the data locally. SatPy won’t be a
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;24h_microphysics&#39;, &#39;airmass&#39;, &#39;ash&#39;, &#39;cimss_cloud_type&#39;, &#39;cimss_cloud_type_raw&#39;, &#39;cimss_green&#39;, &#39;cimss_green_sunz&#39;, &#39;cimss_green_sunz_rayleigh&#39;, &#39;cimss_true_color&#39;, &#39;cimss_true_color_sunz&#39;, &#39;cimss_true_color_sunz_rayleigh&#39;, &#39;cira_day_convection&#39;, &#39;cira_fire_temperature&#39;, &#39;cloud_phase&#39;, &#39;cloud_phase_distinction&#39;, &#39;cloud_phase_distinction_raw&#39;, &#39;cloud_phase_raw&#39;, &#39;cloudtop&#39;, &#39;color_infrared&#39;, &#39;colorized_ir_clouds&#39;, &#39;convection&#39;, &#39;day_microphysics&#39;, &#39;day_microphysics_abi&#39;, &#39;day_microphysics_eum&#39;, &#39;dust&#39;, &#39;fire_temperature_awips&#39;, &#39;fog&#39;, &#39;geo_color&#39;, &#39;geo_color_background_with_low_clouds&#39;, &#39;geo_color_high_clouds&#39;, &#39;geo_color_low_clouds&#39;, &#39;geo_color_night&#39;, &#39;green&#39;, &#39;green_crefl&#39;, &#39;green_nocorr&#39;, &#39;green_raw&#39;, &#39;green_snow&#39;, &#39;highlight_C14&#39;, &#39;ir108_3d&#39;, &#39;ir_cloud_day&#39;, &#39;land_cloud&#39;, &#39;land_cloud_fire&#39;, &#39;natural_color&#39;, &#39;natural_color_nocorr&#39;, &#39;natural_color_raw&#39;, &#39;natural_color_raw_with_night_ir&#39;, &#39;night_fog&#39;, &#39;night_ir_alpha&#39;, &#39;night_ir_with_background&#39;, &#39;night_ir_with_background_hires&#39;, &#39;night_microphysics&#39;, &#39;night_microphysics_eum&#39;, &#39;overview&#39;, &#39;overview_raw&#39;, &#39;rocket_plume_day&#39;, &#39;rocket_plume_night&#39;, &#39;snow&#39;, &#39;snow_fog&#39;, &#39;so2&#39;, &#39;tropical_airmass&#39;, &#39;true_color&#39;, &#39;true_color_crefl&#39;, &#39;true_color_nocorr&#39;, &#39;true_color_raw&#39;, &#39;true_color_reproduction&#39;, &#39;true_color_reproduction_corr&#39;, &#39;true_color_reproduction_uncorr&#39;, &#39;true_color_with_night_fires&#39;, &#39;true_color_with_night_fires_nocorr&#39;, &#39;true_color_with_night_ir&#39;, &#39;true_color_with_night_ir_hires&#39;, &#39;water_vapors1&#39;, &#39;water_vapors2&#39;]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;24h_microphysics&#39;, &#39;airmass&#39;, &#39;ash&#39;, &#39;blowing_snow&#39;, &#39;cimss_cloud_type&#39;, &#39;cimss_cloud_type_raw&#39;, &#39;cimss_green&#39;, &#39;cimss_green_sunz&#39;, &#39;cimss_green_sunz_rayleigh&#39;, &#39;cimss_true_color&#39;, &#39;cimss_true_color_sunz&#39;, &#39;cimss_true_color_sunz_rayleigh&#39;, &#39;cira_day_convection&#39;, &#39;cira_fire_temperature&#39;, &#39;cloud_phase&#39;, &#39;cloud_phase_distinction&#39;, &#39;cloud_phase_distinction_raw&#39;, &#39;cloud_phase_raw&#39;, &#39;cloudtop&#39;, &#39;color_infrared&#39;, &#39;colorized_ir_clouds&#39;, &#39;convection&#39;, &#39;day_cloud_type&#39;, &#39;day_microphysics&#39;, &#39;day_microphysics_abi&#39;, &#39;day_microphysics_eum&#39;, &#39;day_severe_storms&#39;, &#39;day_severe_storms_tropical&#39;, &#39;dust&#39;, &#39;fire_temperature_awips&#39;, &#39;fog&#39;, &#39;geo_color&#39;, &#39;geo_color_background_with_low_clouds&#39;, &#39;geo_color_high_clouds&#39;, &#39;geo_color_low_clouds&#39;, &#39;geo_color_night&#39;, &#39;green&#39;, &#39;green_crefl&#39;, &#39;green_nocorr&#39;, &#39;green_raw&#39;, &#39;green_snow&#39;, &#39;highlight_C14&#39;, &#39;ir108_3d&#39;, &#39;ir_cloud_day&#39;, &#39;land_cloud&#39;, &#39;land_cloud_fire&#39;, &#39;natural_color&#39;, &#39;natural_color_nocorr&#39;, &#39;natural_color_raw&#39;, &#39;natural_color_raw_with_night_ir&#39;, &#39;night_fog&#39;, &#39;night_ir_alpha&#39;, &#39;night_ir_with_background&#39;, &#39;night_ir_with_background_hires&#39;, &#39;night_microphysics&#39;, &#39;night_microphysics_eum&#39;, &#39;night_microphysics_tropical&#39;, &#39;overshooting_tops&#39;, &#39;overview&#39;, &#39;overview_raw&#39;, &#39;rocket_plume_day&#39;, &#39;rocket_plume_night&#39;, &#39;snow&#39;, &#39;snow_fog&#39;, &#39;so2&#39;, &#39;tropical_airmass&#39;, &#39;true_color&#39;, &#39;true_color_crefl&#39;, &#39;true_color_nocorr&#39;, &#39;true_color_raw&#39;, &#39;true_color_reproduction&#39;, &#39;true_color_reproduction_corr&#39;, &#39;true_color_reproduction_uncorr&#39;, &#39;true_color_with_night_fires&#39;, &#39;true_color_with_night_fires_nocorr&#39;, &#39;true_color_with_night_ir&#39;, &#39;true_color_with_night_ir_hires&#39;, &#39;water_vapors1&#39;, &#39;water_vapors2&#39;]
 </pre></div>
 </div>
 </div>
@@ -745,28 +684,76 @@ Therefore, don’t alter them when you save the data locally. SatPy won’t be a
  */
 
 :root {
-  --xr-font-color0: var(--jp-content-font-color0, rgba(0, 0, 0, 1));
-  --xr-font-color2: var(--jp-content-font-color2, rgba(0, 0, 0, 0.54));
-  --xr-font-color3: var(--jp-content-font-color3, rgba(0, 0, 0, 0.38));
-  --xr-border-color: var(--jp-border-color2, #e0e0e0);
-  --xr-disabled-color: var(--jp-layout-color3, #bdbdbd);
-  --xr-background-color: var(--jp-layout-color0, white);
-  --xr-background-color-row-even: var(--jp-layout-color1, white);
-  --xr-background-color-row-odd: var(--jp-layout-color2, #eeeeee);
+  --xr-font-color0: var(
+    --jp-content-font-color0,
+    var(--pst-color-text-base rgba(0, 0, 0, 1))
+  );
+  --xr-font-color2: var(
+    --jp-content-font-color2,
+    var(--pst-color-text-base, rgba(0, 0, 0, 0.54))
+  );
+  --xr-font-color3: var(
+    --jp-content-font-color3,
+    var(--pst-color-text-base, rgba(0, 0, 0, 0.38))
+  );
+  --xr-border-color: var(
+    --jp-border-color2,
+    hsl(from var(--pst-color-on-background, white) h s calc(l - 10))
+  );
+  --xr-disabled-color: var(
+    --jp-layout-color3,
+    hsl(from var(--pst-color-on-background, white) h s calc(l - 40))
+  );
+  --xr-background-color: var(
+    --jp-layout-color0,
+    var(--pst-color-on-background, white)
+  );
+  --xr-background-color-row-even: var(
+    --jp-layout-color1,
+    hsl(from var(--pst-color-on-background, white) h s calc(l - 5))
+  );
+  --xr-background-color-row-odd: var(
+    --jp-layout-color2,
+    hsl(from var(--pst-color-on-background, white) h s calc(l - 15))
+  );
 }
 
 html[theme="dark"],
 html[data-theme="dark"],
 body[data-theme="dark"],
 body.vscode-dark {
-  --xr-font-color0: rgba(255, 255, 255, 1);
-  --xr-font-color2: rgba(255, 255, 255, 0.54);
-  --xr-font-color3: rgba(255, 255, 255, 0.38);
-  --xr-border-color: #1f1f1f;
-  --xr-disabled-color: #515151;
-  --xr-background-color: #111111;
-  --xr-background-color-row-even: #111111;
-  --xr-background-color-row-odd: #313131;
+  --xr-font-color0: var(
+    --jp-content-font-color0,
+    var(--pst-color-text-base, rgba(255, 255, 255, 1))
+  );
+  --xr-font-color2: var(
+    --jp-content-font-color2,
+    var(--pst-color-text-base, rgba(255, 255, 255, 0.54))
+  );
+  --xr-font-color3: var(
+    --jp-content-font-color3,
+    var(--pst-color-text-base, rgba(255, 255, 255, 0.38))
+  );
+  --xr-border-color: var(
+    --jp-border-color2,
+    hsl(from var(--pst-color-on-background, #111111) h s calc(l + 10))
+  );
+  --xr-disabled-color: var(
+    --jp-layout-color3,
+    hsl(from var(--pst-color-on-background, #111111) h s calc(l + 40))
+  );
+  --xr-background-color: var(
+    --jp-layout-color0,
+    var(--pst-color-on-background, #111111)
+  );
+  --xr-background-color-row-even: var(
+    --jp-layout-color1,
+    hsl(from var(--pst-color-on-background, #111111) h s calc(l + 5))
+  );
+  --xr-background-color-row-odd: var(
+    --jp-layout-color2,
+    hsl(from var(--pst-color-on-background, #111111) h s calc(l + 15))
+  );
 }
 
 .xr-wrap {
@@ -822,6 +809,7 @@ body.vscode-dark {
 
 .xr-section-item input + label {
   color: var(--xr-disabled-color);
+  border: 2px solid transparent !important;
 }
 
 .xr-section-item input:enabled + label {
@@ -830,7 +818,7 @@ body.vscode-dark {
 }
 
 .xr-section-item input:focus + label {
-  border: 2px solid var(--xr-font-color0);
+  border: 2px solid var(--xr-font-color0) !important;
 }
 
 .xr-section-item input:enabled + label:hover {
@@ -962,7 +950,9 @@ body.vscode-dark {
 .xr-var-item label,
 .xr-var-item > .xr-var-name span {
   background-color: var(--xr-background-color-row-even);
+  border-color: var(--xr-background-color-row-odd);
   margin-bottom: 0;
+  padding-top: 2px;
 }
 
 .xr-var-item > .xr-var-name:hover span {
@@ -973,6 +963,7 @@ body.vscode-dark {
 .xr-var-list > li:nth-child(odd) > label,
 .xr-var-list > li:nth-child(odd) > .xr-var-name span {
   background-color: var(--xr-background-color-row-odd);
+  border-color: var(--xr-background-color-row-even);
 }
 
 .xr-var-name {
@@ -1022,8 +1013,15 @@ body.vscode-dark {
 .xr-var-data,
 .xr-index-data {
   display: none;
-  background-color: var(--xr-background-color) !important;
-  padding-bottom: 5px !important;
+  border-top: 2px dotted var(--xr-background-color);
+  padding-bottom: 20px !important;
+  padding-top: 10px !important;
+}
+
+.xr-var-attrs-in + label,
+.xr-var-data-in + label,
+.xr-index-data-in + label {
+  padding: 0 1px;
 }
 
 .xr-var-attrs-in:checked ~ .xr-var-attrs,
@@ -1034,6 +1032,12 @@ body.vscode-dark {
 
 .xr-var-data > table {
   float: right;
+}
+
+.xr-var-data > pre,
+.xr-index-data > pre,
+.xr-var-data > table > tbody > tr {
+  background-color: transparent !important;
 }
 
 .xr-var-name span,
@@ -1095,7 +1099,15 @@ dl.xr-attrs {
   stroke: currentColor;
   fill: currentColor;
 }
-</style><pre class='xr-text-repr-fallback'>&lt;xarray.DataArray &#x27;where-b50709265b5062215ed680808a85c7ea&#x27; (bands: 3, y: 5424,
+
+.xr-var-attrs-in:checked + label > .xr-icon-file-text2,
+.xr-var-data-in:checked + label > .xr-icon-database,
+.xr-index-data-in:checked + label > .xr-icon-database {
+  color: var(--xr-font-color0);
+  filter: drop-shadow(1px 1px 5px var(--xr-font-color2));
+  stroke-width: 0.8px;
+}
+</style><pre class='xr-text-repr-fallback'>&lt;xarray.DataArray &#x27;where-a577a96dd933af33cb8bfbd8cfc65c1a&#x27; (bands: 3, y: 5424,
                                                             x: 5424)&gt; Size: 353MB
 dask.array&lt;where, shape=(3, 5424, 5424), dtype=float32, chunksize=(1, 1356, 1356), chunktype=numpy.ndarray&gt;
 Coordinates:
@@ -1104,19 +1116,19 @@ Coordinates:
   * x        (x) float64 43kB -5.434e+06 -5.432e+06 ... 5.432e+06 5.434e+06
   * bands    (bands) &lt;U1 12B &#x27;R&#x27; &#x27;G&#x27; &#x27;B&#x27;
 Attributes: (12/27)
-    ancillary_variables:     []
-    start_time:              2021-04-09 23:50:17.100000
+    production_site:         WCDAS
+    cell_methods:            t: point area: point
+    long_name:               Brightness Temperature
     observation_type:        Rad
     platform_shortname:      G16
-    instrument_ID:           FM1
-    standard_name:           airmass
+    orbital_parameters:      {&#x27;projection_longitude&#x27;: -75.0, &#x27;projection_lati...
     ...                      ...
     wavelength:              None
     name:                    airmass
     _satpy_id:               DataID(name=&#x27;airmass&#x27;, resolution=2000)
     prerequisites:           [DataQuery(name=&#x27;_airmass_dep_0&#x27;), DataQuery(nam...
     optional_prerequisites:  []
-    mode:                    RGB</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>xarray.DataArray</div><div class='xr-array-name'>'where-b50709265b5062215ed680808a85c7ea'</div><ul class='xr-dim-list'><li><span class='xr-has-index'>bands</span>: 3</li><li><span class='xr-has-index'>y</span>: 5424</li><li><span class='xr-has-index'>x</span>: 5424</li></ul></div><ul class='xr-sections'><li class='xr-section-item'><div class='xr-array-wrap'><input id='section-5b238e8c-0e41-400c-92ee-2928f5adb879' class='xr-array-in' type='checkbox' checked><label for='section-5b238e8c-0e41-400c-92ee-2928f5adb879' title='Show/hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-array-preview xr-preview'><span>dask.array&lt;chunksize=(1, 1356, 1356), meta=np.ndarray&gt;</span></div><div class='xr-array-data'><table>
+    mode:                    RGB</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>xarray.DataArray</div><div class='xr-array-name'>'where-a577a96dd933af33cb8bfbd8cfc65c1a'</div><ul class='xr-dim-list'><li><span class='xr-has-index'>bands</span>: 3</li><li><span class='xr-has-index'>y</span>: 5424</li><li><span class='xr-has-index'>x</span>: 5424</li></ul></div><ul class='xr-sections'><li class='xr-section-item'><div class='xr-array-wrap'><input id='section-1de122e8-dd90-427b-a05d-4b5a40f8467f' class='xr-array-in' type='checkbox' checked><label for='section-1de122e8-dd90-427b-a05d-4b5a40f8467f' title='Show/hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-array-preview xr-preview'><span>dask.array&lt;chunksize=(1, 1356, 1356), meta=np.ndarray&gt;</span></div><div class='xr-array-data'><table>
     <tr>
         <td>
             <table style="border-collapse: collapse;">
@@ -1210,7 +1222,7 @@ Attributes: (12/27)
 </svg>
         </td>
     </tr>
-</table></div></div></li><li class='xr-section-item'><input id='section-457e1e3d-145b-4933-8f80-94be5ccd1319' class='xr-section-summary-in' type='checkbox'  checked><label for='section-457e1e3d-145b-4933-8f80-94be5ccd1319' class='xr-section-summary' >Coordinates: <span>(4)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span>crs</span></div><div class='xr-var-dims'>()</div><div class='xr-var-dtype'>object</div><div class='xr-var-preview xr-preview'>PROJCRS[&quot;unknown&quot;,BASEGEOGCRS[&quot;u...</div><input id='attrs-684ef0ac-b127-4e39-87ee-7920c0787284' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-684ef0ac-b127-4e39-87ee-7920c0787284' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-8ddbc7ac-f1b8-4199-a40c-063eca6c0cc2' class='xr-var-data-in' type='checkbox'><label for='data-8ddbc7ac-f1b8-4199-a40c-063eca6c0cc2' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array(&lt;Projected CRS: PROJCRS[&quot;unknown&quot;,BASEGEOGCRS[&quot;unknown&quot;,DATUM[&quot;Unk ...&gt;
+</table></div></div></li><li class='xr-section-item'><input id='section-4b5368a3-6a26-42ae-96f9-d41e7f105de3' class='xr-section-summary-in' type='checkbox'  checked><label for='section-4b5368a3-6a26-42ae-96f9-d41e7f105de3' class='xr-section-summary' >Coordinates: <span>(4)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span>crs</span></div><div class='xr-var-dims'>()</div><div class='xr-var-dtype'>object</div><div class='xr-var-preview xr-preview'>PROJCRS[&quot;unknown&quot;,BASEGEOGCRS[&quot;u...</div><input id='attrs-d97715f3-892f-45e6-9271-87028b244ad6' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-d97715f3-892f-45e6-9271-87028b244ad6' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-82e19769-04e8-4237-85cd-203d3dcdc836' class='xr-var-data-in' type='checkbox'><label for='data-82e19769-04e8-4237-85cd-203d3dcdc836' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array(&lt;Projected CRS: PROJCRS[&quot;unknown&quot;,BASEGEOGCRS[&quot;unknown&quot;,DATUM[&quot;Unk ...&gt;
 Name: unknown
 Axis Info [cartesian]:
 - E[east]: Easting (metre)
@@ -1223,9 +1235,9 @@ Coordinate Operation:
 Datum: Unknown based on GRS 1980 ellipsoid
 - Ellipsoid: GRS 1980
 - Prime Meridian: Greenwich
-, dtype=object)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>y</span></div><div class='xr-var-dims'>(y)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>5.434e+06 5.432e+06 ... -5.434e+06</div><input id='attrs-db278c14-b92b-4664-99b6-c645f7805b9b' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-db278c14-b92b-4664-99b6-c645f7805b9b' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-2a6bbbfd-1601-4289-bd2b-88c798a86227' class='xr-var-data-in' type='checkbox'><label for='data-2a6bbbfd-1601-4289-bd2b-88c798a86227' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>meter</dd></dl></div><div class='xr-var-data'><pre>array([ 5433892.876412,  5431888.859124,  5429884.841836, ..., -5429884.841836,
-       -5431888.859124, -5433892.876412])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>x</span></div><div class='xr-var-dims'>(x)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>-5.434e+06 -5.432e+06 ... 5.434e+06</div><input id='attrs-f304e8e0-8f91-48f7-a2a6-6a42da55d80f' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-f304e8e0-8f91-48f7-a2a6-6a42da55d80f' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-7f017240-0409-4913-be7d-85526b80abd4' class='xr-var-data-in' type='checkbox'><label for='data-7f017240-0409-4913-be7d-85526b80abd4' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>meter</dd></dl></div><div class='xr-var-data'><pre>array([-5433892.876412, -5431888.859124, -5429884.841836, ...,  5429884.841836,
-        5431888.859124,  5433892.876412])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>bands</span></div><div class='xr-var-dims'>(bands)</div><div class='xr-var-dtype'>&lt;U1</div><div class='xr-var-preview xr-preview'>&#x27;R&#x27; &#x27;G&#x27; &#x27;B&#x27;</div><input id='attrs-12aa94ee-552b-4964-aac0-d46a27f2043c' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-12aa94ee-552b-4964-aac0-d46a27f2043c' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-26f84e64-c70d-401e-acf1-a9e48073176e' class='xr-var-data-in' type='checkbox'><label for='data-26f84e64-c70d-401e-acf1-a9e48073176e' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([&#x27;R&#x27;, &#x27;G&#x27;, &#x27;B&#x27;], dtype=&#x27;&lt;U1&#x27;)</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-846acd46-1c63-4287-88a2-4aeef676554b' class='xr-section-summary-in' type='checkbox'  ><label for='section-846acd46-1c63-4287-88a2-4aeef676554b' class='xr-section-summary' >Indexes: <span>(3)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-index-name'><div>y</div></div><div class='xr-index-preview'>PandasIndex</div><input type='checkbox' disabled/><label></label><input id='index-e6289dfd-3c6a-468e-849d-1c07d7e82c5d' class='xr-index-data-in' type='checkbox'/><label for='index-e6289dfd-3c6a-468e-849d-1c07d7e82c5d' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([5433892.8764120005,     5431888.859124,  5429884.841836001,
+, dtype=object)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>y</span></div><div class='xr-var-dims'>(y)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>5.434e+06 5.432e+06 ... -5.434e+06</div><input id='attrs-c24a0934-e53c-478e-a657-5cb3c1ab5150' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-c24a0934-e53c-478e-a657-5cb3c1ab5150' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-13c662a1-d404-4ab1-830b-fc62977f273c' class='xr-var-data-in' type='checkbox'><label for='data-13c662a1-d404-4ab1-830b-fc62977f273c' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>meter</dd></dl></div><div class='xr-var-data'><pre>array([ 5433892.876412,  5431888.859124,  5429884.841836, ..., -5429884.841836,
+       -5431888.859124, -5433892.876412], shape=(5424,))</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>x</span></div><div class='xr-var-dims'>(x)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>-5.434e+06 -5.432e+06 ... 5.434e+06</div><input id='attrs-3ab96a9a-ce22-4610-8864-d42163e361a6' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-3ab96a9a-ce22-4610-8864-d42163e361a6' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-4f845190-8672-428c-9609-6d87ff49bd2c' class='xr-var-data-in' type='checkbox'><label for='data-4f845190-8672-428c-9609-6d87ff49bd2c' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>meter</dd></dl></div><div class='xr-var-data'><pre>array([-5433892.876412, -5431888.859124, -5429884.841836, ...,  5429884.841836,
+        5431888.859124,  5433892.876412], shape=(5424,))</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>bands</span></div><div class='xr-var-dims'>(bands)</div><div class='xr-var-dtype'>&lt;U1</div><div class='xr-var-preview xr-preview'>&#x27;R&#x27; &#x27;G&#x27; &#x27;B&#x27;</div><input id='attrs-ab60d236-60a0-4b55-8c8a-c4645c6f4a39' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-ab60d236-60a0-4b55-8c8a-c4645c6f4a39' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-f4d32cd8-80b4-4d49-a72d-230fc137a139' class='xr-var-data-in' type='checkbox'><label for='data-f4d32cd8-80b4-4d49-a72d-230fc137a139' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([&#x27;R&#x27;, &#x27;G&#x27;, &#x27;B&#x27;], dtype=&#x27;&lt;U1&#x27;)</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-67c47484-f0f6-40d8-be61-c19c2e82e516' class='xr-section-summary-in' type='checkbox'  ><label for='section-67c47484-f0f6-40d8-be61-c19c2e82e516' class='xr-section-summary' >Indexes: <span>(3)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-index-name'><div>y</div></div><div class='xr-index-preview'>PandasIndex</div><input type='checkbox' disabled/><label></label><input id='index-20cccd51-03b5-49a9-88b1-d6ea4e9bb63c' class='xr-index-data-in' type='checkbox'/><label for='index-20cccd51-03b5-49a9-88b1-d6ea4e9bb63c' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([5433892.8764120005,     5431888.859124,  5429884.841836001,
        5427880.8245480005,      5425876.80726,  5423872.789972001,
            5421868.772684,     5419864.755396,  5417860.738108001,
             5415856.72082,
@@ -1234,7 +1246,7 @@ Datum: Unknown based on GRS 1980 ellipsoid
           -5421868.772684,    -5423872.789972, -5425876.807259999,
        -5427880.824547999,    -5429884.841836, -5431888.859123999,
        -5433892.876411999],
-      dtype=&#x27;float64&#x27;, name=&#x27;y&#x27;, length=5424))</pre></div></li><li class='xr-var-item'><div class='xr-index-name'><div>x</div></div><div class='xr-index-preview'>PandasIndex</div><input type='checkbox' disabled/><label></label><input id='index-47e77dfa-ae99-4a0a-8de5-6f91eed06192' class='xr-index-data-in' type='checkbox'/><label for='index-47e77dfa-ae99-4a0a-8de5-6f91eed06192' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([-5433892.8764120005,     -5431888.859124,  -5429884.841836001,
+      dtype=&#x27;float64&#x27;, name=&#x27;y&#x27;, length=5424))</pre></div></li><li class='xr-var-item'><div class='xr-index-name'><div>x</div></div><div class='xr-index-preview'>PandasIndex</div><input type='checkbox' disabled/><label></label><input id='index-1df103a7-f9c6-4fce-aa36-df6e4efd81e3' class='xr-index-data-in' type='checkbox'/><label for='index-1df103a7-f9c6-4fce-aa36-df6e4efd81e3' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([-5433892.8764120005,     -5431888.859124,  -5429884.841836001,
        -5427880.8245480005,      -5425876.80726,  -5423872.789972001,
            -5421868.772684,     -5419864.755396,  -5417860.738108001,
             -5415856.72082,
@@ -1243,13 +1255,13 @@ Datum: Unknown based on GRS 1980 ellipsoid
             5421868.772684,      5423872.789972,   5425876.807259999,
          5427880.824547999,      5429884.841836,   5431888.859123999,
          5433892.876411999],
-      dtype=&#x27;float64&#x27;, name=&#x27;x&#x27;, length=5424))</pre></div></li><li class='xr-var-item'><div class='xr-index-name'><div>bands</div></div><div class='xr-index-preview'>PandasIndex</div><input type='checkbox' disabled/><label></label><input id='index-a7655e69-2438-4362-b3ff-d51c17ab21c4' class='xr-index-data-in' type='checkbox'/><label for='index-a7655e69-2438-4362-b3ff-d51c17ab21c4' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([&#x27;R&#x27;, &#x27;G&#x27;, &#x27;B&#x27;], dtype=&#x27;object&#x27;, name=&#x27;bands&#x27;))</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-fce65e66-9cad-45d0-a5f4-ad1f848bfa16' class='xr-section-summary-in' type='checkbox'  ><label for='section-fce65e66-9cad-45d0-a5f4-ad1f848bfa16' class='xr-section-summary' >Attributes: <span>(27)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>ancillary_variables :</span></dt><dd>[]</dd><dt><span>start_time :</span></dt><dd>2021-04-09 23:50:17.100000</dd><dt><span>observation_type :</span></dt><dd>Rad</dd><dt><span>platform_shortname :</span></dt><dd>G16</dd><dt><span>instrument_ID :</span></dt><dd>FM1</dd><dt><span>standard_name :</span></dt><dd>airmass</dd><dt><span>area :</span></dt><dd>Area ID: GOES-East
+      dtype=&#x27;float64&#x27;, name=&#x27;x&#x27;, length=5424))</pre></div></li><li class='xr-var-item'><div class='xr-index-name'><div>bands</div></div><div class='xr-index-preview'>PandasIndex</div><input type='checkbox' disabled/><label></label><input id='index-e5fed28a-bd2d-4297-96fc-86773710739c' class='xr-index-data-in' type='checkbox'/><label for='index-e5fed28a-bd2d-4297-96fc-86773710739c' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([&#x27;R&#x27;, &#x27;G&#x27;, &#x27;B&#x27;], dtype=&#x27;object&#x27;, name=&#x27;bands&#x27;))</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-e6dda876-9d3a-4d73-b9ee-5c9426316c9f' class='xr-section-summary-in' type='checkbox'  ><label for='section-e6dda876-9d3a-4d73-b9ee-5c9426316c9f' class='xr-section-summary' >Attributes: <span>(27)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>production_site :</span></dt><dd>WCDAS</dd><dt><span>cell_methods :</span></dt><dd>t: point area: point</dd><dt><span>long_name :</span></dt><dd>Brightness Temperature</dd><dt><span>observation_type :</span></dt><dd>Rad</dd><dt><span>platform_shortname :</span></dt><dd>G16</dd><dt><span>orbital_parameters :</span></dt><dd>{&#x27;projection_longitude&#x27;: -75.0, &#x27;projection_latitude&#x27;: 0.0, &#x27;projection_altitude&#x27;: 35786023.0, &#x27;satellite_nominal_latitude&#x27;: 0.0, &#x27;satellite_nominal_longitude&#x27;: -75.19999694824219, &#x27;satellite_nominal_altitude&#x27;: 35786023.4375, &#x27;yaw_flip&#x27;: False}</dd><dt><span>resolution :</span></dt><dd>2000</dd><dt><span>scene_abbr :</span></dt><dd>F</dd><dt><span>end_time :</span></dt><dd>2021-04-09 23:59:49</dd><dt><span>grid_mapping :</span></dt><dd>goes_imager_projection</dd><dt><span>ancillary_variables :</span></dt><dd>[]</dd><dt><span>instrument_ID :</span></dt><dd>FM1</dd><dt><span>scene_id :</span></dt><dd>Full Disk</dd><dt><span>scan_mode :</span></dt><dd>M6</dd><dt><span>sensor :</span></dt><dd>abi</dd><dt><span>standard_name :</span></dt><dd>airmass</dd><dt><span>reader :</span></dt><dd>abi_l1b</dd><dt><span>area :</span></dt><dd>Area ID: GOES-East
 Description: 2km at nadir
 Projection ID: abi_fixed_grid
 Projection: {&#x27;ellps&#x27;: &#x27;GRS80&#x27;, &#x27;h&#x27;: &#x27;35786023&#x27;, &#x27;lon_0&#x27;: &#x27;-75&#x27;, &#x27;no_defs&#x27;: &#x27;None&#x27;, &#x27;proj&#x27;: &#x27;geos&#x27;, &#x27;sweep&#x27;: &#x27;x&#x27;, &#x27;type&#x27;: &#x27;crs&#x27;, &#x27;units&#x27;: &#x27;m&#x27;, &#x27;x_0&#x27;: &#x27;0&#x27;, &#x27;y_0&#x27;: &#x27;0&#x27;}
 Number of columns: 5424
 Number of rows: 5424
-Area extent: (np.float64(-5434894.8851), np.float64(-5434894.8851), np.float64(5434894.8851), np.float64(5434894.8851))</dd><dt><span>scene_abbr :</span></dt><dd>F</dd><dt><span>sensor :</span></dt><dd>abi</dd><dt><span>orbital_slot :</span></dt><dd>GOES-East</dd><dt><span>platform_name :</span></dt><dd>GOES-16</dd><dt><span>end_time :</span></dt><dd>2021-04-09 23:59:49</dd><dt><span>long_name :</span></dt><dd>Brightness Temperature</dd><dt><span>grid_mapping :</span></dt><dd>goes_imager_projection</dd><dt><span>cell_methods :</span></dt><dd>t: point area: point</dd><dt><span>reader :</span></dt><dd>abi_l1b</dd><dt><span>scan_mode :</span></dt><dd>M6</dd><dt><span>resolution :</span></dt><dd>2000</dd><dt><span>scene_id :</span></dt><dd>Full Disk</dd><dt><span>production_site :</span></dt><dd>WCDAS</dd><dt><span>orbital_parameters :</span></dt><dd>{&#x27;projection_longitude&#x27;: -75.0, &#x27;projection_latitude&#x27;: 0.0, &#x27;projection_altitude&#x27;: 35786023.0, &#x27;satellite_nominal_latitude&#x27;: 0.0, &#x27;satellite_nominal_longitude&#x27;: -75.19999694824219, &#x27;satellite_nominal_altitude&#x27;: 35786023.4375, &#x27;yaw_flip&#x27;: False}</dd><dt><span>wavelength :</span></dt><dd>None</dd><dt><span>name :</span></dt><dd>airmass</dd><dt><span>_satpy_id :</span></dt><dd>DataID(name=&#x27;airmass&#x27;, resolution=2000)</dd><dt><span>prerequisites :</span></dt><dd>[DataQuery(name=&#x27;_airmass_dep_0&#x27;), DataQuery(name=&#x27;_airmass_dep_1&#x27;), DataQuery(name=&#x27;C08&#x27;)]</dd><dt><span>optional_prerequisites :</span></dt><dd>[]</dd><dt><span>mode :</span></dt><dd>RGB</dd></dl></div></li></ul></div></div></div></div>
+Area extent: (np.float64(-5434894.8851), np.float64(-5434894.8851), np.float64(5434894.8851), np.float64(5434894.8851))</dd><dt><span>orbital_slot :</span></dt><dd>GOES-East</dd><dt><span>start_time :</span></dt><dd>2021-04-09 23:50:17.100000</dd><dt><span>platform_name :</span></dt><dd>GOES-16</dd><dt><span>wavelength :</span></dt><dd>None</dd><dt><span>name :</span></dt><dd>airmass</dd><dt><span>_satpy_id :</span></dt><dd>DataID(name=&#x27;airmass&#x27;, resolution=2000)</dd><dt><span>prerequisites :</span></dt><dd>[DataQuery(name=&#x27;_airmass_dep_0&#x27;), DataQuery(name=&#x27;_airmass_dep_1&#x27;), DataQuery(name=&#x27;C08&#x27;)]</dd><dt><span>optional_prerequisites :</span></dt><dd>[]</dd><dt><span>mode :</span></dt><dd>RGB</dd></dl></div></li></ul></div></div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1271,22 +1283,22 @@ Area extent: (np.float64(-5434894.8851), np.float64(-5434894.8851), np.float64(5
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[DataID(name=&#39;C01&#39;, wavelength=WavelengthRange(min=0.45, central=0.47, max=0.49, unit=&#39;µm&#39;), resolution=1000, calibration=&lt;calibration.reflectance&gt;, modifiers=()),
- DataID(name=&#39;C02&#39;, wavelength=WavelengthRange(min=0.59, central=0.64, max=0.69, unit=&#39;µm&#39;), resolution=500, calibration=&lt;calibration.reflectance&gt;, modifiers=()),
- DataID(name=&#39;C03&#39;, wavelength=WavelengthRange(min=0.8455, central=0.865, max=0.8845, unit=&#39;µm&#39;), resolution=1000, calibration=&lt;calibration.reflectance&gt;, modifiers=()),
- DataID(name=&#39;C04&#39;, wavelength=WavelengthRange(min=1.3705, central=1.378, max=1.3855, unit=&#39;µm&#39;), resolution=2000, calibration=&lt;calibration.reflectance&gt;, modifiers=()),
- DataID(name=&#39;C05&#39;, wavelength=WavelengthRange(min=1.58, central=1.61, max=1.64, unit=&#39;µm&#39;), resolution=1000, calibration=&lt;calibration.reflectance&gt;, modifiers=()),
- DataID(name=&#39;C06&#39;, wavelength=WavelengthRange(min=2.225, central=2.25, max=2.275, unit=&#39;µm&#39;), resolution=2000, calibration=&lt;calibration.reflectance&gt;, modifiers=()),
- DataID(name=&#39;C07&#39;, wavelength=WavelengthRange(min=3.8, central=3.9, max=4.0, unit=&#39;µm&#39;), resolution=2000, calibration=&lt;calibration.brightness_temperature&gt;, modifiers=()),
- DataID(name=&#39;C08&#39;, wavelength=WavelengthRange(min=5.77, central=6.185, max=6.6, unit=&#39;µm&#39;), resolution=2000, calibration=&lt;calibration.brightness_temperature&gt;, modifiers=()),
- DataID(name=&#39;C09&#39;, wavelength=WavelengthRange(min=6.75, central=6.95, max=7.15, unit=&#39;µm&#39;), resolution=2000, calibration=&lt;calibration.brightness_temperature&gt;, modifiers=()),
- DataID(name=&#39;C10&#39;, wavelength=WavelengthRange(min=7.24, central=7.34, max=7.44, unit=&#39;µm&#39;), resolution=2000, calibration=&lt;calibration.brightness_temperature&gt;, modifiers=()),
- DataID(name=&#39;C11&#39;, wavelength=WavelengthRange(min=8.3, central=8.5, max=8.7, unit=&#39;µm&#39;), resolution=2000, calibration=&lt;calibration.brightness_temperature&gt;, modifiers=()),
- DataID(name=&#39;C12&#39;, wavelength=WavelengthRange(min=9.42, central=9.61, max=9.8, unit=&#39;µm&#39;), resolution=2000, calibration=&lt;calibration.brightness_temperature&gt;, modifiers=()),
- DataID(name=&#39;C13&#39;, wavelength=WavelengthRange(min=10.1, central=10.35, max=10.6, unit=&#39;µm&#39;), resolution=2000, calibration=&lt;calibration.brightness_temperature&gt;, modifiers=()),
- DataID(name=&#39;C14&#39;, wavelength=WavelengthRange(min=10.8, central=11.2, max=11.6, unit=&#39;µm&#39;), resolution=2000, calibration=&lt;calibration.brightness_temperature&gt;, modifiers=()),
- DataID(name=&#39;C15&#39;, wavelength=WavelengthRange(min=11.8, central=12.3, max=12.8, unit=&#39;µm&#39;), resolution=2000, calibration=&lt;calibration.brightness_temperature&gt;, modifiers=()),
- DataID(name=&#39;C16&#39;, wavelength=WavelengthRange(min=13.0, central=13.3, max=13.6, unit=&#39;µm&#39;), resolution=2000, calibration=&lt;calibration.brightness_temperature&gt;, modifiers=()),
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[DataID(name=&#39;C01&#39;, wavelength=WavelengthRange(min=0.45, central=0.47, max=0.49, unit=&#39;µm&#39;), resolution=1000, calibration=&lt;1&gt;, modifiers=()),
+ DataID(name=&#39;C02&#39;, wavelength=WavelengthRange(min=0.59, central=0.64, max=0.69, unit=&#39;µm&#39;), resolution=500, calibration=&lt;1&gt;, modifiers=()),
+ DataID(name=&#39;C03&#39;, wavelength=WavelengthRange(min=0.8455, central=0.865, max=0.8845, unit=&#39;µm&#39;), resolution=1000, calibration=&lt;1&gt;, modifiers=()),
+ DataID(name=&#39;C04&#39;, wavelength=WavelengthRange(min=1.3705, central=1.378, max=1.3855, unit=&#39;µm&#39;), resolution=2000, calibration=&lt;1&gt;, modifiers=()),
+ DataID(name=&#39;C05&#39;, wavelength=WavelengthRange(min=1.58, central=1.61, max=1.64, unit=&#39;µm&#39;), resolution=1000, calibration=&lt;1&gt;, modifiers=()),
+ DataID(name=&#39;C06&#39;, wavelength=WavelengthRange(min=2.225, central=2.25, max=2.275, unit=&#39;µm&#39;), resolution=2000, calibration=&lt;1&gt;, modifiers=()),
+ DataID(name=&#39;C07&#39;, wavelength=WavelengthRange(min=3.8, central=3.9, max=4.0, unit=&#39;µm&#39;), resolution=2000, calibration=&lt;2&gt;, modifiers=()),
+ DataID(name=&#39;C08&#39;, wavelength=WavelengthRange(min=5.77, central=6.185, max=6.6, unit=&#39;µm&#39;), resolution=2000, calibration=&lt;2&gt;, modifiers=()),
+ DataID(name=&#39;C09&#39;, wavelength=WavelengthRange(min=6.75, central=6.95, max=7.15, unit=&#39;µm&#39;), resolution=2000, calibration=&lt;2&gt;, modifiers=()),
+ DataID(name=&#39;C10&#39;, wavelength=WavelengthRange(min=7.24, central=7.34, max=7.44, unit=&#39;µm&#39;), resolution=2000, calibration=&lt;2&gt;, modifiers=()),
+ DataID(name=&#39;C11&#39;, wavelength=WavelengthRange(min=8.3, central=8.5, max=8.7, unit=&#39;µm&#39;), resolution=2000, calibration=&lt;2&gt;, modifiers=()),
+ DataID(name=&#39;C12&#39;, wavelength=WavelengthRange(min=9.42, central=9.61, max=9.8, unit=&#39;µm&#39;), resolution=2000, calibration=&lt;2&gt;, modifiers=()),
+ DataID(name=&#39;C13&#39;, wavelength=WavelengthRange(min=10.1, central=10.35, max=10.6, unit=&#39;µm&#39;), resolution=2000, calibration=&lt;2&gt;, modifiers=()),
+ DataID(name=&#39;C14&#39;, wavelength=WavelengthRange(min=10.8, central=11.2, max=11.6, unit=&#39;µm&#39;), resolution=2000, calibration=&lt;2&gt;, modifiers=()),
+ DataID(name=&#39;C15&#39;, wavelength=WavelengthRange(min=11.8, central=12.3, max=12.8, unit=&#39;µm&#39;), resolution=2000, calibration=&lt;2&gt;, modifiers=()),
+ DataID(name=&#39;C16&#39;, wavelength=WavelengthRange(min=13.0, central=13.3, max=13.6, unit=&#39;µm&#39;), resolution=2000, calibration=&lt;2&gt;, modifiers=()),
  DataID(name=&#39;airmass&#39;, resolution=2000)]
 </pre></div>
 </div>
@@ -1462,7 +1474,7 @@ Projection ID: abi_fixed_grid
 Projection: {&#x27;ellps&#x27;: &#x27;GRS80&#x27;, &#x27;h&#x27;: &#x27;35786023&#x27;, &#x27;lon_0&#x27;: &#x27;-75&#x27;, &#x27;no_defs&#x27;: &#x27;None&#x27;, &#x27;proj&#x27;: &#x27;geos&#x27;, &#x27;sweep&#x27;: &#x27;x&#x27;, &#x27;type&#x27;: &#x27;crs&#x27;, &#x27;units&#x27;: &#x27;m&#x27;, &#x27;x_0&#x27;: &#x27;0&#x27;, &#x27;y_0&#x27;: &#x27;0&#x27;}
 Number of columns: 5424
 Number of rows: 5424
-Area extent: (np.float64(-5434894.8851), np.float64(-5434894.8851), np.float64(5434894.8851), np.float64(5434894.8851))</pre><div class='pyresample-wrap' style='display:none'><div class='pyresample-header'><div class='pyresample-obj-type'>pyresample.AreaDefinition</div></div><div class='pyresample-area-sections'><div class='pyresample-area-section-item'><input id='section-c31707fc-e262-4735-8992-5a1e594c8a9e' class='pyresample-area-section-in' type='checkbox'  checked><label for='section-c31707fc-e262-4735-8992-5a1e594c8a9e'  title='Expand/collapse section'><svg class='icon pyresample-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg> Properties</label><div class='pyresample-area-section-preview'></div><div class='pyresample-area-section-details'><dl><dt>Area name</dt><dd>GOES-East</dd><dt>Description</dt><dd>2km at nadir</dd><dt>Projection</dt><dd>{'ellps': 'GRS80', 'h': '35786023', 'lon_0': '-75', 'no_defs': 'None', 'proj': 'geos', 'sweep': 'x', 'type': 'crs', 'units': 'm', 'x_0': '0', 'y_0': '0'}</dd><dt>Width/Height</dt><dd>5424/5424 Pixel</dd><dt>Resolution x/y (SSP)</dt><dd>2004.0/2004.0 m</dd><dt>Extent (ll_x, ll_y, ur_x, ur_y)</dt><dd>(-5434894.8851, -5434894.8851, 5434894.8851, 5434894.8851)</dd></dl></div></div><div class='pyresample-area-section-item'><input id='section-4bc789c7-5ec3-4fff-adef-0a93c5f0c53a' class='pyresample-area-section-in' type='checkbox'  ><label for='section-4bc789c7-5ec3-4fff-adef-0a93c5f0c53a'  title='Expand/collapse section'><svg class='icon pyresample-icon-globe'><use xlink:href='#icon-globe'></use></svg> Map</label><div class='pyresample-area-section-preview'></div><div class='pyresample-area-section-details'>Note: If cartopy is installed a display of the area can be seen here</div></div></div></div></div>
+Area extent: (np.float64(-5434894.8851), np.float64(-5434894.8851), np.float64(5434894.8851), np.float64(5434894.8851))</pre><div class='pyresample-wrap' style='display:none'><div class='pyresample-header'><div class='pyresample-obj-type'>pyresample.AreaDefinition</div></div><div class='pyresample-area-sections'><div class='pyresample-area-section-item'><input id='section-c10d90f7-82fe-407e-940c-274e2c6736fd' class='pyresample-area-section-in' type='checkbox'  checked><label for='section-c10d90f7-82fe-407e-940c-274e2c6736fd'  title='Expand/collapse section'><svg class='icon pyresample-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg> Properties</label><div class='pyresample-area-section-preview'></div><div class='pyresample-area-section-details'><dl><dt>Area name</dt><dd>GOES-East</dd><dt>Description</dt><dd>2km at nadir</dd><dt>Projection</dt><dd>{'ellps': 'GRS80', 'h': '35786023', 'lon_0': '-75', 'no_defs': 'None', 'proj': 'geos', 'sweep': 'x', 'type': 'crs', 'units': 'm', 'x_0': '0', 'y_0': '0'}</dd><dt>Width/Height</dt><dd>5424/5424 Pixel</dd><dt>Resolution x/y (SSP)</dt><dd>2004.0/2004.0 m</dd><dt>Extent (ll_x, ll_y, ur_x, ur_y)</dt><dd>(-5434894.8851, -5434894.8851, 5434894.8851, 5434894.8851)</dd></dl></div></div><div class='pyresample-area-section-item'><input id='section-50b81dcd-edc9-4362-b1b9-67861fa20039' class='pyresample-area-section-in' type='checkbox'  ><label for='section-50b81dcd-edc9-4362-b1b9-67861fa20039'  title='Expand/collapse section'><svg class='icon pyresample-icon-globe'><use xlink:href='#icon-globe'></use></svg> Map</label><div class='pyresample-area-section-preview'></div><div class='pyresample-area-section-details'>Note: If cartopy is installed a display of the area can be seen here</div></div></div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1634,7 +1646,7 @@ Projection ID: abi_fixed_grid
 Projection: {&#x27;ellps&#x27;: &#x27;GRS80&#x27;, &#x27;h&#x27;: &#x27;35786023&#x27;, &#x27;lon_0&#x27;: &#x27;-75&#x27;, &#x27;no_defs&#x27;: &#x27;None&#x27;, &#x27;proj&#x27;: &#x27;geos&#x27;, &#x27;sweep&#x27;: &#x27;x&#x27;, &#x27;type&#x27;: &#x27;crs&#x27;, &#x27;units&#x27;: &#x27;m&#x27;, &#x27;x_0&#x27;: &#x27;0&#x27;, &#x27;y_0&#x27;: &#x27;0&#x27;}
 Number of columns: 10848
 Number of rows: 10848
-Area extent: (np.float64(-5434894.8851), np.float64(-5434894.8851), np.float64(5434894.8851), np.float64(5434894.8851))</pre><div class='pyresample-wrap' style='display:none'><div class='pyresample-header'><div class='pyresample-obj-type'>pyresample.AreaDefinition</div></div><div class='pyresample-area-sections'><div class='pyresample-area-section-item'><input id='section-73b11b58-9386-484c-a9d5-4115bfc956a2' class='pyresample-area-section-in' type='checkbox'  checked><label for='section-73b11b58-9386-484c-a9d5-4115bfc956a2'  title='Expand/collapse section'><svg class='icon pyresample-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg> Properties</label><div class='pyresample-area-section-preview'></div><div class='pyresample-area-section-details'><dl><dt>Area name</dt><dd>GOES-East</dd><dt>Description</dt><dd>1km at nadir</dd><dt>Projection</dt><dd>{'ellps': 'GRS80', 'h': '35786023', 'lon_0': '-75', 'no_defs': 'None', 'proj': 'geos', 'sweep': 'x', 'type': 'crs', 'units': 'm', 'x_0': '0', 'y_0': '0'}</dd><dt>Width/Height</dt><dd>10848/10848 Pixel</dd><dt>Resolution x/y (SSP)</dt><dd>1002.0/1002.0 m</dd><dt>Extent (ll_x, ll_y, ur_x, ur_y)</dt><dd>(-5434894.8851, -5434894.8851, 5434894.8851, 5434894.8851)</dd></dl></div></div><div class='pyresample-area-section-item'><input id='section-33f0b712-ca9d-472d-8a8e-dfc6697066e8' class='pyresample-area-section-in' type='checkbox'  ><label for='section-33f0b712-ca9d-472d-8a8e-dfc6697066e8'  title='Expand/collapse section'><svg class='icon pyresample-icon-globe'><use xlink:href='#icon-globe'></use></svg> Map</label><div class='pyresample-area-section-preview'></div><div class='pyresample-area-section-details'>Note: If cartopy is installed a display of the area can be seen here</div></div></div></div></div>
+Area extent: (np.float64(-5434894.8851), np.float64(-5434894.8851), np.float64(5434894.8851), np.float64(5434894.8851))</pre><div class='pyresample-wrap' style='display:none'><div class='pyresample-header'><div class='pyresample-obj-type'>pyresample.AreaDefinition</div></div><div class='pyresample-area-sections'><div class='pyresample-area-section-item'><input id='section-2aef5bf6-0c0a-4342-b4c6-28bcd8de0ae3' class='pyresample-area-section-in' type='checkbox'  checked><label for='section-2aef5bf6-0c0a-4342-b4c6-28bcd8de0ae3'  title='Expand/collapse section'><svg class='icon pyresample-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg> Properties</label><div class='pyresample-area-section-preview'></div><div class='pyresample-area-section-details'><dl><dt>Area name</dt><dd>GOES-East</dd><dt>Description</dt><dd>1km at nadir</dd><dt>Projection</dt><dd>{'ellps': 'GRS80', 'h': '35786023', 'lon_0': '-75', 'no_defs': 'None', 'proj': 'geos', 'sweep': 'x', 'type': 'crs', 'units': 'm', 'x_0': '0', 'y_0': '0'}</dd><dt>Width/Height</dt><dd>10848/10848 Pixel</dd><dt>Resolution x/y (SSP)</dt><dd>1002.0/1002.0 m</dd><dt>Extent (ll_x, ll_y, ur_x, ur_y)</dt><dd>(-5434894.8851, -5434894.8851, 5434894.8851, 5434894.8851)</dd></dl></div></div><div class='pyresample-area-section-item'><input id='section-928c3466-4b25-4f97-973a-bf9ed48d8bb3' class='pyresample-area-section-in' type='checkbox'  ><label for='section-928c3466-4b25-4f97-973a-bf9ed48d8bb3'  title='Expand/collapse section'><svg class='icon pyresample-icon-globe'><use xlink:href='#icon-globe'></use></svg> Map</label><div class='pyresample-area-section-preview'></div><div class='pyresample-area-section-details'>Note: If cartopy is installed a display of the area can be seen here</div></div></div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1806,7 +1818,7 @@ Projection ID: abi_fixed_grid
 Projection: {&#x27;ellps&#x27;: &#x27;GRS80&#x27;, &#x27;h&#x27;: &#x27;35786023&#x27;, &#x27;lon_0&#x27;: &#x27;-75&#x27;, &#x27;no_defs&#x27;: &#x27;None&#x27;, &#x27;proj&#x27;: &#x27;geos&#x27;, &#x27;sweep&#x27;: &#x27;x&#x27;, &#x27;type&#x27;: &#x27;crs&#x27;, &#x27;units&#x27;: &#x27;m&#x27;, &#x27;x_0&#x27;: &#x27;0&#x27;, &#x27;y_0&#x27;: &#x27;0&#x27;}
 Number of columns: 21696
 Number of rows: 21696
-Area extent: (np.float64(-5434894.8851), np.float64(-5434894.8851), np.float64(5434894.8851), np.float64(5434894.8851))</pre><div class='pyresample-wrap' style='display:none'><div class='pyresample-header'><div class='pyresample-obj-type'>pyresample.AreaDefinition</div></div><div class='pyresample-area-sections'><div class='pyresample-area-section-item'><input id='section-703dc625-1f47-4fdc-b40a-98cc0479c141' class='pyresample-area-section-in' type='checkbox'  checked><label for='section-703dc625-1f47-4fdc-b40a-98cc0479c141'  title='Expand/collapse section'><svg class='icon pyresample-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg> Properties</label><div class='pyresample-area-section-preview'></div><div class='pyresample-area-section-details'><dl><dt>Area name</dt><dd>GOES-East</dd><dt>Description</dt><dd>0.5km at nadir</dd><dt>Projection</dt><dd>{'ellps': 'GRS80', 'h': '35786023', 'lon_0': '-75', 'no_defs': 'None', 'proj': 'geos', 'sweep': 'x', 'type': 'crs', 'units': 'm', 'x_0': '0', 'y_0': '0'}</dd><dt>Width/Height</dt><dd>21696/21696 Pixel</dd><dt>Resolution x/y (SSP)</dt><dd>501.0/501.0 m</dd><dt>Extent (ll_x, ll_y, ur_x, ur_y)</dt><dd>(-5434894.8851, -5434894.8851, 5434894.8851, 5434894.8851)</dd></dl></div></div><div class='pyresample-area-section-item'><input id='section-577d8a88-4684-49dd-a979-ddb124fd33a3' class='pyresample-area-section-in' type='checkbox'  ><label for='section-577d8a88-4684-49dd-a979-ddb124fd33a3'  title='Expand/collapse section'><svg class='icon pyresample-icon-globe'><use xlink:href='#icon-globe'></use></svg> Map</label><div class='pyresample-area-section-preview'></div><div class='pyresample-area-section-details'>Note: If cartopy is installed a display of the area can be seen here</div></div></div></div></div>
+Area extent: (np.float64(-5434894.8851), np.float64(-5434894.8851), np.float64(5434894.8851), np.float64(5434894.8851))</pre><div class='pyresample-wrap' style='display:none'><div class='pyresample-header'><div class='pyresample-obj-type'>pyresample.AreaDefinition</div></div><div class='pyresample-area-sections'><div class='pyresample-area-section-item'><input id='section-99d7a07b-d4e1-46bc-9296-4ad1c4754246' class='pyresample-area-section-in' type='checkbox'  checked><label for='section-99d7a07b-d4e1-46bc-9296-4ad1c4754246'  title='Expand/collapse section'><svg class='icon pyresample-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg> Properties</label><div class='pyresample-area-section-preview'></div><div class='pyresample-area-section-details'><dl><dt>Area name</dt><dd>GOES-East</dd><dt>Description</dt><dd>0.5km at nadir</dd><dt>Projection</dt><dd>{'ellps': 'GRS80', 'h': '35786023', 'lon_0': '-75', 'no_defs': 'None', 'proj': 'geos', 'sweep': 'x', 'type': 'crs', 'units': 'm', 'x_0': '0', 'y_0': '0'}</dd><dt>Width/Height</dt><dd>21696/21696 Pixel</dd><dt>Resolution x/y (SSP)</dt><dd>501.0/501.0 m</dd><dt>Extent (ll_x, ll_y, ur_x, ur_y)</dt><dd>(-5434894.8851, -5434894.8851, 5434894.8851, 5434894.8851)</dd></dl></div></div><div class='pyresample-area-section-item'><input id='section-0b41a0d9-9daa-4bbb-b413-7731e0b6e00c' class='pyresample-area-section-in' type='checkbox'  ><label for='section-0b41a0d9-9daa-4bbb-b413-7731e0b6e00c'  title='Expand/collapse section'><svg class='icon pyresample-icon-globe'><use xlink:href='#icon-globe'></use></svg> Map</label><div class='pyresample-area-section-preview'></div><div class='pyresample-area-section-details'>Note: If cartopy is installed a display of the area can be seen here</div></div></div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1958,15 +1970,15 @@ Area extent: (np.float64(-5434894.8851), np.float64(-5434894.8851), np.float64(5
     </script>
     <script>kernelName = 'python3'</script>
 
-                  </article>
+                </article>
+              
 
-                
-                
-
-                
-                
-                  <footer class="prev-next-footer">
-                    
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
 <div class="prev-next-area">
     <a class="left-prev"
        href="notebook-template.html"
@@ -1987,19 +1999,18 @@ Area extent: (np.float64(-5434894.8851), np.float64(-5434894.8851), np.float64(5
       <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
-                  </footer>
-                
-              </div>
-
+                </footer>
               
+            </div>
+            
+            
               
-                
-                  <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> On this page
+    <i class="fa-solid fa-list"></i> Contents
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
@@ -2011,218 +2022,17 @@ Area extent: (np.float64(-5434894.8851), np.float64(-5434894.8851), np.float64(5
   </nav></div>
 
 </div></div>
-                
               
-
-
-                
-                <div class="bd-header-article">
-<div class="header-article-items header-article__inner">
-  
-    <div class="header-article-items__start">
-      
-        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-  <span class="fa-solid fa-bars"></span>
-</button></div>
-      
-    </div>
-  
-  
-    <div class="header-article-items__end">
-      
-        <div class="header-article-item">
-
-<div class="article-header-buttons">
-
-
-
-
-
-<div class="dropdown dropdown-launch-buttons">
-  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
-    <i class="fas fa-rocket"></i>
-  </button>
-  <ul class="dropdown-menu">
-      
-      
-      
-      <li><a href="https://binder.projectpythia.org/v2/gh/ProjectPythia/geostationary-cookbook/main?urlpath=lab/tree/notebooks/00_geosat_explaining_steps.ipynb" target="_blank"
-   class="btn btn-sm dropdown-item"
-   title="Launch on Binder"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  
-    <img alt="Binder logo" src="../_static/images/logo_binder.svg">
-  </span>
-<span class="btn__text-container">Binder</span>
-</a>
-</li>
-      
-  </ul>
-</div>
-
-
-
-
-
-
-<div class="dropdown dropdown-source-buttons">
-  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
-    <i class="fab fa-github"></i>
-  </button>
-  <ul class="dropdown-menu">
-      
-      
-      
-      <li><a href="https://github.com/ProjectPythia/geostationary-cookbook" target="_blank"
-   class="btn btn-sm btn-source-repository-button dropdown-item"
-   title="Source repository"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fab fa-github"></i>
-  </span>
-<span class="btn__text-container">Repository</span>
-</a>
-</li>
-      
-      
-      
-      
-      <li><a href="https://github.com/ProjectPythia/geostationary-cookbook/edit/main/notebooks/00_geosat_explaining_steps.ipynb" target="_blank"
-   class="btn btn-sm btn-source-edit-button dropdown-item"
-   title="Suggest edit"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fas fa-pencil-alt"></i>
-  </span>
-<span class="btn__text-container">Suggest edit</span>
-</a>
-</li>
-      
-      
-      
-      
-      <li><a href="https://github.com/ProjectPythia/geostationary-cookbook/issues/new?title=Issue%20on%20page%20%2Fnotebooks/00_geosat_explaining_steps.html&body=Your%20issue%20content%20here." target="_blank"
-   class="btn btn-sm btn-source-issues-button dropdown-item"
-   title="Open an issue"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fas fa-lightbulb"></i>
-  </span>
-<span class="btn__text-container">Open issue</span>
-</a>
-</li>
-      
-  </ul>
-</div>
-
-
-
-
-
-
-<div class="dropdown dropdown-download-buttons">
-  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
-    <i class="fas fa-download"></i>
-  </button>
-  <ul class="dropdown-menu">
-      
-      
-      
-      <li><a href="../_sources/notebooks/00_geosat_explaining_steps.ipynb" target="_blank"
-   class="btn btn-sm btn-download-source-button dropdown-item"
-   title="Download source file"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fas fa-file"></i>
-  </span>
-<span class="btn__text-container">.ipynb</span>
-</a>
-</li>
-      
-      
-      
-      
-      <li>
-<button onclick="window.print()"
-  class="btn btn-sm btn-download-pdf-button dropdown-item"
-  title="Print to PDF"
-  data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fas fa-file-pdf"></i>
-  </span>
-<span class="btn__text-container">.pdf</span>
-</button>
-</li>
-      
-  </ul>
-</div>
-
-
-
-
-<button onclick="toggleFullScreen()"
-  class="btn btn-sm btn-fullscreen-button"
-  title="Fullscreen mode"
-  data-bs-placement="bottom" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fas fa-expand"></i>
-  </span>
-
-</button>
-
-
-
-<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
-  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
-  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
-  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
-</button>
-
-
-<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-</button>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</button>
-</div></div>
-      
-    </div>
-  
-</div>
-</div>
-            </div>
-
-            <footer class="bd-footer-content">
-              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
 <div class="bd-footer-content__inner container">
   
   <div class="footer-item">
     
 <p class="component-author">
-By the <a href="https://projectpythia.org/">Project Pythia</a> Community
+By The Jupyter Book community
 </p>
 
   </div>
@@ -2232,7 +2042,7 @@ By the <a href="https://projectpythia.org/">Project Pythia</a> Community
 
   <p class="copyright">
     
-      © Copyright 2024.
+      © Copyright 2023.
       <br/>
     
   </p>
@@ -2240,10 +2050,7 @@ By the <a href="https://projectpythia.org/">Project Pythia</a> Community
   </div>
   
   <div class="footer-item">
-    <p class="last-updated">
-  Last updated on 27 November 2024.
-  <br/>
-</p>
+    
   </div>
   
   <div class="footer-item">
@@ -2251,88 +2058,18 @@ By the <a href="https://projectpythia.org/">Project Pythia</a> Community
   </div>
   
 </div>
-            </footer>
+          </footer>
+        
 
-        </main>
+      </main>
     </div>
   </div>
-    
+  
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
-<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
-     
-  
-  
-  
-  
-    <div class="footer-items__start">
-      <div class="container-fluid m-0 p-0">
-      
-        <div class="footer-item">
-  <div class="container-fluid footer-logos">
-    <div class="container-xl">
-      <div class="row d-flex flex-wrap align-items-center">
-        <div class="d-flex col-lg-3 col-md-4 col-sm-6 p-2 mx-auto">
-          <img alt="NCAR" src="../_images/NSF-NCAR_Lockup-UCAR-Dark_102523.svg" style="width: 100%">
-        </div>
-        <div class="d-flex col-lg-3 col-md-4 col-sm-6 p-2 mx-auto">
-          <img alt="Unidata" src="../_images/Unidata_logo_horizontal_1200x300.svg" style="width: 100%">
-        </div>
-        <div class="d-flex col-lg-3 col-md-4 col-sm-6 p-2 mx-auto">
-          <img alt="UAlbany" src="../_images/UAlbany-A2-logo-purple-gold.svg" style="width: 100%">
-        </div>
-      </div>
-    </div>
-  </div></div>
-      
-        <div class="footer-item">  <div class="container-fluid footer-info">
-    <div class="container-xl">
-      <div class="d-flex justify-content-center">
-        <p class="py-1 m-0">
-            &copy;&nbsp;2024.
-        
-          By the <a href="https://projectpythia.org/">Project Pythia</a> Community.
-        
-          Last updated on 27 November 2024.
-        </p>
-      </div>
-    </div>
-  </div></div>
-      
-        <div class="footer-item"><div class="container-fluid footer-extra">
-  <div class="container">
-    <center>
-      Theme by <a href="https://projectpythia.org">Project Pythia</a>. All code
-      in Pythia Cookbooks is licensed under
-      <a href="https://opensource.org/license/apache-2-0">Apache 2.0</a>. All
-      other non-code content is licensed under
-      <a href="https://creativecommons.org/licenses/by/4.0/">
-        Creative Commons BY 4.0 (CC BY 4.0)</a
-      >.
-    </center>
-    <br /><br />
-    <div class="row">
-      <p class="m-0">
-        <img
-          src="../_static/footer-logo-nsf.png"
-          style="float: left; width: 60px; height: 60px; margin-right: 1rem"
-        />
-        This material is based upon work supported by the National Science
-        Foundation under Grant Nos. 2026863 and 2026899. Any opinions, findings,
-        and conclusions or recommendations expressed in this material are those
-        of the author(s) and do not necessarily reflect the views of the
-        National Science Foundation.
-      </p>
-    </div>
-  </div>
-</div></div>
-      
-      </div>
-    </div>
-  
-
   </footer>
   </body>
 </html>
