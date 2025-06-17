@@ -1,6 +1,6 @@
-<img src="notebooks/images/logos/ncar_pythia.png" alt="pythia ncar" />
-
 # Geostationary satellite Cookbook
+
+<img src="notebooks/images/logos/ncar_pythia.png" alt="pythia ncar" />
 
 [![nightly-build](https://github.com/ProjectPythia/geostationary-cookbook/actions/workflows/nightly-build.yaml/badge.svg)](https://github.com/ProjectPythia/geostationary-cookbook/actions/workflows/nightly-build.yaml)
 [![Binder](https://binder.projectpythia.org/badge_logo.svg)](https://binder.projectpythia.org/v2/gh/ProjectPythia/geostationary-cookbook/main?labpath=notebooks)
