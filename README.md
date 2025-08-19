@@ -12,17 +12,50 @@ This **"Pythia Cookbook"** was started during the **Project Pythia June 11-14 20
 
 ## Motivation
 
+
+Satellite-based Earth observation is vital for global climate monitoring and disaster management. These systems provide critical data across a wide range of applications, including:
+
+- Agriculture  
+- Forest fires  
+- Urbanization  
+- Ice cover  
+- Extreme weather  
+- Atmospheric composition  
+- Natural hazards such as cyclones and volcanic eruptions
+
+The latest **third-generation geostationary satellites (GEOs)** significantly enhance these capabilities. With advanced features such as **RGB composite visualization**, **high-frequency sensing**, and **greater data availability**, these satellites are central to monitoring both atmospheric and terrestrial environments—especially for early detection and response to disasters.
+
+Public access to data from NOAA’s third-generation GEOs—**GOES-16**, **GOES-17**, **GOES-18 (GOES-West)**, and **GOES-19 (GOES-East)**—is made possible through the **NOAA Open Data Dissemination (NODD) Program**, which partners with commercial cloud platforms like:
+
+- **Microsoft Azure**
+- **Amazon Web Services (AWS)**
+- **Google Cloud Platform**
+
+Additionally, AWS also hosts data from international 3rd-gen GEOs such as:
+
+- **Himawari-8**
+- **Geo-KOMPSAT-2A**
+
+These partnerships enable **near real-time access** and **long-term data archives** for both domestic and global users.
+
+To support weather services and disaster response agencies, 3rd-gen GEOs deliver **continuous, high-resolution monitoring** of key meteorological variables—such as cloud cover, temperature, and moisture—enabling better detection and forecasting of extreme weather events like **hurricanes**, **tornadoes**, and **floods**.
+
+Finally, the **visualization of satellite data** in map-based formats is a critical task. It allows scientists, decision-makers, and emergency managers to:
+
+- Identify risk patterns  
+- Assess vulnerabilities  
+- Improve early warning systems  
+- Enhance disaster preparedness and planning
+
+
 <p>
-<img align="left" src="https://registry.opendata.aws/img/logos/noaa-logo.png" width="100" height="100" >   
-Public access to NOAA's geostationary satellite data, including GOES-16, GOES-17, and GOES-18, is made possible through the NOAA Open Data Dissemination <a href="https://www.noaa.gov/information-technology/open-data-dissemination">NODD</a> Program on commercial cloud platforms like Microsoft Azure, Amazon Web Services, and Google Cloud Platform. Amazon Web Services also hosts data from two other geostationary satellites HIMAWARI and Geo-KOMPSAT-2A. NODD's partnerships with top cloud providers enable near real-time access to to all these satellites, as well as long archives.</p>  
-<p>
-Global weather, climate, and environmental phenomena monitoring is greatly aided by geostationary satellites such as GOES-R, HIMAWARI, and GK2A. The need for thorough tools and resources to efficiently analyze and interpret satellite data is growing as the use of such data for scientific research, weather forecasting, and environmental monitoring grows. 
+<img align="left" src="https://registry.opendata.aws/img/logos/noaa-logo.png" width="25" height="25" >   
+Public access to NOAA's geostationary satellite data, including HIMAWARI, GK2A, GOES-16, GOES-17, GOES-18, and GOES-19, is made possible through the NOAA Open Data Dissemination <a href="https://www.noaa.gov/information-technology/open-data-dissemination">NODD</a>
 </p>  
 
 <p>
-<img align="left" src="https://avatars.githubusercontent.com/u/13004956?s=200&v=4" width="100" height="100" >   
-A Python library called Satpy was created specifically for handling data from satellite instruments that observe the Earth. Remote-sensing data can be read, modified, and written with it. Geophysical parameters can be converted from various file formats into Xarray DataArray and Dataset classes, which allow for easy integration with other scientific Python libraries. Satpy combines data from various instrument bands or products to make it easier to create RGB images and composite types. In order to enhance the quality and usefulness of images, it has features for atmospheric corrections and visual improvements. Several formats, including PNG, GeoTIFF, and CF standard NetCDF files, are available for saving output data. Users can resample data to geographic projected grids (areas) using Satpy as well.Although there are already guides and tutorials available for using Satpy, there isn't much thorough advice that is tailored specifically to the analysis 
-of the three geostationary satellites that can be accessed freely from AWS buckets <a href="https://registry.opendata.aws/noaa-goes/">AWS_GOES-R</a>, <a href="https://registry.opendata.aws/noaa-himawari/">AWS_HIMAWARI</a>, and <a href="https://registry.opendata.aws/noaa-gk2a-pds/">AWS_GK2A</a>. Users can gain access to structured tutorials, detailed instructions, and sample workflows that are specifically designed to meet the needs and distinctive features of these satellites by creating a cookbook specifically for them.</p> 
+<img align="left" src="https://avatars.githubusercontent.com/u/13004956?s=200&v=4" width="25" height="25" >   
+A Python library called Satpy was created specifically for handling data from satellite instruments that observe the Earth. </p> 
 
 ## Authors
 | Name      | Affiliation |
