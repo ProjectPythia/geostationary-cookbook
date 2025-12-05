@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="http://localhost:3000/sitemap_style.xsl" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>http://localhost:3000</loc>
+  </url>
+  <url>
+    <loc>http://localhost:3000/notebooks/how-to-cite</loc>
+  </url>
+  <url>
+    <loc>http://localhost:3000/notebooks/notebook-template</loc>
+  </url>
+  <url>
+    <loc>http://localhost:3000/notebooks/geosat-explaining-steps</loc>
+  </url>
+  <url>
+    <loc>http://localhost:3000/notebooks/geosat-abi-goes-east</loc>
+  </url>
+  <url>
+    <loc>http://localhost:3000/notebooks/geosat-goesr</loc>
+  </url>
+  <url>
+    <loc>http://localhost:3000/notebooks/geosat-abi-goes-west</loc>
+  </url>
+  <url>
+    <loc>http://localhost:3000/notebooks/geosat-ahi-himawari</loc>
+  </url>
+  <url>
+    <loc>http://localhost:3000/notebooks/geosat-ami-gk2a</loc>
+  </url>
+  <url>
+    <loc>http://localhost:3000/notebooks/auxiliar-dowloading</loc>
+  </url>
+</urlset>
